@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notificaciones;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -147,5 +148,92 @@ namespace DemoControles
             String txtBox = txtBox0.Texts;
             MessageBox.Show(txtBox, "Mensaje");
         }
+
+        private void BtnMostrarMensajeOK_Click(object sender, EventArgs e)
+        {
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_OK, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_OK, autoCerrar);
+            }
+        }
+
+        private void BtnWarning_Click(object sender, EventArgs e)
+        {
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_WARNING, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_WARNING, autoCerrar);
+            }
+        }
+
+        private void btnMensajeError_Click(object sender, EventArgs e)
+        {
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_ERROR, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_ERROR, autoCerrar);
+            }
+        }
+
+        private void btnMensajeInformacion_Click(object sender, EventArgs e)
+        {
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_INFO, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_INFO, autoCerrar);
+            }
+        }
+
+        private void btnMensajeDefaul_Click(object sender, EventArgs e)
+        {
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, null, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", null, autoCerrar);
+            }
+        }
+
+        private void btnPersonalizado_Click(object sender, EventArgs e)
+        {
+            Notificacion.CUSTOM_OPACIDAD = 0.9;
+            Notificacion.CUSTOM_COLOR_FONDO = Color.DarkBlue;
+            Notificacion.CUSTOM_ICON = Properties.Resources.icons8_like_it_64px;
+            Notificacion.CUSTOM_COLOR_TEXT = Color.FromArgb(220, 220, 220);
+            Notificacion.CUSTOM_FONT_TITULO = new Font(base.Font.FontFamily, 8F, FontStyle.Bold);
+            Notificacion.CUSTOM_FONT_MENSAJE = new Font("Century Gothic", 11.00F, FontStyle.Regular, GraphicsUnit.Point, 0); //new Font(base.Font.FontFamily, 8F, FontStyle.Regular);
+
+            bool autoCerrar = chkCerrarMensaje.Checked;
+            if (chkIncluirTitulo.Checked)
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.CUSTOM_ICON, autoCerrar);
+            }
+            else
+            {
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.CUSTOM_ICON, autoCerrar);
+            }
+        }
+
     }
 }

@@ -90,8 +90,33 @@
             this.erRadioButton2 = new ControlesPersonalizados.ERRadioButton();
             this.erRadioButton1 = new ControlesPersonalizados.ERRadioButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.erButton6 = new ControlesPersonalizados.ERButton();
+            this.erButton5 = new ControlesPersonalizados.ERButton();
             this.txtBox1 = new ControlesPersonalizados.ERTextBox();
             this.txtBox0 = new ControlesPersonalizados.ERTextBox();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnPersonalizado = new ControlesPersonalizados.ERButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnMensajeDefaul = new ControlesPersonalizados.ERButton();
+            this.btnMensajeInformacion = new ControlesPersonalizados.ERButton();
+            this.btnMensajeError = new ControlesPersonalizados.ERButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.chkCerrarMensaje = new ControlesPersonalizados.ERToggleButton();
+            this.BtnWarning = new ControlesPersonalizados.ERButton();
+            this.txtContenidoMensaje = new ControlesPersonalizados.ERTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtContenidoTitulo = new ControlesPersonalizados.ERTextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.BtnMostrarMensajeOK = new ControlesPersonalizados.ERButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.chkIncluirTitulo = new ControlesPersonalizados.ERToggleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -100,8 +125,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.erButton5 = new ControlesPersonalizados.ERButton();
-            this.erButton6 = new ControlesPersonalizados.ERButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -121,6 +144,8 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -136,11 +161,13 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Location = new System.Drawing.Point(8, 29);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(94);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1350, 554);
+            this.tabControl1.Size = new System.Drawing.Size(1371, 610);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -1062,6 +1089,44 @@
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "TextBox";
             // 
+            // erButton6
+            // 
+            this.erButton6.BackColor = System.Drawing.Color.DarkGreen;
+            this.erButton6.BackGroundColor = System.Drawing.Color.DarkGreen;
+            this.erButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.erButton6.BorderRadius = 40;
+            this.erButton6.BorderSize = 0;
+            this.erButton6.FlatAppearance.BorderSize = 0;
+            this.erButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.erButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton6.Location = new System.Drawing.Point(147, 197);
+            this.erButton6.Name = "erButton6";
+            this.erButton6.Size = new System.Drawing.Size(150, 40);
+            this.erButton6.TabIndex = 3;
+            this.erButton6.Text = "Ver";
+            this.erButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton6.UseVisualStyleBackColor = false;
+            this.erButton6.Click += new System.EventHandler(this.erButton6_Click);
+            // 
+            // erButton5
+            // 
+            this.erButton5.BackColor = System.Drawing.Color.DarkOrange;
+            this.erButton5.BackGroundColor = System.Drawing.Color.DarkOrange;
+            this.erButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.erButton5.BorderRadius = 40;
+            this.erButton5.BorderSize = 0;
+            this.erButton5.FlatAppearance.BorderSize = 0;
+            this.erButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.erButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton5.Location = new System.Drawing.Point(501, 197);
+            this.erButton5.Name = "erButton5";
+            this.erButton5.Size = new System.Drawing.Size(150, 40);
+            this.erButton5.TabIndex = 2;
+            this.erButton5.Text = "Ver";
+            this.erButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton5.UseVisualStyleBackColor = false;
+            this.erButton5.Click += new System.EventHandler(this.erButton5_Click);
+            // 
             // txtBox1
             // 
             this.txtBox1.BackColor = System.Drawing.SystemColors.Window;
@@ -1106,6 +1171,338 @@
             this.txtBox0.Texts = "";
             this.txtBox0.UnderlinedStyle = true;
             // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage9.Controls.Add(this.groupBox3);
+            this.tabPage9.Controls.Add(this.btnPersonalizado);
+            this.tabPage9.Controls.Add(this.label13);
+            this.tabPage9.Controls.Add(this.btnMensajeDefaul);
+            this.tabPage9.Controls.Add(this.btnMensajeInformacion);
+            this.tabPage9.Controls.Add(this.btnMensajeError);
+            this.tabPage9.Controls.Add(this.label12);
+            this.tabPage9.Controls.Add(this.chkCerrarMensaje);
+            this.tabPage9.Controls.Add(this.BtnWarning);
+            this.tabPage9.Controls.Add(this.txtContenidoMensaje);
+            this.tabPage9.Controls.Add(this.label11);
+            this.tabPage9.Controls.Add(this.txtContenidoTitulo);
+            this.tabPage9.Controls.Add(this.label10);
+            this.tabPage9.Controls.Add(this.BtnMostrarMensajeOK);
+            this.tabPage9.Controls.Add(this.label9);
+            this.tabPage9.Controls.Add(this.chkIncluirTitulo);
+            this.tabPage9.Location = new System.Drawing.Point(4, 26);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1363, 580);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "Alertas";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Location = new System.Drawing.Point(706, 76);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(630, 208);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(16, 134);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(607, 17);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "Notificacion.CUSTOM_FONT_MENSAJE = new Font(base.Font.FontFamily, 8F, FontStyle.R" +
+    "egular);";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(16, 112);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(568, 17);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "Notificacion.CUSTOM_FONT_TITULO = new Font(base.Font.FontFamily, 8F, FontStyle.Bo" +
+    "ld);";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(16, 90);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(426, 17);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Notificacion.CUSTOM_COLOR_TEXT = Color.FromArgb(255, 120, 0);";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(16, 68);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(529, 17);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Notificacion.CUSTOM_ICON = Properties.Resources.icons8_close_window_64px_2;";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(16, 46);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(456, 17);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Notificacion.CUSTOM_COLOR_FONDO = Color.FromArgb(255, 180, 80);";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(16, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(259, 17);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Notificacion.CUSTOM_OPACIDAD = 0.9;";
+            // 
+            // btnPersonalizado
+            // 
+            this.btnPersonalizado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPersonalizado.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPersonalizado.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnPersonalizado.BorderRadius = 0;
+            this.btnPersonalizado.BorderSize = 0;
+            this.btnPersonalizado.FlatAppearance.BorderSize = 0;
+            this.btnPersonalizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalizado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPersonalizado.Location = new System.Drawing.Point(931, 291);
+            this.btnPersonalizado.Name = "btnPersonalizado";
+            this.btnPersonalizado.Size = new System.Drawing.Size(164, 34);
+            this.btnPersonalizado.TabIndex = 15;
+            this.btnPersonalizado.Text = "Alerta Personalizada";
+            this.btnPersonalizado.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPersonalizado.UseVisualStyleBackColor = false;
+            this.btnPersonalizado.Click += new System.EventHandler(this.btnPersonalizado_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(877, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(314, 17);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Configuración de la notificación personalizada";
+            // 
+            // btnMensajeDefaul
+            // 
+            this.btnMensajeDefaul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMensajeDefaul.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMensajeDefaul.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMensajeDefaul.BorderRadius = 0;
+            this.btnMensajeDefaul.BorderSize = 0;
+            this.btnMensajeDefaul.FlatAppearance.BorderSize = 0;
+            this.btnMensajeDefaul.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensajeDefaul.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeDefaul.Location = new System.Drawing.Point(488, 331);
+            this.btnMensajeDefaul.Name = "btnMensajeDefaul";
+            this.btnMensajeDefaul.Size = new System.Drawing.Size(164, 34);
+            this.btnMensajeDefaul.TabIndex = 12;
+            this.btnMensajeDefaul.Text = "Mensaje Normal";
+            this.btnMensajeDefaul.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeDefaul.UseVisualStyleBackColor = false;
+            this.btnMensajeDefaul.Click += new System.EventHandler(this.btnMensajeDefaul_Click);
+            // 
+            // btnMensajeInformacion
+            // 
+            this.btnMensajeInformacion.BackColor = System.Drawing.Color.Blue;
+            this.btnMensajeInformacion.BackGroundColor = System.Drawing.Color.Blue;
+            this.btnMensajeInformacion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMensajeInformacion.BorderRadius = 0;
+            this.btnMensajeInformacion.BorderSize = 0;
+            this.btnMensajeInformacion.FlatAppearance.BorderSize = 0;
+            this.btnMensajeInformacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensajeInformacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeInformacion.Location = new System.Drawing.Point(488, 291);
+            this.btnMensajeInformacion.Name = "btnMensajeInformacion";
+            this.btnMensajeInformacion.Size = new System.Drawing.Size(164, 34);
+            this.btnMensajeInformacion.TabIndex = 11;
+            this.btnMensajeInformacion.Text = "Mensaje Información";
+            this.btnMensajeInformacion.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeInformacion.UseVisualStyleBackColor = false;
+            this.btnMensajeInformacion.Click += new System.EventHandler(this.btnMensajeInformacion_Click);
+            // 
+            // btnMensajeError
+            // 
+            this.btnMensajeError.BackColor = System.Drawing.Color.Red;
+            this.btnMensajeError.BackGroundColor = System.Drawing.Color.Red;
+            this.btnMensajeError.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnMensajeError.BorderRadius = 0;
+            this.btnMensajeError.BorderSize = 0;
+            this.btnMensajeError.FlatAppearance.BorderSize = 0;
+            this.btnMensajeError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMensajeError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeError.Location = new System.Drawing.Point(488, 250);
+            this.btnMensajeError.Name = "btnMensajeError";
+            this.btnMensajeError.Size = new System.Drawing.Size(164, 34);
+            this.btnMensajeError.TabIndex = 10;
+            this.btnMensajeError.Text = "Mensaje Error";
+            this.btnMensajeError.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.btnMensajeError.UseVisualStyleBackColor = false;
+            this.btnMensajeError.Click += new System.EventHandler(this.btnMensajeError_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(534, 109);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 17);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Cerrar Automáticamente";
+            // 
+            // chkCerrarMensaje
+            // 
+            this.chkCerrarMensaje.AutoSize = true;
+            this.chkCerrarMensaje.Checked = true;
+            this.chkCerrarMensaje.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkCerrarMensaje.Location = new System.Drawing.Point(488, 104);
+            this.chkCerrarMensaje.MinimumSize = new System.Drawing.Size(40, 22);
+            this.chkCerrarMensaje.Name = "chkCerrarMensaje";
+            this.chkCerrarMensaje.OffBackColor = System.Drawing.Color.Gray;
+            this.chkCerrarMensaje.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chkCerrarMensaje.OnBackColor = System.Drawing.Color.Lime;
+            this.chkCerrarMensaje.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chkCerrarMensaje.Size = new System.Drawing.Size(40, 22);
+            this.chkCerrarMensaje.TabIndex = 8;
+            this.chkCerrarMensaje.UseVisualStyleBackColor = true;
+            // 
+            // BtnWarning
+            // 
+            this.BtnWarning.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnWarning.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnWarning.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnWarning.BorderRadius = 0;
+            this.BtnWarning.BorderSize = 0;
+            this.BtnWarning.FlatAppearance.BorderSize = 0;
+            this.BtnWarning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnWarning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnWarning.Location = new System.Drawing.Point(488, 210);
+            this.BtnWarning.Name = "BtnWarning";
+            this.BtnWarning.Size = new System.Drawing.Size(164, 34);
+            this.BtnWarning.TabIndex = 7;
+            this.BtnWarning.Text = "Mensaje Advertencia";
+            this.BtnWarning.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnWarning.UseVisualStyleBackColor = false;
+            this.BtnWarning.Click += new System.EventHandler(this.BtnWarning_Click);
+            // 
+            // txtContenidoMensaje
+            // 
+            this.txtContenidoMensaje.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContenidoMensaje.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtContenidoMensaje.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtContenidoMensaje.BorderRadius = 0;
+            this.txtContenidoMensaje.BorderSize = 2;
+            this.txtContenidoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContenidoMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoMensaje.Location = new System.Drawing.Point(79, 93);
+            this.txtContenidoMensaje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContenidoMensaje.Multiline = true;
+            this.txtContenidoMensaje.Name = "txtContenidoMensaje";
+            this.txtContenidoMensaje.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContenidoMensaje.PasswordChar = false;
+            this.txtContenidoMensaje.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContenidoMensaje.PlaceholderText = "";
+            this.txtContenidoMensaje.Size = new System.Drawing.Size(358, 212);
+            this.txtContenidoMensaje.TabIndex = 6;
+            this.txtContenidoMensaje.Texts = "Lorem ipsum dolor sit amet consectetur adipiscing elit duis neque, rhoncus habita" +
+    "sse volutpat phasellus penatibus pharetra.";
+            this.txtContenidoMensaje.UnderlinedStyle = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 107);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 17);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Mensaje";
+            // 
+            // txtContenidoTitulo
+            // 
+            this.txtContenidoTitulo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContenidoTitulo.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtContenidoTitulo.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtContenidoTitulo.BorderRadius = 0;
+            this.txtContenidoTitulo.BorderSize = 2;
+            this.txtContenidoTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContenidoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoTitulo.Location = new System.Drawing.Point(79, 40);
+            this.txtContenidoTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContenidoTitulo.Multiline = false;
+            this.txtContenidoTitulo.Name = "txtContenidoTitulo";
+            this.txtContenidoTitulo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContenidoTitulo.PasswordChar = false;
+            this.txtContenidoTitulo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContenidoTitulo.PlaceholderText = "";
+            this.txtContenidoTitulo.Size = new System.Drawing.Size(358, 31);
+            this.txtContenidoTitulo.TabIndex = 4;
+            this.txtContenidoTitulo.Texts = "Título de Alerta";
+            this.txtContenidoTitulo.UnderlinedStyle = true;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 17);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Título";
+            // 
+            // BtnMostrarMensajeOK
+            // 
+            this.BtnMostrarMensajeOK.BackColor = System.Drawing.Color.Lime;
+            this.BtnMostrarMensajeOK.BackGroundColor = System.Drawing.Color.Lime;
+            this.BtnMostrarMensajeOK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnMostrarMensajeOK.BorderRadius = 0;
+            this.BtnMostrarMensajeOK.BorderSize = 0;
+            this.BtnMostrarMensajeOK.FlatAppearance.BorderSize = 0;
+            this.BtnMostrarMensajeOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMostrarMensajeOK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnMostrarMensajeOK.Location = new System.Drawing.Point(488, 170);
+            this.BtnMostrarMensajeOK.Name = "BtnMostrarMensajeOK";
+            this.BtnMostrarMensajeOK.Size = new System.Drawing.Size(164, 34);
+            this.BtnMostrarMensajeOK.TabIndex = 2;
+            this.BtnMostrarMensajeOK.Text = "Mensaje OK";
+            this.BtnMostrarMensajeOK.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnMostrarMensajeOK.UseVisualStyleBackColor = false;
+            this.BtnMostrarMensajeOK.Click += new System.EventHandler(this.BtnMostrarMensajeOK_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(534, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Incluir Título";
+            // 
+            // chkIncluirTitulo
+            // 
+            this.chkIncluirTitulo.AutoSize = true;
+            this.chkIncluirTitulo.Checked = true;
+            this.chkIncluirTitulo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkIncluirTitulo.Location = new System.Drawing.Point(488, 65);
+            this.chkIncluirTitulo.MinimumSize = new System.Drawing.Size(40, 22);
+            this.chkIncluirTitulo.Name = "chkIncluirTitulo";
+            this.chkIncluirTitulo.OffBackColor = System.Drawing.Color.Gray;
+            this.chkIncluirTitulo.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.chkIncluirTitulo.OnBackColor = System.Drawing.Color.Lime;
+            this.chkIncluirTitulo.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.chkIncluirTitulo.Size = new System.Drawing.Size(40, 22);
+            this.chkIncluirTitulo.TabIndex = 0;
+            this.chkIncluirTitulo.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
@@ -1127,7 +1524,7 @@
             this.label5.Location = new System.Drawing.Point(473, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(394, 44);
+            this.label5.Size = new System.Drawing.Size(395, 44);
             this.label5.TabIndex = 0;
             this.label5.Text = "Controles Extendidos";
             // 
@@ -1183,44 +1580,6 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // erButton5
-            // 
-            this.erButton5.BackColor = System.Drawing.Color.DarkOrange;
-            this.erButton5.BackGroundColor = System.Drawing.Color.DarkOrange;
-            this.erButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.erButton5.BorderRadius = 40;
-            this.erButton5.BorderSize = 0;
-            this.erButton5.FlatAppearance.BorderSize = 0;
-            this.erButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.erButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton5.Location = new System.Drawing.Point(501, 197);
-            this.erButton5.Name = "erButton5";
-            this.erButton5.Size = new System.Drawing.Size(150, 40);
-            this.erButton5.TabIndex = 2;
-            this.erButton5.Text = "Ver";
-            this.erButton5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton5.UseVisualStyleBackColor = false;
-            this.erButton5.Click += new System.EventHandler(this.erButton5_Click);
-            // 
-            // erButton6
-            // 
-            this.erButton6.BackColor = System.Drawing.Color.DarkGreen;
-            this.erButton6.BackGroundColor = System.Drawing.Color.DarkGreen;
-            this.erButton6.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.erButton6.BorderRadius = 40;
-            this.erButton6.BorderSize = 0;
-            this.erButton6.FlatAppearance.BorderSize = 0;
-            this.erButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.erButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton6.Location = new System.Drawing.Point(147, 197);
-            this.erButton6.Name = "erButton6";
-            this.erButton6.Size = new System.Drawing.Size(150, 40);
-            this.erButton6.TabIndex = 3;
-            this.erButton6.Text = "Ver";
-            this.erButton6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton6.UseVisualStyleBackColor = false;
-            this.erButton6.Click += new System.EventHandler(this.erButton6_Click);
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1260,6 +1619,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage8.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -1342,6 +1705,29 @@
         private ControlesPersonalizados.ERTextBox txtBox1;
         private ControlesPersonalizados.ERButton erButton5;
         private ControlesPersonalizados.ERButton erButton6;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.Label label9;
+        private ControlesPersonalizados.ERToggleButton chkIncluirTitulo;
+        private ControlesPersonalizados.ERTextBox txtContenidoMensaje;
+        private System.Windows.Forms.Label label11;
+        private ControlesPersonalizados.ERTextBox txtContenidoTitulo;
+        private System.Windows.Forms.Label label10;
+        private ControlesPersonalizados.ERButton BtnMostrarMensajeOK;
+        private ControlesPersonalizados.ERButton BtnWarning;
+        private System.Windows.Forms.Label label12;
+        private ControlesPersonalizados.ERToggleButton chkCerrarMensaje;
+        private ControlesPersonalizados.ERButton btnMensajeError;
+        private ControlesPersonalizados.ERButton btnMensajeInformacion;
+        private ControlesPersonalizados.ERButton btnMensajeDefaul;
+        private ControlesPersonalizados.ERButton btnPersonalizado;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
     }
 }
 
