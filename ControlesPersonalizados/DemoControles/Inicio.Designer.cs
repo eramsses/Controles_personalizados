@@ -72,7 +72,6 @@
             this.erButton1 = new ControlesPersonalizados.ERButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.bp5 = new ControlesPersonalizados.ERProgressBar();
-            this.erProgressBar1 = new ControlesPersonalizados.ERProgressBar();
             this.bp6 = new ControlesPersonalizados.ERProgressBar();
             this.bp0 = new ControlesPersonalizados.ERProgressBar();
             this.bp4 = new ControlesPersonalizados.ERProgressBar();
@@ -187,7 +186,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage1.Size = new System.Drawing.Size(1363, 580);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Toggle Button";
             // 
@@ -294,9 +293,9 @@
             this.lblDefecto.Location = new System.Drawing.Point(359, 226);
             this.lblDefecto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDefecto.Name = "lblDefecto";
-            this.lblDefecto.Size = new System.Drawing.Size(136, 17);
+            this.lblDefecto.Size = new System.Drawing.Size(203, 17);
             this.lblDefecto.TabIndex = 4;
-            this.lblDefecto.Text = "Valores por defecto";
+            this.lblDefecto.Text = "Valores por defecto Apagado";
             // 
             // lblPersonalizado
             // 
@@ -320,7 +319,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage2.Size = new System.Drawing.Size(1363, 580);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Botón";
             // 
@@ -401,7 +400,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage3.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage3.Size = new System.Drawing.Size(1363, 580);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Date Picker";
             // 
@@ -463,7 +462,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage4.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage4.Size = new System.Drawing.Size(1363, 580);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Imagen Redonda";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -611,7 +610,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage5.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage5.Size = new System.Drawing.Size(1363, 580);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Combobox";
             // 
@@ -777,7 +776,6 @@
             // 
             this.tabPage6.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage6.Controls.Add(this.bp5);
-            this.tabPage6.Controls.Add(this.erProgressBar1);
             this.tabPage6.Controls.Add(this.bp6);
             this.tabPage6.Controls.Add(this.bp0);
             this.tabPage6.Controls.Add(this.bp4);
@@ -789,7 +787,7 @@
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage6.Size = new System.Drawing.Size(1363, 580);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Barra de Progreso";
             // 
@@ -799,34 +797,17 @@
             this.bp5.ChannelHeight = 20;
             this.bp5.ForeBackColor = System.Drawing.Color.PaleGreen;
             this.bp5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.bp5.Location = new System.Drawing.Point(469, 107);
+            this.bp5.Location = new System.Drawing.Point(813, 95);
             this.bp5.Maximum = 300;
             this.bp5.Name = "bp5";
             this.bp5.ShowMaximun = false;
             this.bp5.ShowValue = ControlesPersonalizados.TextPosition.Right;
             this.bp5.Size = new System.Drawing.Size(216, 47);
-            this.bp5.SliderColor = System.Drawing.Color.Lime;
+            this.bp5.SliderColor = System.Drawing.Color.DarkOliveGreen;
             this.bp5.SliderHeight = 16;
             this.bp5.SymbolAfter = "";
             this.bp5.SymbolBefore = "";
             this.bp5.TabIndex = 9;
-            // 
-            // erProgressBar1
-            // 
-            this.erProgressBar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
-            this.erProgressBar1.ChannelHeight = 6;
-            this.erProgressBar1.ForeBackColor = System.Drawing.Color.SlateGray;
-            this.erProgressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.erProgressBar1.Location = new System.Drawing.Point(1091, 131);
-            this.erProgressBar1.Name = "erProgressBar1";
-            this.erProgressBar1.ShowMaximun = false;
-            this.erProgressBar1.ShowValue = ControlesPersonalizados.TextPosition.Right;
-            this.erProgressBar1.Size = new System.Drawing.Size(100, 23);
-            this.erProgressBar1.SliderColor = System.Drawing.Color.AliceBlue;
-            this.erProgressBar1.SliderHeight = 6;
-            this.erProgressBar1.SymbolAfter = "";
-            this.erProgressBar1.SymbolBefore = "";
-            this.erProgressBar1.TabIndex = 8;
             // 
             // bp6
             // 
@@ -834,7 +815,7 @@
             this.bp6.ChannelHeight = 10;
             this.bp6.ForeBackColor = System.Drawing.Color.Snow;
             this.bp6.ForeColor = System.Drawing.Color.DimGray;
-            this.bp6.Location = new System.Drawing.Point(469, 226);
+            this.bp6.Location = new System.Drawing.Point(813, 214);
             this.bp6.Maximum = 300;
             this.bp6.Name = "bp6";
             this.bp6.ShowMaximun = false;
@@ -853,7 +834,7 @@
             this.bp0.ChannelHeight = 6;
             this.bp0.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp0.ForeColor = System.Drawing.Color.White;
-            this.bp0.Location = new System.Drawing.Point(62, 107);
+            this.bp0.Location = new System.Drawing.Point(300, 85);
             this.bp0.Maximum = 300;
             this.bp0.Name = "bp0";
             this.bp0.ShowMaximun = true;
@@ -872,7 +853,7 @@
             this.bp4.ChannelHeight = 6;
             this.bp4.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp4.ForeColor = System.Drawing.Color.White;
-            this.bp4.Location = new System.Drawing.Point(62, 275);
+            this.bp4.Location = new System.Drawing.Point(300, 253);
             this.bp4.Maximum = 300;
             this.bp4.Name = "bp4";
             this.bp4.ShowMaximun = true;
@@ -891,7 +872,7 @@
             this.bp3.ChannelHeight = 6;
             this.bp3.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp3.ForeColor = System.Drawing.Color.White;
-            this.bp3.Location = new System.Drawing.Point(62, 233);
+            this.bp3.Location = new System.Drawing.Point(300, 211);
             this.bp3.Maximum = 300;
             this.bp3.Name = "bp3";
             this.bp3.ShowMaximun = true;
@@ -910,7 +891,7 @@
             this.bp2.ChannelHeight = 6;
             this.bp2.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp2.ForeColor = System.Drawing.Color.White;
-            this.bp2.Location = new System.Drawing.Point(62, 191);
+            this.bp2.Location = new System.Drawing.Point(300, 169);
             this.bp2.Maximum = 300;
             this.bp2.Name = "bp2";
             this.bp2.ShowMaximun = true;
@@ -948,7 +929,7 @@
             this.bp1.ChannelHeight = 6;
             this.bp1.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp1.ForeColor = System.Drawing.Color.White;
-            this.bp1.Location = new System.Drawing.Point(62, 149);
+            this.bp1.Location = new System.Drawing.Point(300, 127);
             this.bp1.Maximum = 300;
             this.bp1.Name = "bp1";
             this.bp1.ShowMaximun = true;
@@ -969,7 +950,7 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 26);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage7.Size = new System.Drawing.Size(1363, 580);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Radio Button";
             // 
@@ -1085,7 +1066,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 26);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1342, 524);
+            this.tabPage8.Size = new System.Drawing.Size(1363, 580);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "TextBox";
             // 
@@ -1524,7 +1505,7 @@
             this.label5.Location = new System.Drawing.Point(473, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(395, 44);
+            this.label5.Size = new System.Drawing.Size(394, 44);
             this.label5.TabIndex = 0;
             this.label5.Text = "Controles Extendidos";
             // 
@@ -1691,7 +1672,6 @@
         private ControlesPersonalizados.ERProgressBar bp3;
         private ControlesPersonalizados.ERProgressBar bp2;
         private ControlesPersonalizados.ERProgressBar bp6;
-        private ControlesPersonalizados.ERProgressBar erProgressBar1;
         private ControlesPersonalizados.ERProgressBar bp5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton3;

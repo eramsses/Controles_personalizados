@@ -155,11 +155,11 @@ namespace DemoControles
             if (chkIncluirTitulo.Checked)
             {
                 
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_OK, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.OK, autoCerrar);
             }
             else
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_OK, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.OK, autoCerrar);
             }
         }
 
@@ -168,11 +168,11 @@ namespace DemoControles
             bool autoCerrar = chkCerrarMensaje.Checked;
             if (chkIncluirTitulo.Checked)
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_WARNING, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.WARNING, autoCerrar);
             }
             else
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_WARNING, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.WARNING, autoCerrar);
             }
         }
 
@@ -181,11 +181,11 @@ namespace DemoControles
             bool autoCerrar = chkCerrarMensaje.Checked;
             if (chkIncluirTitulo.Checked)
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_ERROR, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ERROR, autoCerrar);
             }
             else
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_ERROR, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ERROR, autoCerrar);
             }
         }
 
@@ -194,11 +194,11 @@ namespace DemoControles
             bool autoCerrar = chkCerrarMensaje.Checked;
             if (chkIncluirTitulo.Checked)
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.ICON_INFO, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.INFO, autoCerrar);
             }
             else
             {
-                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.ICON_INFO, autoCerrar);
+                Notificacion.Mostrar(txtContenidoMensaje.Texts, "", Notificacion.INFO, autoCerrar);
             }
         }
 
