@@ -29,6 +29,8 @@ namespace ControlesPersonalizados
         private string placeholderText = "";
         private bool isPlaceholder = false;
         private bool isPasswordChar = false;
+        //private char passChar = '';
+
 
         //Events
         public event EventHandler _TextChanged;
@@ -56,6 +58,21 @@ namespace ControlesPersonalizados
             get { return borderColor; }
             set
             {
+                var borderColorFocusLight = ControlPaint.Light(value, 0.7F);
+                var borderColorFocusLight2 = ControlPaint.LightLight(value);
+                var borderColorFocusDark = ControlPaint.Dark(value, 0.7F);
+                var borderColorFocusDark2 = ControlPaint.DarkDark(value);
+
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    this.ForeColor = darkText;
+                    borderFocusColor = borderColorFocusDark;
+                }
+                else
+                {
+                    borderFocusColor = borderColorFocusLight;
+                }
+                
                 borderColor = value;
                 this.Invalidate();
             }
@@ -93,17 +110,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
-        public bool PasswordChar
-        {
-            get { return isPasswordChar; }
-            set
-            {
-                isPasswordChar = value;
-                if (!isPlaceholder)
-                    textBox1.UseSystemPasswordChar = value;
-            }
-        }
+        
 
         [Category("ER Control")]
         public bool Multiline
@@ -173,6 +180,38 @@ namespace ControlesPersonalizados
             }
         }
 
+        public void AppendTexts (string value)
+        {
+               textBox1.AppendText(value);
+        }
+
+        [DefaultValue("Both")]
+        [Category("ER Control")]
+        public ScrollBars ScrollBar 
+        { 
+            get
+            {
+                return textBox1.ScrollBars;
+            }
+            set
+            {
+                textBox1.ScrollBars = value;    
+            }
+        }
+
+        [Category("ER Control")]
+        public HorizontalAlignment TextsAlign
+        {
+            get
+            {
+                return textBox1.TextAlign;
+            }
+            set
+            {
+                textBox1.TextAlign = value;
+            }
+        }
+
         [Category("ER Control")]
         public int BorderRadius
         {
@@ -205,11 +244,141 @@ namespace ControlesPersonalizados
             get { return placeholderText; }
             set
             {
-                placeholderText = value;
-                textBox1.Text = "";
-                SetPlaceholder();
+                if(value != "")
+                {
+                    placeholderText = value;
+                    textBox1.Text = "";
+                    SetPlaceholder();
+                }
+                else
+                {
+                    placeholderText = value;
+                    SetPlaceholder();
+                }
+                
             }
         }
+        #endregion
+
+        #region -> Propiedades de comportamiento
+
+        [Category("ER Comportamiento")]
+        public bool AcceptReturn
+        {
+            get
+            {
+                return textBox1.AcceptsReturn;
+            }
+            set
+            {
+                textBox1.AcceptsReturn = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool AcceptTab
+        {
+            get
+            {
+                return textBox1.AcceptsTab;
+            }
+            set
+            {
+                textBox1.AcceptsTab = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool AllowDrops
+        {
+            get
+            {
+                return textBox1.AllowDrop;
+            }
+            set
+            {
+                textBox1.AllowDrop = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public CharacterCasing CharactersCasing
+        {
+            get
+            {
+                return textBox1.CharacterCasing;
+            }
+            set
+            {
+                textBox1.CharacterCasing = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public ContextMenuStrip ContextMenuStrips
+        {
+            get
+            {
+                return textBox1.ContextMenuStrip;
+            }
+            set
+            {
+                textBox1.ContextMenuStrip = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool Enable
+        {
+            get
+            {
+                return textBox1.Enabled;
+            }
+            set
+            {
+                textBox1.Enabled = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool HideSelections
+        {
+            get
+            {
+                return textBox1.HideSelection;
+            }
+            set
+            {
+                textBox1.HideSelection = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool ReadsOnly
+        {
+            get
+            {
+                return textBox1.ReadOnly;
+            }
+            set
+            {
+                textBox1.ReadOnly = value;
+            }
+        }
+
+        
+        [Category("ER Comportamiento")]
+        public bool PasswordChar
+        {
+            get { return isPasswordChar; }
+            set
+            {
+                isPasswordChar = value;
+                if (!isPlaceholder)
+                    textBox1.UseSystemPasswordChar = value;
+            }
+        }
+
         #endregion
 
         #region -> Overridden methods
@@ -286,7 +455,6 @@ namespace ControlesPersonalizados
         #region -> Private methods
         private void SetPlaceholder()
         {
-            textBox1.Text = textBox1.Text.Trim();
             if (string.IsNullOrWhiteSpace(textBox1.Text) && placeholderText != "")
             {
                 isPlaceholder = true;
@@ -294,6 +462,14 @@ namespace ControlesPersonalizados
                 textBox1.ForeColor = placeholderColor;
                 if (isPasswordChar)
                     textBox1.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                isPlaceholder = false;
+                //textBox1.Text = placeholderText;
+                textBox1.ForeColor = base.ForeColor;
+                if (isPasswordChar)
+                    textBox1.UseSystemPasswordChar = true;
             }
         }
 

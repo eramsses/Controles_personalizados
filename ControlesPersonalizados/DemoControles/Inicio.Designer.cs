@@ -89,10 +89,16 @@
             this.erRadioButton2 = new ControlesPersonalizados.ERRadioButton();
             this.erRadioButton1 = new ControlesPersonalizados.ERRadioButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.txtBox0 = new ControlesPersonalizados.ERTextBox();
+            this.erTextBox1 = new ControlesPersonalizados.ERTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtApend2 = new System.Windows.Forms.TextBox();
+            this.txtAppend = new ControlesPersonalizados.ERTextBox();
+            this.erButton7 = new ControlesPersonalizados.ERButton();
+            this.txt3 = new ControlesPersonalizados.ERTextBox();
             this.erButton6 = new ControlesPersonalizados.ERButton();
             this.erButton5 = new ControlesPersonalizados.ERButton();
             this.txtBox1 = new ControlesPersonalizados.ERTextBox();
-            this.txtBox0 = new ControlesPersonalizados.ERTextBox();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -122,7 +128,6 @@
             this.btnSalir = new ControlesPersonalizados.ERButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1059,16 +1064,189 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage8.Controls.Add(this.txtBox0);
+            this.tabPage8.Controls.Add(this.erTextBox1);
+            this.tabPage8.Controls.Add(this.textBox1);
+            this.tabPage8.Controls.Add(this.txtApend2);
+            this.tabPage8.Controls.Add(this.txtAppend);
+            this.tabPage8.Controls.Add(this.erButton7);
+            this.tabPage8.Controls.Add(this.txt3);
             this.tabPage8.Controls.Add(this.erButton6);
             this.tabPage8.Controls.Add(this.erButton5);
             this.tabPage8.Controls.Add(this.txtBox1);
-            this.tabPage8.Controls.Add(this.txtBox0);
             this.tabPage8.Location = new System.Drawing.Point(4, 26);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(1363, 580);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "TextBox";
+            // 
+            // txtBox0
+            // 
+            this.txtBox0.AcceptReturn = false;
+            this.txtBox0.AcceptTab = false;
+            this.txtBox0.AllowDrops = false;
+            this.txtBox0.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBox0.BorderColor = System.Drawing.Color.Navy;
+            this.txtBox0.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(255)))));
+            this.txtBox0.BorderRadius = 0;
+            this.txtBox0.BorderSize = 2;
+            this.txtBox0.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBox0.ContextMenuStrips = null;
+            this.txtBox0.Enable = true;
+            this.txtBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBox0.HideSelections = true;
+            this.txtBox0.Location = new System.Drawing.Point(124, 129);
+            this.txtBox0.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBox0.Multiline = false;
+            this.txtBox0.Name = "txtBox0";
+            this.txtBox0.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBox0.PasswordChar = true;
+            this.txtBox0.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBox0.PlaceholderText = "Contraseña";
+            this.txtBox0.ReadsOnly = false;
+            this.txtBox0.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txtBox0.Size = new System.Drawing.Size(250, 31);
+            this.txtBox0.TabIndex = 10;
+            this.txtBox0.Texts = "";
+            this.txtBox0.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox0.UnderlinedStyle = true;
+            // 
+            // erTextBox1
+            // 
+            this.erTextBox1.AcceptReturn = false;
+            this.erTextBox1.AcceptTab = false;
+            this.erTextBox1.AllowDrops = false;
+            this.erTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.erTextBox1.BorderColor = System.Drawing.Color.DarkBlue;
+            this.erTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(255)))));
+            this.erTextBox1.BorderRadius = 0;
+            this.erTextBox1.BorderSize = 2;
+            this.erTextBox1.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.erTextBox1.ContextMenuStrips = null;
+            this.erTextBox1.Enable = true;
+            this.erTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.erTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.erTextBox1.HideSelections = true;
+            this.erTextBox1.Location = new System.Drawing.Point(77, 360);
+            this.erTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.erTextBox1.Multiline = false;
+            this.erTextBox1.Name = "erTextBox1";
+            this.erTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.erTextBox1.PasswordChar = false;
+            this.erTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.erTextBox1.PlaceholderText = "";
+            this.erTextBox1.ReadsOnly = false;
+            this.erTextBox1.ScrollBar = System.Windows.Forms.ScrollBars.Both;
+            this.erTextBox1.Size = new System.Drawing.Size(250, 31);
+            this.erTextBox1.TabIndex = 9;
+            this.erTextBox1.Texts = "";
+            this.erTextBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.erTextBox1.UnderlinedStyle = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(101, 306);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '%';
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtApend2
+            // 
+            this.txtApend2.Location = new System.Drawing.Point(421, 279);
+            this.txtApend2.Multiline = true;
+            this.txtApend2.Name = "txtApend2";
+            this.txtApend2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtApend2.Size = new System.Drawing.Size(409, 112);
+            this.txtApend2.TabIndex = 7;
+            // 
+            // txtAppend
+            // 
+            this.txtAppend.AcceptReturn = false;
+            this.txtAppend.AcceptTab = false;
+            this.txtAppend.AllowDrops = false;
+            this.txtAppend.AutoScroll = true;
+            this.txtAppend.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAppend.BorderColor = System.Drawing.Color.Coral;
+            this.txtAppend.BorderFocusColor = System.Drawing.Color.Red;
+            this.txtAppend.BorderRadius = 0;
+            this.txtAppend.BorderSize = 2;
+            this.txtAppend.CharactersCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAppend.ContextMenuStrips = null;
+            this.txtAppend.Enable = true;
+            this.txtAppend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAppend.HideSelections = true;
+            this.txtAppend.Location = new System.Drawing.Point(934, 279);
+            this.txtAppend.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAppend.Multiline = true;
+            this.txtAppend.Name = "txtAppend";
+            this.txtAppend.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAppend.PasswordChar = false;
+            this.txtAppend.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAppend.PlaceholderText = "";
+            this.txtAppend.ReadsOnly = false;
+            this.txtAppend.ScrollBar = System.Windows.Forms.ScrollBars.Both;
+            this.txtAppend.Size = new System.Drawing.Size(331, 112);
+            this.txtAppend.TabIndex = 6;
+            this.txtAppend.Texts = "";
+            this.txtAppend.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAppend.UnderlinedStyle = false;
+            // 
+            // erButton7
+            // 
+            this.erButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.erButton7.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.erButton7.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.erButton7.BorderRadius = 40;
+            this.erButton7.BorderSize = 0;
+            this.erButton7.FlatAppearance.BorderSize = 0;
+            this.erButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.erButton7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton7.Location = new System.Drawing.Point(1023, 167);
+            this.erButton7.Name = "erButton7";
+            this.erButton7.Size = new System.Drawing.Size(150, 40);
+            this.erButton7.TabIndex = 5;
+            this.erButton7.Text = "Agregar Texto";
+            this.erButton7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.erButton7.UseVisualStyleBackColor = false;
+            this.erButton7.Click += new System.EventHandler(this.erButton7_Click);
+            // 
+            // txt3
+            // 
+            this.txt3.AcceptReturn = false;
+            this.txt3.AcceptTab = false;
+            this.txt3.AllowDrops = false;
+            this.txt3.BackColor = System.Drawing.SystemColors.Window;
+            this.txt3.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txt3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(210)))));
+            this.txt3.BorderRadius = 0;
+            this.txt3.BorderSize = 3;
+            this.txt3.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt3.ContextMenuStrips = null;
+            this.txt3.Enable = true;
+            this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt3.HideSelections = true;
+            this.txt3.Location = new System.Drawing.Point(934, 129);
+            this.txt3.Margin = new System.Windows.Forms.Padding(4);
+            this.txt3.Multiline = false;
+            this.txt3.Name = "txt3";
+            this.txt3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt3.PasswordChar = false;
+            this.txt3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt3.PlaceholderText = "Hola";
+            this.txt3.ReadsOnly = false;
+            this.txt3.ScrollBar = System.Windows.Forms.ScrollBars.Both;
+            this.txt3.Size = new System.Drawing.Size(331, 31);
+            this.txt3.TabIndex = 3;
+            this.txt3.Texts = "Hola";
+            this.txt3.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt3.UnderlinedStyle = true;
             // 
             // erButton6
             // 
@@ -1080,7 +1258,7 @@
             this.erButton6.FlatAppearance.BorderSize = 0;
             this.erButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.erButton6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton6.Location = new System.Drawing.Point(147, 197);
+            this.erButton6.Location = new System.Drawing.Point(177, 167);
             this.erButton6.Name = "erButton6";
             this.erButton6.Size = new System.Drawing.Size(150, 40);
             this.erButton6.TabIndex = 3;
@@ -1099,7 +1277,7 @@
             this.erButton5.FlatAppearance.BorderSize = 0;
             this.erButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.erButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton5.Location = new System.Drawing.Point(501, 197);
+            this.erButton5.Location = new System.Drawing.Point(608, 167);
             this.erButton5.Name = "erButton5";
             this.erButton5.Size = new System.Drawing.Size(150, 40);
             this.erButton5.TabIndex = 2;
@@ -1110,47 +1288,35 @@
             // 
             // txtBox1
             // 
+            this.txtBox1.AcceptReturn = false;
+            this.txtBox1.AcceptTab = false;
+            this.txtBox1.AllowDrops = false;
             this.txtBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.txtBox1.BorderFocusColor = System.Drawing.Color.Red;
+            this.txtBox1.BorderColor = System.Drawing.Color.Green;
+            this.txtBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(255)))), ((int)(((byte)(6)))));
             this.txtBox1.BorderRadius = 0;
             this.txtBox1.BorderSize = 3;
+            this.txtBox1.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBox1.ContextMenuStrips = null;
+            this.txtBox1.Enable = true;
             this.txtBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBox1.Location = new System.Drawing.Point(433, 129);
+            this.txtBox1.HideSelections = true;
+            this.txtBox1.Location = new System.Drawing.Point(515, 129);
             this.txtBox1.Margin = new System.Windows.Forms.Padding(4);
             this.txtBox1.Multiline = false;
             this.txtBox1.Name = "txtBox1";
             this.txtBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBox1.PasswordChar = false;
             this.txtBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBox1.PlaceholderText = "Hola mundo";
+            this.txtBox1.PlaceholderText = "Usuario";
+            this.txtBox1.ReadsOnly = false;
+            this.txtBox1.ScrollBar = System.Windows.Forms.ScrollBars.None;
             this.txtBox1.Size = new System.Drawing.Size(331, 31);
             this.txtBox1.TabIndex = 1;
-            this.txtBox1.Texts = "";
+            this.txtBox1.Texts = "Usuario";
+            this.txtBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBox1.UnderlinedStyle = true;
-            // 
-            // txtBox0
-            // 
-            this.txtBox0.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBox0.BorderColor = System.Drawing.Color.Green;
-            this.txtBox0.BorderFocusColor = System.Drawing.Color.Red;
-            this.txtBox0.BorderRadius = 0;
-            this.txtBox0.BorderSize = 3;
-            this.txtBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBox0.Location = new System.Drawing.Point(68, 129);
-            this.txtBox0.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBox0.Multiline = false;
-            this.txtBox0.Name = "txtBox0";
-            this.txtBox0.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBox0.PasswordChar = true;
-            this.txtBox0.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBox0.PlaceholderText = "Contraseña";
-            this.txtBox0.Size = new System.Drawing.Size(317, 31);
-            this.txtBox0.TabIndex = 0;
-            this.txtBox0.Texts = "";
-            this.txtBox0.UnderlinedStyle = true;
             // 
             // tabPage9
             // 
@@ -1379,13 +1545,20 @@
             // 
             // txtContenidoMensaje
             // 
+            this.txtContenidoMensaje.AcceptReturn = false;
+            this.txtContenidoMensaje.AcceptTab = false;
+            this.txtContenidoMensaje.AllowDrops = false;
             this.txtContenidoMensaje.BackColor = System.Drawing.SystemColors.Window;
             this.txtContenidoMensaje.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtContenidoMensaje.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtContenidoMensaje.BorderRadius = 0;
             this.txtContenidoMensaje.BorderSize = 2;
+            this.txtContenidoMensaje.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContenidoMensaje.ContextMenuStrips = null;
+            this.txtContenidoMensaje.Enable = true;
             this.txtContenidoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContenidoMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoMensaje.HideSelections = true;
             this.txtContenidoMensaje.Location = new System.Drawing.Point(79, 93);
             this.txtContenidoMensaje.Margin = new System.Windows.Forms.Padding(4);
             this.txtContenidoMensaje.Multiline = true;
@@ -1394,10 +1567,12 @@
             this.txtContenidoMensaje.PasswordChar = false;
             this.txtContenidoMensaje.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContenidoMensaje.PlaceholderText = "";
+            this.txtContenidoMensaje.ReadsOnly = false;
+            this.txtContenidoMensaje.ScrollBar = System.Windows.Forms.ScrollBars.None;
             this.txtContenidoMensaje.Size = new System.Drawing.Size(358, 212);
             this.txtContenidoMensaje.TabIndex = 6;
-            this.txtContenidoMensaje.Texts = "Lorem ipsum dolor sit amet consectetur adipiscing elit duis neque, rhoncus habita" +
-    "sse volutpat phasellus penatibus pharetra.";
+            this.txtContenidoMensaje.Texts = "";
+            this.txtContenidoMensaje.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContenidoMensaje.UnderlinedStyle = false;
             // 
             // label11
@@ -1411,13 +1586,20 @@
             // 
             // txtContenidoTitulo
             // 
+            this.txtContenidoTitulo.AcceptReturn = false;
+            this.txtContenidoTitulo.AcceptTab = false;
+            this.txtContenidoTitulo.AllowDrops = false;
             this.txtContenidoTitulo.BackColor = System.Drawing.SystemColors.Window;
             this.txtContenidoTitulo.BorderColor = System.Drawing.Color.MediumSlateBlue;
             this.txtContenidoTitulo.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtContenidoTitulo.BorderRadius = 0;
             this.txtContenidoTitulo.BorderSize = 2;
+            this.txtContenidoTitulo.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContenidoTitulo.ContextMenuStrips = null;
+            this.txtContenidoTitulo.Enable = true;
             this.txtContenidoTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContenidoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoTitulo.HideSelections = true;
             this.txtContenidoTitulo.Location = new System.Drawing.Point(79, 40);
             this.txtContenidoTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txtContenidoTitulo.Multiline = false;
@@ -1426,9 +1608,12 @@
             this.txtContenidoTitulo.PasswordChar = false;
             this.txtContenidoTitulo.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContenidoTitulo.PlaceholderText = "";
+            this.txtContenidoTitulo.ReadsOnly = false;
+            this.txtContenidoTitulo.ScrollBar = System.Windows.Forms.ScrollBars.None;
             this.txtContenidoTitulo.Size = new System.Drawing.Size(358, 31);
             this.txtContenidoTitulo.TabIndex = 4;
-            this.txtContenidoTitulo.Texts = "Título de Alerta";
+            this.txtContenidoTitulo.Texts = "";
+            this.txtContenidoTitulo.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContenidoTitulo.UnderlinedStyle = true;
             // 
             // label10
@@ -1600,6 +1785,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1643,7 +1829,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private ControlesPersonalizados.ERDatePicker erDatePicker1;
         private ControlesPersonalizados.ERDatePicker erDatePicker2;
-        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label label2;
         private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox1;
         protected System.Windows.Forms.TabPage tabPage4;
@@ -1681,7 +1866,6 @@
         private ControlesPersonalizados.ERRadioButton erRadioButton2;
         private ControlesPersonalizados.ERRadioButton erRadioButton1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private ControlesPersonalizados.ERTextBox txtBox0;
         private ControlesPersonalizados.ERTextBox txtBox1;
         private ControlesPersonalizados.ERButton erButton5;
         private ControlesPersonalizados.ERButton erButton6;
@@ -1708,6 +1892,13 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
+        private ControlesPersonalizados.ERTextBox txt3;
+        private ControlesPersonalizados.ERButton erButton7;
+        private ControlesPersonalizados.ERTextBox txtAppend;
+        private System.Windows.Forms.TextBox txtApend2;
+        private System.Windows.Forms.TextBox textBox1;
+        private ControlesPersonalizados.ERTextBox erTextBox1;
+        private ControlesPersonalizados.ERTextBox txtBox0;
     }
 }
 

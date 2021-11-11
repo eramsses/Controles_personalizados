@@ -235,5 +235,13 @@ namespace DemoControles
             }
         }
 
+        private void erButton7_Click(object sender, EventArgs e)
+        {
+            //Notificacion.Mostrar(txt3.Texts, "Contenido", Notificacion.INFO, true);
+            txtAppend.AppendTexts(txt3.Texts);
+            txtApend2.AppendText(txt3.Texts);
+        }
+
+        
     }
 }
