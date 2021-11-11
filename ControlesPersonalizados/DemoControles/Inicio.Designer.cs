@@ -90,9 +90,8 @@
             this.erRadioButton1 = new ControlesPersonalizados.ERRadioButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.txtBox0 = new ControlesPersonalizados.ERTextBox();
-            this.erTextBox1 = new ControlesPersonalizados.ERTextBox();
+            this.txtApend2 = new ControlesPersonalizados.ERTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtApend2 = new System.Windows.Forms.TextBox();
             this.txtAppend = new ControlesPersonalizados.ERTextBox();
             this.erButton7 = new ControlesPersonalizados.ERButton();
             this.txt3 = new ControlesPersonalizados.ERTextBox();
@@ -1065,9 +1064,8 @@
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage8.Controls.Add(this.txtBox0);
-            this.tabPage8.Controls.Add(this.erTextBox1);
-            this.tabPage8.Controls.Add(this.textBox1);
             this.tabPage8.Controls.Add(this.txtApend2);
+            this.tabPage8.Controls.Add(this.textBox1);
             this.tabPage8.Controls.Add(this.txtAppend);
             this.tabPage8.Controls.Add(this.erButton7);
             this.tabPage8.Controls.Add(this.txt3);
@@ -1112,38 +1110,42 @@
             this.txtBox0.Texts = "";
             this.txtBox0.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBox0.UnderlinedStyle = true;
+            this.txtBox0.VisibleEr = true;
+            this.txtBox0.WordWrapEr = true;
             // 
-            // erTextBox1
+            // txtApend2
             // 
-            this.erTextBox1.AcceptReturn = false;
-            this.erTextBox1.AcceptTab = false;
-            this.erTextBox1.AllowDrops = false;
-            this.erTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.erTextBox1.BorderColor = System.Drawing.Color.DarkBlue;
-            this.erTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(255)))));
-            this.erTextBox1.BorderRadius = 0;
-            this.erTextBox1.BorderSize = 2;
-            this.erTextBox1.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.erTextBox1.ContextMenuStrips = null;
-            this.erTextBox1.Enable = true;
-            this.erTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.erTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.erTextBox1.HideSelections = true;
-            this.erTextBox1.Location = new System.Drawing.Point(77, 360);
-            this.erTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.erTextBox1.Multiline = false;
-            this.erTextBox1.Name = "erTextBox1";
-            this.erTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.erTextBox1.PasswordChar = false;
-            this.erTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.erTextBox1.PlaceholderText = "";
-            this.erTextBox1.ReadsOnly = false;
-            this.erTextBox1.ScrollBar = System.Windows.Forms.ScrollBars.Both;
-            this.erTextBox1.Size = new System.Drawing.Size(250, 31);
-            this.erTextBox1.TabIndex = 9;
-            this.erTextBox1.Texts = "";
-            this.erTextBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.erTextBox1.UnderlinedStyle = false;
+            this.txtApend2.AcceptReturn = false;
+            this.txtApend2.AcceptTab = false;
+            this.txtApend2.AllowDrops = false;
+            this.txtApend2.BackColor = System.Drawing.SystemColors.Window;
+            this.txtApend2.BorderColor = System.Drawing.Color.DarkBlue;
+            this.txtApend2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(255)))));
+            this.txtApend2.BorderRadius = 0;
+            this.txtApend2.BorderSize = 2;
+            this.txtApend2.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtApend2.ContextMenuStrips = null;
+            this.txtApend2.Enable = true;
+            this.txtApend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApend2.HideSelections = true;
+            this.txtApend2.Location = new System.Drawing.Point(667, 279);
+            this.txtApend2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApend2.Multiline = true;
+            this.txtApend2.Name = "txtApend2";
+            this.txtApend2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApend2.PasswordChar = false;
+            this.txtApend2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtApend2.PlaceholderText = "";
+            this.txtApend2.ReadsOnly = false;
+            this.txtApend2.ScrollBar = System.Windows.Forms.ScrollBars.Both;
+            this.txtApend2.Size = new System.Drawing.Size(238, 112);
+            this.txtApend2.TabIndex = 9;
+            this.txtApend2.Texts = "";
+            this.txtApend2.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtApend2.UnderlinedStyle = false;
+            this.txtApend2.VisibleEr = true;
+            this.txtApend2.WordWrapEr = false;
             // 
             // textBox1
             // 
@@ -1154,21 +1156,14 @@
             this.textBox1.Size = new System.Drawing.Size(100, 23);
             this.textBox1.TabIndex = 8;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtApend2
-            // 
-            this.txtApend2.Location = new System.Drawing.Point(421, 279);
-            this.txtApend2.Multiline = true;
-            this.txtApend2.Name = "txtApend2";
-            this.txtApend2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtApend2.Size = new System.Drawing.Size(409, 112);
-            this.txtApend2.TabIndex = 7;
+            this.textBox1.WordWrap = false;
             // 
             // txtAppend
             // 
             this.txtAppend.AcceptReturn = false;
             this.txtAppend.AcceptTab = false;
             this.txtAppend.AllowDrops = false;
+            this.txtAppend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAppend.AutoScroll = true;
             this.txtAppend.BackColor = System.Drawing.SystemColors.Window;
             this.txtAppend.BorderColor = System.Drawing.Color.Coral;
@@ -1178,10 +1173,10 @@
             this.txtAppend.CharactersCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAppend.ContextMenuStrips = null;
             this.txtAppend.Enable = true;
-            this.txtAppend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAppend.HideSelections = true;
-            this.txtAppend.Location = new System.Drawing.Point(934, 279);
+            this.txtAppend.Location = new System.Drawing.Point(1002, 279);
             this.txtAppend.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppend.Multiline = true;
             this.txtAppend.Name = "txtAppend";
@@ -1189,13 +1184,15 @@
             this.txtAppend.PasswordChar = false;
             this.txtAppend.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAppend.PlaceholderText = "";
-            this.txtAppend.ReadsOnly = false;
+            this.txtAppend.ReadsOnly = true;
             this.txtAppend.ScrollBar = System.Windows.Forms.ScrollBars.Both;
-            this.txtAppend.Size = new System.Drawing.Size(331, 112);
+            this.txtAppend.Size = new System.Drawing.Size(263, 112);
             this.txtAppend.TabIndex = 6;
             this.txtAppend.Texts = "";
             this.txtAppend.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAppend.UnderlinedStyle = false;
+            this.txtAppend.VisibleEr = true;
+            this.txtAppend.WordWrapEr = true;
             // 
             // erButton7
             // 
@@ -1247,6 +1244,8 @@
             this.txt3.Texts = "Hola";
             this.txt3.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt3.UnderlinedStyle = true;
+            this.txt3.VisibleEr = true;
+            this.txt3.WordWrapEr = true;
             // 
             // erButton6
             // 
@@ -1317,6 +1316,8 @@
             this.txtBox1.Texts = "Usuario";
             this.txtBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBox1.UnderlinedStyle = true;
+            this.txtBox1.VisibleEr = true;
+            this.txtBox1.WordWrapEr = true;
             // 
             // tabPage9
             // 
@@ -1574,6 +1575,8 @@
             this.txtContenidoMensaje.Texts = "";
             this.txtContenidoMensaje.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContenidoMensaje.UnderlinedStyle = false;
+            this.txtContenidoMensaje.VisibleEr = false;
+            this.txtContenidoMensaje.WordWrapEr = true;
             // 
             // label11
             // 
@@ -1615,6 +1618,8 @@
             this.txtContenidoTitulo.Texts = "";
             this.txtContenidoTitulo.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtContenidoTitulo.UnderlinedStyle = true;
+            this.txtContenidoTitulo.VisibleEr = false;
+            this.txtContenidoTitulo.WordWrapEr = true;
             // 
             // label10
             // 
@@ -1894,11 +1899,10 @@
         private System.Windows.Forms.Label label14;
         private ControlesPersonalizados.ERTextBox txt3;
         private ControlesPersonalizados.ERButton erButton7;
-        private ControlesPersonalizados.ERTextBox txtAppend;
-        private System.Windows.Forms.TextBox txtApend2;
         private System.Windows.Forms.TextBox textBox1;
-        private ControlesPersonalizados.ERTextBox erTextBox1;
+        private ControlesPersonalizados.ERTextBox txtApend2;
         private ControlesPersonalizados.ERTextBox txtBox0;
+        private ControlesPersonalizados.ERTextBox txtAppend;
     }
 }
 

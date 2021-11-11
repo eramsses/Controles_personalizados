@@ -379,6 +379,34 @@ namespace ControlesPersonalizados
             }
         }
 
+        [Category("ER Comportamiento")]
+        public bool VisibleEr
+        {
+            get
+            {
+                return textBox1.Visible;
+            }
+            set
+            {
+                textBox1.Visible = value;
+            }
+        }
+
+        [Category("ER Comportamiento")]
+        public bool WordWrapEr
+        {
+            get
+            {
+                return textBox1.WordWrap;
+            }
+            set
+            {
+                textBox1.WordWrap = value;
+            }
+        }
+
+        
+
         #endregion
 
         #region -> Overridden methods

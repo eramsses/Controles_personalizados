@@ -239,7 +239,7 @@ namespace DemoControles
         {
             //Notificacion.Mostrar(txt3.Texts, "Contenido", Notificacion.INFO, true);
             txtAppend.AppendTexts(txt3.Texts);
-            txtApend2.AppendText(txt3.Texts);
+            txtApend2.AppendTexts(txt3.Texts + "\r\n");
         }
 
         
