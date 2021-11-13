@@ -71,13 +71,17 @@
             this.cmbMunicipios = new ControlesPersonalizados.ERComboBox();
             this.erButton1 = new ControlesPersonalizados.ERButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.rProgressBar1 = new ControlesPersonalizados.RProgressBar();
+            this.lblBp = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.bp5 = new ControlesPersonalizados.ERProgressBar();
             this.bp6 = new ControlesPersonalizados.ERProgressBar();
+            this.bp7 = new System.Windows.Forms.ProgressBar();
             this.bp0 = new ControlesPersonalizados.ERProgressBar();
             this.bp4 = new ControlesPersonalizados.ERProgressBar();
             this.bp3 = new ControlesPersonalizados.ERProgressBar();
             this.bp2 = new ControlesPersonalizados.ERProgressBar();
-            this.erButton4 = new ControlesPersonalizados.ERButton();
+            this.BtnActivarBarras = new ControlesPersonalizados.ERButton();
             this.bp1 = new ControlesPersonalizados.ERProgressBar();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -106,20 +110,20 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnPersonalizado = new ControlesPersonalizados.ERButton();
             this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnPersonalizado = new ControlesPersonalizados.ERButton();
             this.btnMensajeDefaul = new ControlesPersonalizados.ERButton();
             this.btnMensajeInformacion = new ControlesPersonalizados.ERButton();
             this.btnMensajeError = new ControlesPersonalizados.ERButton();
-            this.label12 = new System.Windows.Forms.Label();
             this.chkCerrarMensaje = new ControlesPersonalizados.ERToggleButton();
             this.BtnWarning = new ControlesPersonalizados.ERButton();
             this.txtContenidoMensaje = new ControlesPersonalizados.ERTextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.txtContenidoTitulo = new ControlesPersonalizados.ERTextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.BtnMostrarMensajeOK = new ControlesPersonalizados.ERButton();
-            this.label9 = new System.Windows.Forms.Label();
             this.chkIncluirTitulo = new ControlesPersonalizados.ERToggleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -143,6 +147,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erCircularPictureBox1)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -779,13 +784,15 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage6.Controls.Add(this.bp5);
-            this.tabPage6.Controls.Add(this.bp6);
+            this.tabPage6.Controls.Add(this.rProgressBar1);
+            this.tabPage6.Controls.Add(this.lblBp);
+            this.tabPage6.Controls.Add(this.panel4);
+            this.tabPage6.Controls.Add(this.bp7);
             this.tabPage6.Controls.Add(this.bp0);
             this.tabPage6.Controls.Add(this.bp4);
             this.tabPage6.Controls.Add(this.bp3);
             this.tabPage6.Controls.Add(this.bp2);
-            this.tabPage6.Controls.Add(this.erButton4);
+            this.tabPage6.Controls.Add(this.BtnActivarBarras);
             this.tabPage6.Controls.Add(this.bp1);
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
@@ -795,17 +802,53 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Barra de Progreso";
             // 
+            // rProgressBar1
+            // 
+            this.rProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.rProgressBar1.BarHeight = 5;
+            this.rProgressBar1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rProgressBar1.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Left;
+            this.rProgressBar1.Location = new System.Drawing.Point(371, 421);
+            this.rProgressBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.rProgressBar1.Maximum = 300;
+            this.rProgressBar1.Minimum = 0;
+            this.rProgressBar1.Name = "rProgressBar1";
+            this.rProgressBar1.ShowMaximun = true;
+            this.rProgressBar1.ShowText = ControlesPersonalizados.TextVerticalPosition.None;
+            this.rProgressBar1.Size = new System.Drawing.Size(477, 5);
+            this.rProgressBar1.SymbolAfter = " $.";
+            this.rProgressBar1.SymbolBefore = "Lps. ";
+            this.rProgressBar1.TabIndex = 13;
+            this.rProgressBar1.Value = 150;
+            // 
+            // lblBp
+            // 
+            this.lblBp.Location = new System.Drawing.Point(421, 83);
+            this.lblBp.Name = "lblBp";
+            this.lblBp.Size = new System.Drawing.Size(54, 17);
+            this.lblBp.TabIndex = 12;
+            this.lblBp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.bp5);
+            this.panel4.Controls.Add(this.bp6);
+            this.panel4.Location = new System.Drawing.Point(615, 104);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(411, 227);
+            this.panel4.TabIndex = 11;
+            // 
             // bp5
             // 
             this.bp5.ChannelColor = System.Drawing.Color.Turquoise;
             this.bp5.ChannelHeight = 20;
             this.bp5.ForeBackColor = System.Drawing.Color.PaleGreen;
             this.bp5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.bp5.Location = new System.Drawing.Point(813, 95);
+            this.bp5.Location = new System.Drawing.Point(84, 40);
             this.bp5.Maximum = 300;
             this.bp5.Name = "bp5";
             this.bp5.ShowMaximun = false;
-            this.bp5.ShowValue = ControlesPersonalizados.TextPosition.Right;
+            this.bp5.ShowValue = ControlesPersonalizados.TextPositions.Right;
             this.bp5.Size = new System.Drawing.Size(216, 47);
             this.bp5.SliderColor = System.Drawing.Color.DarkOliveGreen;
             this.bp5.SliderHeight = 16;
@@ -819,12 +862,12 @@
             this.bp6.ChannelHeight = 10;
             this.bp6.ForeBackColor = System.Drawing.Color.Snow;
             this.bp6.ForeColor = System.Drawing.Color.DimGray;
-            this.bp6.Location = new System.Drawing.Point(813, 214);
+            this.bp6.Location = new System.Drawing.Point(84, 159);
             this.bp6.Maximum = 300;
             this.bp6.Name = "bp6";
             this.bp6.ShowMaximun = false;
-            this.bp6.ShowValue = ControlesPersonalizados.TextPosition.Center;
-            this.bp6.Size = new System.Drawing.Size(216, 30);
+            this.bp6.ShowValue = ControlesPersonalizados.TextPositions.Center;
+            this.bp6.Size = new System.Drawing.Size(216, 41);
             this.bp6.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.bp6.SliderHeight = 8;
             this.bp6.Step = 1;
@@ -832,17 +875,28 @@
             this.bp6.SymbolBefore = "";
             this.bp6.TabIndex = 7;
             // 
+            // bp7
+            // 
+            this.bp7.BackColor = System.Drawing.Color.Red;
+            this.bp7.ForeColor = System.Drawing.Color.Yellow;
+            this.bp7.Location = new System.Drawing.Point(259, 334);
+            this.bp7.Maximum = 300;
+            this.bp7.Name = "bp7";
+            this.bp7.Size = new System.Drawing.Size(216, 13);
+            this.bp7.Step = 1;
+            this.bp7.TabIndex = 10;
+            // 
             // bp0
             // 
             this.bp0.ChannelColor = System.Drawing.Color.LightSteelBlue;
             this.bp0.ChannelHeight = 6;
             this.bp0.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp0.ForeColor = System.Drawing.Color.White;
-            this.bp0.Location = new System.Drawing.Point(300, 85);
+            this.bp0.Location = new System.Drawing.Point(259, 87);
             this.bp0.Maximum = 300;
             this.bp0.Name = "bp0";
             this.bp0.ShowMaximun = true;
-            this.bp0.ShowValue = ControlesPersonalizados.TextPosition.None;
+            this.bp0.ShowValue = ControlesPersonalizados.TextPositions.None;
             this.bp0.Size = new System.Drawing.Size(216, 23);
             this.bp0.SliderColor = System.Drawing.Color.RoyalBlue;
             this.bp0.SliderHeight = 6;
@@ -857,12 +911,12 @@
             this.bp4.ChannelHeight = 6;
             this.bp4.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp4.ForeColor = System.Drawing.Color.White;
-            this.bp4.Location = new System.Drawing.Point(300, 253);
+            this.bp4.Location = new System.Drawing.Point(259, 255);
             this.bp4.Maximum = 300;
             this.bp4.Name = "bp4";
-            this.bp4.ShowMaximun = true;
-            this.bp4.ShowValue = ControlesPersonalizados.TextPosition.Sliding;
-            this.bp4.Size = new System.Drawing.Size(216, 23);
+            this.bp4.ShowMaximun = false;
+            this.bp4.ShowValue = ControlesPersonalizados.TextPositions.Sliding;
+            this.bp4.Size = new System.Drawing.Size(216, 35);
             this.bp4.SliderColor = System.Drawing.Color.RoyalBlue;
             this.bp4.SliderHeight = 6;
             this.bp4.Step = 1;
@@ -876,12 +930,12 @@
             this.bp3.ChannelHeight = 6;
             this.bp3.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp3.ForeColor = System.Drawing.Color.White;
-            this.bp3.Location = new System.Drawing.Point(300, 211);
-            this.bp3.Maximum = 300;
+            this.bp3.Location = new System.Drawing.Point(259, 213);
+            this.bp3.Maximum = 500;
             this.bp3.Name = "bp3";
             this.bp3.ShowMaximun = true;
-            this.bp3.ShowValue = ControlesPersonalizados.TextPosition.Left;
-            this.bp3.Size = new System.Drawing.Size(216, 23);
+            this.bp3.ShowValue = ControlesPersonalizados.TextPositions.Left;
+            this.bp3.Size = new System.Drawing.Size(216, 28);
             this.bp3.SliderColor = System.Drawing.Color.RoyalBlue;
             this.bp3.SliderHeight = 6;
             this.bp3.Step = 1;
@@ -895,12 +949,12 @@
             this.bp2.ChannelHeight = 6;
             this.bp2.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp2.ForeColor = System.Drawing.Color.White;
-            this.bp2.Location = new System.Drawing.Point(300, 169);
+            this.bp2.Location = new System.Drawing.Point(259, 171);
             this.bp2.Maximum = 300;
             this.bp2.Name = "bp2";
             this.bp2.ShowMaximun = true;
-            this.bp2.ShowValue = ControlesPersonalizados.TextPosition.Center;
-            this.bp2.Size = new System.Drawing.Size(216, 23);
+            this.bp2.ShowValue = ControlesPersonalizados.TextPositions.Center;
+            this.bp2.Size = new System.Drawing.Size(216, 29);
             this.bp2.SliderColor = System.Drawing.Color.RoyalBlue;
             this.bp2.SliderHeight = 6;
             this.bp2.Step = 1;
@@ -908,24 +962,24 @@
             this.bp2.SymbolBefore = "";
             this.bp2.TabIndex = 2;
             // 
-            // erButton4
+            // BtnActivarBarras
             // 
-            this.erButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.erButton4.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.erButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.erButton4.BorderRadius = 40;
-            this.erButton4.BorderSize = 0;
-            this.erButton4.FlatAppearance.BorderSize = 0;
-            this.erButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.erButton4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton4.Location = new System.Drawing.Point(547, 342);
-            this.erButton4.Name = "erButton4";
-            this.erButton4.Size = new System.Drawing.Size(150, 40);
-            this.erButton4.TabIndex = 1;
-            this.erButton4.Text = "Iniciar Barras";
-            this.erButton4.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.erButton4.UseVisualStyleBackColor = false;
-            this.erButton4.Click += new System.EventHandler(this.erButton4_Click);
+            this.BtnActivarBarras.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnActivarBarras.BackGroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.BtnActivarBarras.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.BtnActivarBarras.BorderRadius = 40;
+            this.BtnActivarBarras.BorderSize = 0;
+            this.BtnActivarBarras.FlatAppearance.BorderSize = 0;
+            this.BtnActivarBarras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnActivarBarras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.BtnActivarBarras.Location = new System.Drawing.Point(534, 340);
+            this.BtnActivarBarras.Name = "BtnActivarBarras";
+            this.BtnActivarBarras.Size = new System.Drawing.Size(150, 40);
+            this.BtnActivarBarras.TabIndex = 1;
+            this.BtnActivarBarras.Text = "Iniciar Barras";
+            this.BtnActivarBarras.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.BtnActivarBarras.UseVisualStyleBackColor = false;
+            this.BtnActivarBarras.Click += new System.EventHandler(this.BtnActivarBarras_Click);
             // 
             // bp1
             // 
@@ -933,12 +987,12 @@
             this.bp1.ChannelHeight = 6;
             this.bp1.ForeBackColor = System.Drawing.Color.RoyalBlue;
             this.bp1.ForeColor = System.Drawing.Color.White;
-            this.bp1.Location = new System.Drawing.Point(300, 127);
+            this.bp1.Location = new System.Drawing.Point(259, 129);
             this.bp1.Maximum = 300;
             this.bp1.Name = "bp1";
             this.bp1.ShowMaximun = true;
-            this.bp1.ShowValue = ControlesPersonalizados.TextPosition.Right;
-            this.bp1.Size = new System.Drawing.Size(216, 23);
+            this.bp1.ShowValue = ControlesPersonalizados.TextPositions.Right;
+            this.bp1.Size = new System.Drawing.Size(216, 30);
             this.bp1.SliderColor = System.Drawing.Color.RoyalBlue;
             this.bp1.SliderHeight = 6;
             this.bp1.Step = 1;
@@ -1110,7 +1164,7 @@
             this.txtBox0.Texts = "";
             this.txtBox0.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBox0.UnderlinedStyle = true;
-            this.txtBox0.VisibleEr = true;
+            this.txtBox0.VisibleEr = false;
             this.txtBox0.WordWrapEr = true;
             // 
             // txtApend2
@@ -1144,7 +1198,7 @@
             this.txtApend2.Texts = "";
             this.txtApend2.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtApend2.UnderlinedStyle = false;
-            this.txtApend2.VisibleEr = true;
+            this.txtApend2.VisibleEr = false;
             this.txtApend2.WordWrapEr = false;
             // 
             // textBox1
@@ -1191,7 +1245,7 @@
             this.txtAppend.Texts = "";
             this.txtAppend.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAppend.UnderlinedStyle = false;
-            this.txtAppend.VisibleEr = true;
+            this.txtAppend.VisibleEr = false;
             this.txtAppend.WordWrapEr = true;
             // 
             // erButton7
@@ -1244,7 +1298,7 @@
             this.txt3.Texts = "Hola";
             this.txt3.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt3.UnderlinedStyle = true;
-            this.txt3.VisibleEr = true;
+            this.txt3.VisibleEr = false;
             this.txt3.WordWrapEr = true;
             // 
             // erButton6
@@ -1316,27 +1370,27 @@
             this.txtBox1.Texts = "Usuario";
             this.txtBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtBox1.UnderlinedStyle = true;
-            this.txtBox1.VisibleEr = true;
+            this.txtBox1.VisibleEr = false;
             this.txtBox1.WordWrapEr = true;
             // 
             // tabPage9
             // 
             this.tabPage9.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage9.Controls.Add(this.groupBox3);
-            this.tabPage9.Controls.Add(this.btnPersonalizado);
             this.tabPage9.Controls.Add(this.label13);
+            this.tabPage9.Controls.Add(this.label12);
+            this.tabPage9.Controls.Add(this.label11);
+            this.tabPage9.Controls.Add(this.label10);
+            this.tabPage9.Controls.Add(this.label9);
+            this.tabPage9.Controls.Add(this.btnPersonalizado);
             this.tabPage9.Controls.Add(this.btnMensajeDefaul);
             this.tabPage9.Controls.Add(this.btnMensajeInformacion);
             this.tabPage9.Controls.Add(this.btnMensajeError);
-            this.tabPage9.Controls.Add(this.label12);
             this.tabPage9.Controls.Add(this.chkCerrarMensaje);
             this.tabPage9.Controls.Add(this.BtnWarning);
             this.tabPage9.Controls.Add(this.txtContenidoMensaje);
-            this.tabPage9.Controls.Add(this.label11);
             this.tabPage9.Controls.Add(this.txtContenidoTitulo);
-            this.tabPage9.Controls.Add(this.label10);
             this.tabPage9.Controls.Add(this.BtnMostrarMensajeOK);
-            this.tabPage9.Controls.Add(this.label9);
             this.tabPage9.Controls.Add(this.chkIncluirTitulo);
             this.tabPage9.Location = new System.Drawing.Point(4, 26);
             this.tabPage9.Name = "tabPage9";
@@ -1415,6 +1469,51 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "Notificacion.CUSTOM_OPACIDAD = 0.9;";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(877, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(314, 17);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Configuración de la notificación personalizada";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(534, 109);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 17);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Cerrar Automáticamente";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 107);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 17);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Mensaje";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 17);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Título";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(534, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Incluir Título";
+            // 
             // btnPersonalizado
             // 
             this.btnPersonalizado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1433,15 +1532,6 @@
             this.btnPersonalizado.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnPersonalizado.UseVisualStyleBackColor = false;
             this.btnPersonalizado.Click += new System.EventHandler(this.btnPersonalizado_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(877, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(314, 17);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Configuración de la notificación personalizada";
             // 
             // btnMensajeDefaul
             // 
@@ -1499,15 +1589,6 @@
             this.btnMensajeError.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.btnMensajeError.UseVisualStyleBackColor = false;
             this.btnMensajeError.Click += new System.EventHandler(this.btnMensajeError_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(534, 109);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 17);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Cerrar Automáticamente";
             // 
             // chkCerrarMensaje
             // 
@@ -1578,15 +1659,6 @@
             this.txtContenidoMensaje.VisibleEr = false;
             this.txtContenidoMensaje.WordWrapEr = true;
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 107);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 17);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Mensaje";
-            // 
             // txtContenidoTitulo
             // 
             this.txtContenidoTitulo.AcceptReturn = false;
@@ -1621,15 +1693,6 @@
             this.txtContenidoTitulo.VisibleEr = false;
             this.txtContenidoTitulo.WordWrapEr = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 54);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 17);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Título";
-            // 
             // BtnMostrarMensajeOK
             // 
             this.BtnMostrarMensajeOK.BackColor = System.Drawing.Color.Lime;
@@ -1648,15 +1711,6 @@
             this.BtnMostrarMensajeOK.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnMostrarMensajeOK.UseVisualStyleBackColor = false;
             this.BtnMostrarMensajeOK.Click += new System.EventHandler(this.BtnMostrarMensajeOK_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(534, 70);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 17);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Incluir Título";
             // 
             // chkIncluirTitulo
             // 
@@ -1784,6 +1838,7 @@
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1856,7 +1911,7 @@
         private System.Windows.Forms.TabPage tabPage8;
         private ControlesPersonalizados.ERProgressBar bp1;
         private System.Windows.Forms.Timer timer1;
-        private ControlesPersonalizados.ERButton erButton4;
+        private ControlesPersonalizados.ERButton BtnActivarBarras;
         private ControlesPersonalizados.ERProgressBar bp0;
         private ControlesPersonalizados.ERProgressBar bp4;
         private ControlesPersonalizados.ERProgressBar bp3;
@@ -1903,6 +1958,10 @@
         private ControlesPersonalizados.ERTextBox txtApend2;
         private ControlesPersonalizados.ERTextBox txtBox0;
         private ControlesPersonalizados.ERTextBox txtAppend;
+        private System.Windows.Forms.ProgressBar bp7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblBp;
+        private ControlesPersonalizados.RProgressBar rProgressBar1;
     }
 }
 

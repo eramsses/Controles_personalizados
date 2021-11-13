@@ -11,7 +11,7 @@ using System.ComponentModel;
 
 namespace ControlesPersonalizados
 {
-    public enum TextPosition
+    public enum TextPositions
     {
         Left,
         Right,
@@ -31,10 +31,11 @@ namespace ControlesPersonalizados
         private Color foreBackColor = Color.RoyalBlue;
         private int channelHeight = 6;
         private int sliderHeight = 6;
-        private TextPosition showValue = TextPosition.Right;
+        private TextPositions showValue = TextPositions.Right;
         private string symbolBefore = "";
         private string symbolAfter = "";
         private bool showMaximun = false;
+        private int valueAnterior = 0;
 
         //-> Others
         private bool paintedBack = false;
@@ -47,7 +48,8 @@ namespace ControlesPersonalizados
             this.ForeColor = Color.White;
         }
 
-        //Propertiesfff
+        //Properties
+        
         [Category("ER Control")]
         public Color ChannelColor
         {
@@ -113,7 +115,7 @@ namespace ControlesPersonalizados
         }
 
         [Category("ER Control")]
-        public TextPosition ShowValue
+        public TextPositions ShowValue
         {
             get { return showValue; }
             set
@@ -204,20 +206,26 @@ namespace ControlesPersonalizados
                     }
                 }
                 //Reset painting the back & channel
-                if (this.Value == this.Maximum || this.Value == this.Minimum)
+                //if (this.Value == this.Maximum || this.Value == this.Minimum)
                     paintedBack = false;
+                
             }
+            
         }
+
         //-> Paint slider
         protected override void OnPaint(PaintEventArgs e)
         {
+            double scaleFactor = (((double)this.Value - this.Minimum) / ((double)this.Maximum - this.Minimum));
+            int sliderWidth = (int)(this.Width * scaleFactor);
+
             if (stopPainting == false)
             {
                 //Fields
                 Graphics graph = e.Graphics;
-                double scaleFactor = (((double)this.Value - this.Minimum) / ((double)this.Maximum - this.Minimum));
-                int sliderWidth = (int)(this.Width * scaleFactor);
+                
                 Rectangle rectSlider = new Rectangle(0, 0, sliderWidth, sliderHeight);
+                Rectangle rectText = new Rectangle(0, 0, this.Width, sliderHeight);
                 using (var brushSlider = new SolidBrush(sliderColor))
                 {
                     if (sliderHeight >= channelHeight)
@@ -226,13 +234,27 @@ namespace ControlesPersonalizados
 
                     //Painting
                     if (sliderWidth > 1) //Slider
+                    {
                         graph.FillRectangle(brushSlider, rectSlider);
-                    if (showValue != TextPosition.None) //Text
-                        DrawValueText(graph, sliderWidth, rectSlider);
+                    }
+                        
+                    if (showValue != TextPositions.None) //Text
+                        DrawValueText(graph, sliderWidth, rectText);
                 }
             }
-            if (this.Value == this.Maximum) stopPainting = true;//Stop painting
-            else stopPainting = false; //Keep painting
+
+            if (this.Value == this.Maximum || this.Value == this.Minimum || this.Value == valueAnterior)
+            //if (this.Value == this.Maximum || this.Value == this.Minimum)
+            {
+                //stopPainting = true;//Stop painting
+            }
+            else
+            {
+                stopPainting = false;
+                
+                valueAnterior = this.Value;
+            }
+                
         }
 
         //-> Paint value text
@@ -249,22 +271,22 @@ namespace ControlesPersonalizados
             {
                 switch (showValue)
                 {
-                    case TextPosition.Left:
+                    case TextPositions.Left:
                         rectText.X = 0;
                         textFormat.Alignment = StringAlignment.Near;
                         break;
 
-                    case TextPosition.Right:
+                    case TextPositions.Right:
                         rectText.X = this.Width - textSize.Width;
                         textFormat.Alignment = StringAlignment.Far;
                         break;
 
-                    case TextPosition.Center:
+                    case TextPositions.Center:
                         rectText.X = (this.Width - textSize.Width) / 2;
                         textFormat.Alignment = StringAlignment.Center;
                         break;
 
-                    case TextPosition.Sliding:
+                    case TextPositions.Sliding:
                         rectText.X = sliderWidth - textSize.Width;
                         textFormat.Alignment = StringAlignment.Center;
                         //Clean previous text surface
@@ -278,6 +300,7 @@ namespace ControlesPersonalizados
                         break;
                 }
                 //Painting
+                
                 graph.FillRectangle(brushTextBack, rectText);
                 graph.DrawString(text, this.Font, brushText, rectText, textFormat);
             }

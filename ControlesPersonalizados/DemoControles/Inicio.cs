@@ -19,6 +19,8 @@ namespace DemoControles
         }
 
         private int i = 0;
+        private bool subir = true;
+        private bool barrasActivas = false;
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -97,44 +99,72 @@ namespace DemoControles
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(bp1.Maximum > i)
-            {
-                bp0.Value = i;
-                bp1.Value = i;
-                bp2.Value = i;
-                bp3.Value = i;
-                bp4.Value = i;
-                bp5.Value = i;
-                bp6.Value = i;
 
+            if (subir)
+                i += 10;
+            else 
+                i -= 10;
+
+            if(i <= bp1.Minimum)
+                subir = true;
+            else if (i >= bp1.Maximum)
+                subir = false;
+
+            if(i < bp1.Minimum)
+                i = bp1.Minimum;
+
+            if(i > bp1.Maximum)
+                i = bp1.Maximum;
+            
+
+            bp0.Value = i;
+            bp1.Value = i;
+            bp2.Value = i;
+            bp3.Value = i;
+            bp4.Value = i;
+            bp5.Value = i;
+            bp6.Value = i;
+            bp7.Value = i;
+            rProgressBar1.Value = i;
+
+            lblBp.Text = bp7.Value.ToString();
+
+            if (i >= bp0.Maximum)
+            {
+                //timer1.Stop();
+                //i = 0;
+            }
+                
+
+        }
+
+        private void BtnActivarBarras_Click(object sender, EventArgs e)
+        {
+            if(!barrasActivas)
+            {
+                //bp0.Value = 0;
+                //bp1.Value = 0;
+                //bp2.Value = 0;
+                //bp3.Value = 0;
+                //bp4.Value = 0;
+                //bp5.Value = 0;
+                //bp6.Value = 0;
+
+                //i = 0;
+
+                timer1.Start();
+                barrasActivas = true;
+                
+                BtnActivarBarras.Text = "Detener Barras";
             }
             else
             {
-                bp0.Value = 0;
-                bp1.Value = 0;
-                bp2.Value = 0;
-                bp3.Value = 0;
-                bp4.Value = 0;
-                bp5.Value = 0;
-                bp6.Value = 0;
-
-                i = 0;
+                timer1.Stop();
+                barrasActivas = false;
+                
+                BtnActivarBarras.Text = "Iniciar Barras";
             }
             
-            i += 10;
-        }
-
-        private void erButton4_Click(object sender, EventArgs e)
-        {
-            bp0.Value = 0;
-            bp1.Value = 0;
-            bp2.Value = 0;
-            bp3.Value = 0;
-            bp4.Value = 0;
-            bp5.Value = 0;
-            bp6.Value = 0;
-
-            timer1.Start();
         }
 
         private void erButton5_Click(object sender, EventArgs e)

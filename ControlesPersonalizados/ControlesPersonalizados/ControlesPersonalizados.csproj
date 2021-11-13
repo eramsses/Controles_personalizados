@@ -87,6 +87,12 @@
     <Compile Include="ERTextBox.designer.cs">
       <DependentUpon>ERTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="RProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RProgressBar.Designer.cs">
+      <DependentUpon>RProgressBar.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ERTextBox.resx">
       <DependentUpon>ERTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RProgressBar.resx">
+      <DependentUpon>RProgressBar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
