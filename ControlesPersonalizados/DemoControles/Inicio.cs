@@ -101,9 +101,9 @@ namespace DemoControles
         {
 
             if (subir)
-                i += 10;
+                i += 2;
             else 
-                i -= 10;
+                i -= 2;
 
             if(i <= bp1.Minimum)
                 subir = true;
@@ -117,19 +117,24 @@ namespace DemoControles
                 i = bp1.Maximum;
             
 
-            bp0.Value = i;
+            
             bp1.Value = i;
-            bp2.Value = i;
-            bp3.Value = i;
-            bp4.Value = i;
-            bp5.Value = i;
-            bp6.Value = i;
-            bp7.Value = i;
+            rProgressBar10.Value = i;
             rProgressBar1.Value = i;
+            rProgressBar2.Value = i;
+            rProgressBar3.Value = i;
+            rProgressBar4.Value = i;
+            rProgressBar5.Value = i;
+            rProgressBar6.Value = i;
+            rProgressBar7.Value = i;
+            rProgressBar8.Value = i;
+            rProgressBar9.Value = i;
 
-            lblBp.Text = bp7.Value.ToString();
+            rvProgressBar1.Value = i;
 
-            if (i >= bp0.Maximum)
+
+
+            if (i >= bp1.Maximum)
             {
                 //timer1.Stop();
                 //i = 0;
@@ -151,7 +156,7 @@ namespace DemoControles
                 //bp6.Value = 0;
 
                 //i = 0;
-
+                
                 timer1.Start();
                 barrasActivas = true;
                 
@@ -272,6 +277,5 @@ namespace DemoControles
             txtApend2.AppendTexts(txt3.Texts + "\r\n");
         }
 
-        
     }
 }

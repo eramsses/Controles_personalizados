@@ -93,6 +93,12 @@
     <Compile Include="RProgressBar.Designer.cs">
       <DependentUpon>RProgressBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="RVProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RVProgressBar.Designer.cs">
+      <DependentUpon>RVProgressBar.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RProgressBar.resx">
       <DependentUpon>RProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RVProgressBar.resx">
+      <DependentUpon>RVProgressBar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
