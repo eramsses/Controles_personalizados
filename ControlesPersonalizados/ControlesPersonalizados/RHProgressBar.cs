@@ -268,20 +268,6 @@ namespace ControlesPersonalizados
                 LblTextI.BackColor = value;
                 LblTextU.BackColor = value;
 
-                
-                if (value.GetBrightness() >= 0.8F)
-                {
-                    LblTextO.ForeColor = darkText;
-                    LblTextI.ForeColor = darkText;
-                    LblTextU.ForeColor = darkText;
-                }
-                else
-                {
-                    LblTextO.ForeColor = ligthText;
-                    LblTextI.ForeColor = ligthText;
-                    LblTextU.ForeColor = ligthText;
-                }
-
                 this.Invalidate();
             }
         }
@@ -570,7 +556,7 @@ namespace ControlesPersonalizados
                 case TextVerticalPosition.None:
                     PnlChannel.Height = barHeight;
                     PnlSlider.Height = barHeight;
-                    this.Height = barHeight + 2;
+                    this.Height = barHeight;
                     break;
 
 
@@ -588,7 +574,7 @@ namespace ControlesPersonalizados
                     }
 
                     barHeight = PnlChannel.Height;
-                    this.Height = PnlChannel.Height + 2;
+                    this.Height = PnlChannel.Height;
 
 
                     break;
@@ -597,7 +583,7 @@ namespace ControlesPersonalizados
                     PnlChannel.Height = barHeight;
                     PnlSlider.Height = barHeight;
 
-                    this.Height = txtHeight + this.Padding.Top + this.Padding.Bottom + barHeight + 2;
+                    this.Height = txtHeight + this.Padding.Top + this.Padding.Bottom + barHeight + 1;
                     break;
 
 
