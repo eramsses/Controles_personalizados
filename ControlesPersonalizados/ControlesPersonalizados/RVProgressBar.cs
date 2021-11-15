@@ -276,20 +276,6 @@ namespace ControlesPersonalizados
                 LblTextC.BackColor = value;
                 LblTextR.BackColor = value;
 
-
-                //if (value.GetBrightness() >= 0.4F)
-                //{
-                //    LblTextL.ForeColor = darkText;
-                //    LblTextC.ForeColor = darkText;
-                //    LblTextR.ForeColor = darkText;
-                //}
-                //else
-                //{
-                //    LblTextL.ForeColor = ligthText;
-                //    LblTextC.ForeColor = ligthText;
-                //    LblTextR.ForeColor = ligthText;
-                //}
-
                 this.Invalidate();
             }
         }
