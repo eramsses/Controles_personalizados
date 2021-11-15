@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ControlesPersonalizados;
 
 namespace DemoControles
 {
@@ -119,20 +120,17 @@ namespace DemoControles
 
             
             bp1.Value = i;
-            rProgressBar10.Value = i;
-            rProgressBar1.Value = i;
-            rProgressBar2.Value = i;
-            rProgressBar3.Value = i;
-            rProgressBar4.Value = i;
-            rProgressBar5.Value = i;
-            rProgressBar6.Value = i;
-            rProgressBar7.Value = i;
-            rProgressBar8.Value = i;
-            rProgressBar9.Value = i;
+           
 
-            rvProgressBar1.Value = i;
+            foreach(RVProgressBar pbV in PnlBarrasProgreso.Controls.OfType<RVProgressBar>().ToList())
+            {
+                pbV.Value = i;
+            }
 
-
+            foreach (RHProgressBar pbH in PnlBarrasProgreso.Controls.OfType<RHProgressBar>().ToList())
+            {
+                pbH.Value = i;
+            }
 
             if (i >= bp1.Maximum)
             {

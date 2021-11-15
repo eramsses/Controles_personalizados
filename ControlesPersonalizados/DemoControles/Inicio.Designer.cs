@@ -70,7 +70,7 @@
             this.erComboBox1 = new ControlesPersonalizados.ERComboBox();
             this.cmbMunicipios = new ControlesPersonalizados.ERComboBox();
             this.erButton1 = new ControlesPersonalizados.ERButton();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.PnlBarrasProgreso = new System.Windows.Forms.TabPage();
             this.bp1 = new System.Windows.Forms.ProgressBar();
             this.BtnActivarBarras = new ControlesPersonalizados.ERButton();
             this.tabPage7 = new System.Windows.Forms.TabPage();
@@ -122,6 +122,8 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rhProgressBar1 = new ControlesPersonalizados.RHProgressBar();
+            this.rvProgressBar1 = new ControlesPersonalizados.RVProgressBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -136,7 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erCircularPictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.erCircularPictureBox1)).BeginInit();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.PnlBarrasProgreso.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -155,7 +157,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.PnlBarrasProgreso);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage8);
             this.tabControl1.Controls.Add(this.tabPage9);
@@ -770,18 +772,20 @@
             this.erButton1.UseVisualStyleBackColor = false;
             this.erButton1.Click += new System.EventHandler(this.erButton1_Click);
             // 
-            // tabPage6
+            // PnlBarrasProgreso
             // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage6.Controls.Add(this.bp1);
-            this.tabPage6.Controls.Add(this.BtnActivarBarras);
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage6.Size = new System.Drawing.Size(1363, 580);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Barra de Progreso";
+            this.PnlBarrasProgreso.BackColor = System.Drawing.SystemColors.Window;
+            this.PnlBarrasProgreso.Controls.Add(this.rvProgressBar1);
+            this.PnlBarrasProgreso.Controls.Add(this.rhProgressBar1);
+            this.PnlBarrasProgreso.Controls.Add(this.bp1);
+            this.PnlBarrasProgreso.Controls.Add(this.BtnActivarBarras);
+            this.PnlBarrasProgreso.Location = new System.Drawing.Point(4, 26);
+            this.PnlBarrasProgreso.Margin = new System.Windows.Forms.Padding(4);
+            this.PnlBarrasProgreso.Name = "PnlBarrasProgreso";
+            this.PnlBarrasProgreso.Padding = new System.Windows.Forms.Padding(4);
+            this.PnlBarrasProgreso.Size = new System.Drawing.Size(1363, 580);
+            this.PnlBarrasProgreso.TabIndex = 5;
+            this.PnlBarrasProgreso.Text = "Barra de Progreso";
             // 
             // bp1
             // 
@@ -1618,6 +1622,50 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // rhProgressBar1
+            // 
+            this.rhProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.rhProgressBar1.BackgroundBarColor = System.Drawing.Color.Gainsboro;
+            this.rhProgressBar1.BackgroundForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rhProgressBar1.BackgroundTextColor = System.Drawing.Color.Blue;
+            this.rhProgressBar1.BarHeight = 5;
+            this.rhProgressBar1.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Right;
+            this.rhProgressBar1.Location = new System.Drawing.Point(348, 75);
+            this.rhProgressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rhProgressBar1.Maximum = 100;
+            this.rhProgressBar1.Minimum = 0;
+            this.rhProgressBar1.Name = "rhProgressBar1";
+            this.rhProgressBar1.ProgressBarColor = System.Drawing.Color.Lime;
+            this.rhProgressBar1.RBackGrounColor = System.Drawing.Color.Transparent;
+            this.rhProgressBar1.ShowMaximun = false;
+            this.rhProgressBar1.ShowText = ControlesPersonalizados.TextVerticalPosition.Over;
+            this.rhProgressBar1.Size = new System.Drawing.Size(340, 25);
+            this.rhProgressBar1.SymbolAfter = "";
+            this.rhProgressBar1.SymbolBefore = "";
+            this.rhProgressBar1.TabIndex = 11;
+            this.rhProgressBar1.Value = 0;
+            // 
+            // rvProgressBar1
+            // 
+            this.rvProgressBar1.BackgroundBarColor = System.Drawing.Color.Gainsboro;
+            this.rvProgressBar1.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rvProgressBar1.BackgroundTextColor = System.Drawing.SystemColors.Window;
+            this.rvProgressBar1.BarWidth = 10;
+            this.rvProgressBar1.Location = new System.Drawing.Point(833, 63);
+            this.rvProgressBar1.Maximum = 100;
+            this.rvProgressBar1.Minimum = 0;
+            this.rvProgressBar1.Name = "rvProgressBar1";
+            this.rvProgressBar1.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.rvProgressBar1.RBackGrounColor = System.Drawing.SystemColors.Window;
+            this.rvProgressBar1.ShowMaximun = false;
+            this.rvProgressBar1.ShowText = ControlesPersonalizados.HPositionText.Right;
+            this.rvProgressBar1.Size = new System.Drawing.Size(61, 292);
+            this.rvProgressBar1.SymbolAfter = "";
+            this.rvProgressBar1.SymbolBefore = "";
+            this.rvProgressBar1.TabIndex = 12;
+            this.rvProgressBar1.Value = 0;
+            this.rvProgressBar1.VerticalPositionText = ControlesPersonalizados.VPositionText.Down;
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -1650,7 +1698,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.erCircularPictureBox1)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
+            this.PnlBarrasProgreso.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1677,7 +1725,7 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage PnlBarrasProgreso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblChk;
@@ -1764,6 +1812,8 @@
         private ControlesPersonalizados.ERTextBox txtBox0;
         private ControlesPersonalizados.ERTextBox txtAppend;
         private System.Windows.Forms.ProgressBar bp1;
+        private ControlesPersonalizados.RVProgressBar rvProgressBar1;
+        private ControlesPersonalizados.RHProgressBar rhProgressBar1;
     }
 }
 

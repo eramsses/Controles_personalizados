@@ -75,9 +75,6 @@
     <Compile Include="ERComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ERProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="ERRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -87,11 +84,11 @@
     <Compile Include="ERTextBox.designer.cs">
       <DependentUpon>ERTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="RProgressBar.cs">
+    <Compile Include="RHProgressBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="RProgressBar.Designer.cs">
-      <DependentUpon>RProgressBar.cs</DependentUpon>
+    <Compile Include="RHProgressBar.Designer.cs">
+      <DependentUpon>RHProgressBar.cs</DependentUpon>
     </Compile>
     <Compile Include="RVProgressBar.cs">
       <SubType>UserControl</SubType>
@@ -109,8 +106,8 @@
     <EmbeddedResource Include="ERTextBox.resx">
       <DependentUpon>ERTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RProgressBar.resx">
-      <DependentUpon>RProgressBar.cs</DependentUpon>
+    <EmbeddedResource Include="RHProgressBar.resx">
+      <DependentUpon>RHProgressBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RVProgressBar.resx">
       <DependentUpon>RVProgressBar.cs</DependentUpon>
