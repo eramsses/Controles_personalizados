@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class ERToggleButton
+    partial class RToggleButton
     {
         /// <summary>
         /// Variable del diseñador necesaria.

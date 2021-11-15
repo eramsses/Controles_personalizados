@@ -12,7 +12,7 @@ using System.Drawing.Drawing2D;
 namespace ControlesPersonalizados
 {
     [DefaultEvent("_TextChanged")]
-    public partial class ERTextBox : UserControl
+    public partial class RTextBox : UserControl
     {
         #region -> Fields
         //Fields
@@ -38,7 +38,7 @@ namespace ControlesPersonalizados
         #endregion
 
         //-> Constructor
-        public ERTextBox()
+        public RTextBox()
         {
             //Created by designer
             InitializeComponent();
@@ -52,7 +52,7 @@ namespace ControlesPersonalizados
         }
 
         #region -> Properties
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -78,14 +78,14 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderFocusColor
         {
             get { return borderFocusColor; }
             set { borderFocusColor = value; }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -99,7 +99,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public bool UnderlinedStyle
         {
             get { return underlinedStyle; }
@@ -112,14 +112,14 @@ namespace ControlesPersonalizados
 
         
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public bool Multiline
         {
             get { return textBox1.Multiline; }
             set { textBox1.Multiline = value; }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public override Color BackColor
         {
             get { return base.BackColor; }
@@ -141,7 +141,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public override Color ForeColor
         {
             get { return base.ForeColor; }
@@ -152,7 +152,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public override Font Font
         {
             get { return base.Font; }
@@ -165,7 +165,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public string Texts
         {
             get
@@ -186,7 +186,7 @@ namespace ControlesPersonalizados
         }
 
         [DefaultValue("Both")]
-        [Category("ER Control")]
+        [Category("R Control")]
         public ScrollBars ScrollBar 
         { 
             get
@@ -199,7 +199,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public HorizontalAlignment TextsAlign
         {
             get
@@ -212,7 +212,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderRadius
         {
             get { return borderRadius; }
@@ -226,7 +226,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color PlaceholderColor
         {
             get { return placeholderColor; }
@@ -238,7 +238,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public string PlaceholderText
         {
             get { return placeholderText; }
@@ -262,7 +262,7 @@ namespace ControlesPersonalizados
 
         #region -> Propiedades de comportamiento
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool AcceptReturn
         {
             get
@@ -275,7 +275,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool AcceptTab
         {
             get
@@ -288,7 +288,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool AllowDrops
         {
             get
@@ -301,7 +301,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public CharacterCasing CharactersCasing
         {
             get
@@ -314,7 +314,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public ContextMenuStrip ContextMenuStrips
         {
             get
@@ -327,7 +327,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool Enable
         {
             get
@@ -340,7 +340,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool HideSelections
         {
             get
@@ -353,7 +353,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool ReadsOnly
         {
             get
@@ -367,7 +367,7 @@ namespace ControlesPersonalizados
         }
 
         
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool PasswordChar
         {
             get { return isPasswordChar; }
@@ -379,7 +379,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool VisibleEr
         {
             get
@@ -392,7 +392,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Comportamiento")]
+        [Category("R Comportamiento")]
         public bool WordWrapEr
         {
             get

@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class ERTextBox
+    partial class RTextBox
     {
         /// <summary> 
         /// Required designer variable.
@@ -47,7 +47,7 @@
             this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
-            // ERTextBox
+            // RTextBox
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -55,7 +55,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ERTextBox";
+            this.Name = "RTextBox";
             this.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.Size = new System.Drawing.Size(250, 30);
             this.ResumeLayout(false);

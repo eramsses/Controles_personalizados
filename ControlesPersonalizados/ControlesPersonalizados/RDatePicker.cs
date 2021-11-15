@@ -12,7 +12,7 @@ using System.ComponentModel;
 
 namespace ControlesPersonalizados
 {
-    public partial class ERDatePicker : DateTimePicker
+    public partial class RDatePicker : DateTimePicker
     {//Campos
         //-> Apariencia
         private static Color darkText = Color.FromArgb(70, 70, 70);
@@ -30,7 +30,7 @@ namespace ControlesPersonalizados
         private const int arrowIconWidth = 17;
 
         //Propiedades
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color SkinColor
         {
             get { return skinColor; }
@@ -52,7 +52,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color TextColor
         {
             get { return textColor; }
@@ -63,7 +63,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -74,7 +74,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -86,7 +86,7 @@ namespace ControlesPersonalizados
         }
 
         //Constructor
-        public ERDatePicker()
+        public RDatePicker()
         {
             this.SetStyle(ControlStyles.UserPaint, true);
             this.MinimumSize = new Size(0, 35);

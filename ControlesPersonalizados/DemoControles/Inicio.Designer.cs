@@ -35,42 +35,44 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkBtn = new ControlesPersonalizados.ERToggleButton();
-            this.chkBtnDefecto = new ControlesPersonalizados.ERToggleButton();
+            this.chkBtn = new ControlesPersonalizados.RToggleButton();
+            this.chkBtnDefecto = new ControlesPersonalizados.RToggleButton();
             this.lblChk = new System.Windows.Forms.Label();
-            this.chkPersonalizado = new ControlesPersonalizados.ERToggleButton();
+            this.chkPersonalizado = new ControlesPersonalizados.RToggleButton();
             this.lblDefecto = new System.Windows.Forms.Label();
             this.lblPersonalizado = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.erButton2 = new ControlesPersonalizados.ERButton();
-            this.Normal = new ControlesPersonalizados.ERButton();
+            this.erButton2 = new ControlesPersonalizados.RButton();
+            this.Normal = new ControlesPersonalizados.RButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.erDatePicker2 = new ControlesPersonalizados.ERDatePicker();
-            this.erDatePicker1 = new ControlesPersonalizados.ERDatePicker();
+            this.erDatePicker2 = new ControlesPersonalizados.RDatePicker();
+            this.erDatePicker1 = new ControlesPersonalizados.RDatePicker();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.erCircularPictureBox6 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox7 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox4 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox5 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox2 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox3 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox8 = new ControlesPersonalizados.ERCircularPictureBox();
-            this.erCircularPictureBox1 = new ControlesPersonalizados.ERCircularPictureBox();
+            this.erCircularPictureBox6 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox7 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox4 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox5 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox2 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox3 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox8 = new ControlesPersonalizados.RCircularPictureBox();
+            this.erCircularPictureBox1 = new ControlesPersonalizados.RCircularPictureBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.erButton3 = new ControlesPersonalizados.ERButton();
-            this.cmb3 = new ControlesPersonalizados.ERComboBox();
-            this.erComboBox2 = new ControlesPersonalizados.ERComboBox();
-            this.erComboBox1 = new ControlesPersonalizados.ERComboBox();
-            this.cmbMunicipios = new ControlesPersonalizados.ERComboBox();
-            this.erButton1 = new ControlesPersonalizados.ERButton();
+            this.erButton3 = new ControlesPersonalizados.RButton();
+            this.cmb3 = new ControlesPersonalizados.RComboBox();
+            this.erComboBox2 = new ControlesPersonalizados.RComboBox();
+            this.erComboBox1 = new ControlesPersonalizados.RComboBox();
+            this.cmbMunicipios = new ControlesPersonalizados.RComboBox();
+            this.erButton1 = new ControlesPersonalizados.RButton();
             this.PnlBarrasProgreso = new System.Windows.Forms.TabPage();
+            this.rhProgressBar4 = new ControlesPersonalizados.RHProgressBar();
+            this.rvProgressBar4 = new ControlesPersonalizados.RVProgressBar();
             this.rhProgressBar3 = new ControlesPersonalizados.RHProgressBar();
             this.rvProgressBar3 = new ControlesPersonalizados.RVProgressBar();
             this.rhProgressBar2 = new ControlesPersonalizados.RHProgressBar();
@@ -78,26 +80,25 @@
             this.rvProgressBar1 = new ControlesPersonalizados.RVProgressBar();
             this.rhProgressBar1 = new ControlesPersonalizados.RHProgressBar();
             this.bp1 = new System.Windows.Forms.ProgressBar();
-            this.BtnActivarBarras = new ControlesPersonalizados.ERButton();
+            this.BtnActivarBarras = new ControlesPersonalizados.RButton();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.erRadioButton3 = new ControlesPersonalizados.ERRadioButton();
-            this.erRadioButton2 = new ControlesPersonalizados.ERRadioButton();
-            this.erRadioButton1 = new ControlesPersonalizados.ERRadioButton();
+            this.erRadioButton3 = new ControlesPersonalizados.RRadioButton();
+            this.erRadioButton2 = new ControlesPersonalizados.RRadioButton();
+            this.erRadioButton1 = new ControlesPersonalizados.RRadioButton();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.txtBox0 = new ControlesPersonalizados.ERTextBox();
-            this.txtApend2 = new ControlesPersonalizados.ERTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtAppend = new ControlesPersonalizados.ERTextBox();
-            this.erButton7 = new ControlesPersonalizados.ERButton();
-            this.txt3 = new ControlesPersonalizados.ERTextBox();
-            this.erButton6 = new ControlesPersonalizados.ERButton();
-            this.erButton5 = new ControlesPersonalizados.ERButton();
-            this.txtBox1 = new ControlesPersonalizados.ERTextBox();
+            this.txtAppend = new ControlesPersonalizados.RTextBox();
+            this.txtAppend2 = new ControlesPersonalizados.RTextBox();
+            this.txt3 = new ControlesPersonalizados.RTextBox();
+            this.txtBox1 = new ControlesPersonalizados.RTextBox();
+            this.txtBox0 = new ControlesPersonalizados.RTextBox();
+            this.erButton7 = new ControlesPersonalizados.RButton();
+            this.erButton6 = new ControlesPersonalizados.RButton();
+            this.erButton5 = new ControlesPersonalizados.RButton();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -111,25 +112,23 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnPersonalizado = new ControlesPersonalizados.ERButton();
-            this.btnMensajeDefaul = new ControlesPersonalizados.ERButton();
-            this.btnMensajeInformacion = new ControlesPersonalizados.ERButton();
-            this.btnMensajeError = new ControlesPersonalizados.ERButton();
-            this.chkCerrarMensaje = new ControlesPersonalizados.ERToggleButton();
-            this.BtnWarning = new ControlesPersonalizados.ERButton();
-            this.txtContenidoMensaje = new ControlesPersonalizados.ERTextBox();
-            this.txtContenidoTitulo = new ControlesPersonalizados.ERTextBox();
-            this.BtnMostrarMensajeOK = new ControlesPersonalizados.ERButton();
-            this.chkIncluirTitulo = new ControlesPersonalizados.ERToggleButton();
+            this.btnPersonalizado = new ControlesPersonalizados.RButton();
+            this.btnMensajeDefaul = new ControlesPersonalizados.RButton();
+            this.btnMensajeInformacion = new ControlesPersonalizados.RButton();
+            this.btnMensajeError = new ControlesPersonalizados.RButton();
+            this.chkCerrarMensaje = new ControlesPersonalizados.RToggleButton();
+            this.BtnWarning = new ControlesPersonalizados.RButton();
+            this.BtnMostrarMensajeOK = new ControlesPersonalizados.RButton();
+            this.chkIncluirTitulo = new ControlesPersonalizados.RToggleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSalir = new ControlesPersonalizados.ERButton();
+            this.btnSalir = new ControlesPersonalizados.RButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rvProgressBar4 = new ControlesPersonalizados.RVProgressBar();
-            this.rhProgressBar4 = new ControlesPersonalizados.RHProgressBar();
+            this.txtContenidoTitulo = new ControlesPersonalizados.RTextBox();
+            this.txtContenidoMensaje = new ControlesPersonalizados.RTextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -799,6 +798,51 @@
             this.PnlBarrasProgreso.TabIndex = 5;
             this.PnlBarrasProgreso.Text = "Barra de Progreso";
             // 
+            // rhProgressBar4
+            // 
+            this.rhProgressBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rhProgressBar4.BackgroundBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rhProgressBar4.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.rhProgressBar4.BackgroundTextColor = System.Drawing.Color.MediumOrchid;
+            this.rhProgressBar4.BarHeight = 5;
+            this.rhProgressBar4.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Right;
+            this.rhProgressBar4.Location = new System.Drawing.Point(53, 257);
+            this.rhProgressBar4.Margin = new System.Windows.Forms.Padding(7);
+            this.rhProgressBar4.Maximum = 350;
+            this.rhProgressBar4.Minimum = 0;
+            this.rhProgressBar4.Name = "rhProgressBar4";
+            this.rhProgressBar4.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.rhProgressBar4.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.rhProgressBar4.ShowMaximun = false;
+            this.rhProgressBar4.ShowText = ControlesPersonalizados.TextVerticalPosition.None;
+            this.rhProgressBar4.Size = new System.Drawing.Size(350, 5);
+            this.rhProgressBar4.SymbolAfter = "";
+            this.rhProgressBar4.SymbolBefore = "";
+            this.rhProgressBar4.TabIndex = 18;
+            this.rhProgressBar4.Value = 0;
+            // 
+            // rvProgressBar4
+            // 
+            this.rvProgressBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.rvProgressBar4.BackgroundBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rvProgressBar4.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rvProgressBar4.BackgroundTextColor = System.Drawing.Color.Plum;
+            this.rvProgressBar4.BarWidth = 5;
+            this.rvProgressBar4.Location = new System.Drawing.Point(1154, 62);
+            this.rvProgressBar4.Maximum = 350;
+            this.rvProgressBar4.Minimum = 0;
+            this.rvProgressBar4.Name = "rvProgressBar4";
+            this.rvProgressBar4.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.rvProgressBar4.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.rvProgressBar4.ShowMaximun = false;
+            this.rvProgressBar4.ShowText = ControlesPersonalizados.HPositionText.None;
+            this.rvProgressBar4.Size = new System.Drawing.Size(5, 292);
+            this.rvProgressBar4.SymbolAfter = "";
+            this.rvProgressBar4.SymbolBefore = "";
+            this.rvProgressBar4.TabIndex = 17;
+            this.rvProgressBar4.Value = 0;
+            this.rvProgressBar4.VerticalPositionText = ControlesPersonalizados.VPositionText.Sliding;
+            // 
             // rhProgressBar3
             // 
             this.rhProgressBar3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -816,7 +860,7 @@
             this.rhProgressBar3.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rhProgressBar3.ShowMaximun = false;
             this.rhProgressBar3.ShowText = ControlesPersonalizados.TextVerticalPosition.InSide;
-            this.rhProgressBar3.Size = new System.Drawing.Size(350, 20);
+            this.rhProgressBar3.Size = new System.Drawing.Size(350, 18);
             this.rhProgressBar3.SymbolAfter = "";
             this.rhProgressBar3.SymbolBefore = "";
             this.rhProgressBar3.TabIndex = 16;
@@ -861,7 +905,7 @@
             this.rhProgressBar2.RBackGrounColor = System.Drawing.Color.Transparent;
             this.rhProgressBar2.ShowMaximun = false;
             this.rhProgressBar2.ShowText = ControlesPersonalizados.TextVerticalPosition.Over;
-            this.rhProgressBar2.Size = new System.Drawing.Size(350, 34);
+            this.rhProgressBar2.Size = new System.Drawing.Size(350, 33);
             this.rhProgressBar2.SymbolAfter = "";
             this.rhProgressBar2.SymbolBefore = "";
             this.rhProgressBar2.TabIndex = 14;
@@ -891,8 +935,8 @@
             // 
             // rvProgressBar1
             // 
-            this.rvProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rvProgressBar1.BackgroundBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.rvProgressBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.rvProgressBar1.BackgroundBarColor = System.Drawing.Color.LightCoral;
             this.rvProgressBar1.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rvProgressBar1.BackgroundTextColor = System.Drawing.Color.Plum;
             this.rvProgressBar1.BarWidth = 15;
@@ -900,8 +944,8 @@
             this.rvProgressBar1.Maximum = 250;
             this.rvProgressBar1.Minimum = 0;
             this.rvProgressBar1.Name = "rvProgressBar1";
-            this.rvProgressBar1.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.rvProgressBar1.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.rvProgressBar1.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.rvProgressBar1.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.rvProgressBar1.ShowMaximun = false;
             this.rvProgressBar1.ShowText = ControlesPersonalizados.HPositionText.Right;
             this.rvProgressBar1.Size = new System.Drawing.Size(30, 292);
@@ -928,7 +972,7 @@
             this.rhProgressBar1.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.rhProgressBar1.ShowMaximun = false;
             this.rhProgressBar1.ShowText = ControlesPersonalizados.TextVerticalPosition.Over;
-            this.rhProgressBar1.Size = new System.Drawing.Size(350, 21);
+            this.rhProgressBar1.Size = new System.Drawing.Size(350, 20);
             this.rhProgressBar1.SymbolAfter = "";
             this.rhProgressBar1.SymbolBefore = "";
             this.rhProgressBar1.TabIndex = 11;
@@ -1081,15 +1125,14 @@
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage8.Controls.Add(this.txtBox0);
-            this.tabPage8.Controls.Add(this.txtApend2);
-            this.tabPage8.Controls.Add(this.textBox1);
             this.tabPage8.Controls.Add(this.txtAppend);
-            this.tabPage8.Controls.Add(this.erButton7);
+            this.tabPage8.Controls.Add(this.txtAppend2);
             this.tabPage8.Controls.Add(this.txt3);
+            this.tabPage8.Controls.Add(this.txtBox1);
+            this.tabPage8.Controls.Add(this.txtBox0);
+            this.tabPage8.Controls.Add(this.erButton7);
             this.tabPage8.Controls.Add(this.erButton6);
             this.tabPage8.Controls.Add(this.erButton5);
-            this.tabPage8.Controls.Add(this.txtBox1);
             this.tabPage8.Location = new System.Drawing.Point(4, 26);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
@@ -1097,104 +1140,24 @@
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "TextBox";
             // 
-            // txtBox0
-            // 
-            this.txtBox0.AcceptReturn = false;
-            this.txtBox0.AcceptTab = false;
-            this.txtBox0.AllowDrops = false;
-            this.txtBox0.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBox0.BorderColor = System.Drawing.Color.Navy;
-            this.txtBox0.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(6)))), ((int)(((byte)(255)))));
-            this.txtBox0.BorderRadius = 0;
-            this.txtBox0.BorderSize = 2;
-            this.txtBox0.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBox0.ContextMenuStrips = null;
-            this.txtBox0.Enable = true;
-            this.txtBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBox0.HideSelections = true;
-            this.txtBox0.Location = new System.Drawing.Point(124, 129);
-            this.txtBox0.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBox0.Multiline = false;
-            this.txtBox0.Name = "txtBox0";
-            this.txtBox0.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBox0.PasswordChar = true;
-            this.txtBox0.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBox0.PlaceholderText = "Contraseña";
-            this.txtBox0.ReadsOnly = false;
-            this.txtBox0.ScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.txtBox0.Size = new System.Drawing.Size(250, 31);
-            this.txtBox0.TabIndex = 10;
-            this.txtBox0.Texts = "";
-            this.txtBox0.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBox0.UnderlinedStyle = true;
-            this.txtBox0.VisibleEr = false;
-            this.txtBox0.WordWrapEr = true;
-            // 
-            // txtApend2
-            // 
-            this.txtApend2.AcceptReturn = false;
-            this.txtApend2.AcceptTab = false;
-            this.txtApend2.AllowDrops = false;
-            this.txtApend2.BackColor = System.Drawing.SystemColors.Window;
-            this.txtApend2.BorderColor = System.Drawing.Color.DarkBlue;
-            this.txtApend2.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(13)))), ((int)(((byte)(255)))));
-            this.txtApend2.BorderRadius = 0;
-            this.txtApend2.BorderSize = 2;
-            this.txtApend2.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtApend2.ContextMenuStrips = null;
-            this.txtApend2.Enable = true;
-            this.txtApend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApend2.HideSelections = true;
-            this.txtApend2.Location = new System.Drawing.Point(346, 253);
-            this.txtApend2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApend2.Multiline = true;
-            this.txtApend2.Name = "txtApend2";
-            this.txtApend2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApend2.PasswordChar = false;
-            this.txtApend2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtApend2.PlaceholderText = "";
-            this.txtApend2.ReadsOnly = false;
-            this.txtApend2.ScrollBar = System.Windows.Forms.ScrollBars.Both;
-            this.txtApend2.Size = new System.Drawing.Size(598, 269);
-            this.txtApend2.TabIndex = 9;
-            this.txtApend2.Texts = "";
-            this.txtApend2.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtApend2.UnderlinedStyle = false;
-            this.txtApend2.VisibleEr = false;
-            this.txtApend2.WordWrapEr = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(101, 306);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '%';
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.WordWrap = false;
-            // 
             // txtAppend
             // 
             this.txtAppend.AcceptReturn = false;
             this.txtAppend.AcceptTab = false;
             this.txtAppend.AllowDrops = false;
-            this.txtAppend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAppend.AutoScroll = true;
             this.txtAppend.BackColor = System.Drawing.SystemColors.Window;
-            this.txtAppend.BorderColor = System.Drawing.Color.Coral;
-            this.txtAppend.BorderFocusColor = System.Drawing.Color.Red;
+            this.txtAppend.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtAppend.BorderFocusColor = System.Drawing.Color.HotPink;
             this.txtAppend.BorderRadius = 0;
             this.txtAppend.BorderSize = 2;
-            this.txtAppend.CharactersCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAppend.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtAppend.ContextMenuStrips = null;
             this.txtAppend.Enable = true;
-            this.txtAppend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtAppend.HideSelections = true;
-            this.txtAppend.Location = new System.Drawing.Point(1002, 279);
+            this.txtAppend.Location = new System.Drawing.Point(900, 302);
             this.txtAppend.Margin = new System.Windows.Forms.Padding(4);
             this.txtAppend.Multiline = true;
             this.txtAppend.Name = "txtAppend";
@@ -1202,15 +1165,152 @@
             this.txtAppend.PasswordChar = false;
             this.txtAppend.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAppend.PlaceholderText = "";
-            this.txtAppend.ReadsOnly = true;
-            this.txtAppend.ScrollBar = System.Windows.Forms.ScrollBars.Both;
-            this.txtAppend.Size = new System.Drawing.Size(263, 112);
-            this.txtAppend.TabIndex = 6;
+            this.txtAppend.ReadsOnly = false;
+            this.txtAppend.ScrollBar = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtAppend.Size = new System.Drawing.Size(409, 190);
+            this.txtAppend.TabIndex = 15;
             this.txtAppend.Texts = "";
             this.txtAppend.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAppend.UnderlinedStyle = false;
             this.txtAppend.VisibleEr = false;
             this.txtAppend.WordWrapEr = true;
+            // 
+            // txtAppend2
+            // 
+            this.txtAppend2.AcceptReturn = false;
+            this.txtAppend2.AcceptTab = false;
+            this.txtAppend2.AllowDrops = false;
+            this.txtAppend2.BackColor = System.Drawing.SystemColors.Window;
+            this.txtAppend2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtAppend2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtAppend2.BorderRadius = 0;
+            this.txtAppend2.BorderSize = 2;
+            this.txtAppend2.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtAppend2.ContextMenuStrips = null;
+            this.txtAppend2.Enable = true;
+            this.txtAppend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtAppend2.HideSelections = true;
+            this.txtAppend2.Location = new System.Drawing.Point(374, 299);
+            this.txtAppend2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAppend2.Multiline = true;
+            this.txtAppend2.Name = "txtAppend2";
+            this.txtAppend2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAppend2.PasswordChar = false;
+            this.txtAppend2.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAppend2.PlaceholderText = "";
+            this.txtAppend2.ReadsOnly = false;
+            this.txtAppend2.ScrollBar = System.Windows.Forms.ScrollBars.Both;
+            this.txtAppend2.Size = new System.Drawing.Size(432, 193);
+            this.txtAppend2.TabIndex = 14;
+            this.txtAppend2.Texts = "";
+            this.txtAppend2.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtAppend2.UnderlinedStyle = false;
+            this.txtAppend2.VisibleEr = false;
+            this.txtAppend2.WordWrapEr = true;
+            // 
+            // txt3
+            // 
+            this.txt3.AcceptReturn = false;
+            this.txt3.AcceptTab = false;
+            this.txt3.AllowDrops = false;
+            this.txt3.BackColor = System.Drawing.SystemColors.Window;
+            this.txt3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txt3.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txt3.BorderRadius = 0;
+            this.txt3.BorderSize = 2;
+            this.txt3.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt3.ContextMenuStrips = null;
+            this.txt3.Enable = true;
+            this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt3.HideSelections = true;
+            this.txt3.Location = new System.Drawing.Point(1003, 118);
+            this.txt3.Margin = new System.Windows.Forms.Padding(4);
+            this.txt3.Multiline = false;
+            this.txt3.Name = "txt3";
+            this.txt3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txt3.PasswordChar = false;
+            this.txt3.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt3.PlaceholderText = "";
+            this.txt3.ReadsOnly = false;
+            this.txt3.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txt3.Size = new System.Drawing.Size(250, 31);
+            this.txt3.TabIndex = 13;
+            this.txt3.Texts = "";
+            this.txt3.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt3.UnderlinedStyle = false;
+            this.txt3.VisibleEr = false;
+            this.txt3.WordWrapEr = true;
+            // 
+            // txtBox1
+            // 
+            this.txtBox1.AcceptReturn = false;
+            this.txtBox1.AcceptTab = false;
+            this.txtBox1.AllowDrops = false;
+            this.txtBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtBox1.BorderRadius = 0;
+            this.txtBox1.BorderSize = 2;
+            this.txtBox1.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBox1.ContextMenuStrips = null;
+            this.txtBox1.Enable = true;
+            this.txtBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBox1.HideSelections = true;
+            this.txtBox1.Location = new System.Drawing.Point(520, 129);
+            this.txtBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBox1.Multiline = false;
+            this.txtBox1.Name = "txtBox1";
+            this.txtBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBox1.PasswordChar = true;
+            this.txtBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBox1.PlaceholderText = "Contraseña";
+            this.txtBox1.ReadsOnly = false;
+            this.txtBox1.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txtBox1.Size = new System.Drawing.Size(321, 31);
+            this.txtBox1.TabIndex = 12;
+            this.txtBox1.Texts = "";
+            this.txtBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox1.UnderlinedStyle = false;
+            this.txtBox1.VisibleEr = false;
+            this.txtBox1.WordWrapEr = true;
+            // 
+            // txtBox0
+            // 
+            this.txtBox0.AcceptReturn = false;
+            this.txtBox0.AcceptTab = false;
+            this.txtBox0.AllowDrops = false;
+            this.txtBox0.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBox0.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtBox0.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(210)))));
+            this.txtBox0.BorderRadius = 0;
+            this.txtBox0.BorderSize = 2;
+            this.txtBox0.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBox0.ContextMenuStrips = null;
+            this.txtBox0.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtBox0.Enable = true;
+            this.txtBox0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBox0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBox0.HideSelections = true;
+            this.txtBox0.Location = new System.Drawing.Point(81, 129);
+            this.txtBox0.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBox0.Multiline = false;
+            this.txtBox0.Name = "txtBox0";
+            this.txtBox0.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBox0.PasswordChar = false;
+            this.txtBox0.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBox0.PlaceholderText = "Texto";
+            this.txtBox0.ReadsOnly = false;
+            this.txtBox0.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txtBox0.Size = new System.Drawing.Size(333, 31);
+            this.txtBox0.TabIndex = 11;
+            this.txtBox0.Texts = "";
+            this.txtBox0.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBox0.UnderlinedStyle = false;
+            this.txtBox0.VisibleEr = false;
+            this.txtBox0.WordWrapEr = true;
             // 
             // erButton7
             // 
@@ -1230,40 +1330,6 @@
             this.erButton7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.erButton7.UseVisualStyleBackColor = false;
             this.erButton7.Click += new System.EventHandler(this.erButton7_Click);
-            // 
-            // txt3
-            // 
-            this.txt3.AcceptReturn = false;
-            this.txt3.AcceptTab = false;
-            this.txt3.AllowDrops = false;
-            this.txt3.BackColor = System.Drawing.SystemColors.Window;
-            this.txt3.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txt3.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(210)))));
-            this.txt3.BorderRadius = 0;
-            this.txt3.BorderSize = 3;
-            this.txt3.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt3.ContextMenuStrips = null;
-            this.txt3.Enable = true;
-            this.txt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt3.HideSelections = true;
-            this.txt3.Location = new System.Drawing.Point(934, 129);
-            this.txt3.Margin = new System.Windows.Forms.Padding(4);
-            this.txt3.Multiline = false;
-            this.txt3.Name = "txt3";
-            this.txt3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txt3.PasswordChar = false;
-            this.txt3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txt3.PlaceholderText = "Hola";
-            this.txt3.ReadsOnly = false;
-            this.txt3.ScrollBar = System.Windows.Forms.ScrollBars.Both;
-            this.txt3.Size = new System.Drawing.Size(331, 31);
-            this.txt3.TabIndex = 3;
-            this.txt3.Texts = "Hola";
-            this.txt3.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt3.UnderlinedStyle = true;
-            this.txt3.VisibleEr = false;
-            this.txt3.WordWrapEr = true;
             // 
             // erButton6
             // 
@@ -1303,43 +1369,11 @@
             this.erButton5.UseVisualStyleBackColor = false;
             this.erButton5.Click += new System.EventHandler(this.erButton5_Click);
             // 
-            // txtBox1
-            // 
-            this.txtBox1.AcceptReturn = false;
-            this.txtBox1.AcceptTab = false;
-            this.txtBox1.AllowDrops = false;
-            this.txtBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBox1.BorderColor = System.Drawing.Color.Green;
-            this.txtBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(255)))), ((int)(((byte)(6)))));
-            this.txtBox1.BorderRadius = 0;
-            this.txtBox1.BorderSize = 3;
-            this.txtBox1.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBox1.ContextMenuStrips = null;
-            this.txtBox1.Enable = true;
-            this.txtBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBox1.HideSelections = true;
-            this.txtBox1.Location = new System.Drawing.Point(515, 129);
-            this.txtBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBox1.Multiline = false;
-            this.txtBox1.Name = "txtBox1";
-            this.txtBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBox1.PasswordChar = false;
-            this.txtBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBox1.PlaceholderText = "Usuario";
-            this.txtBox1.ReadsOnly = false;
-            this.txtBox1.ScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.txtBox1.Size = new System.Drawing.Size(331, 31);
-            this.txtBox1.TabIndex = 1;
-            this.txtBox1.Texts = "Usuario";
-            this.txtBox1.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBox1.UnderlinedStyle = true;
-            this.txtBox1.VisibleEr = false;
-            this.txtBox1.WordWrapEr = true;
-            // 
             // tabPage9
             // 
             this.tabPage9.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage9.Controls.Add(this.txtContenidoMensaje);
+            this.tabPage9.Controls.Add(this.txtContenidoTitulo);
             this.tabPage9.Controls.Add(this.groupBox3);
             this.tabPage9.Controls.Add(this.label13);
             this.tabPage9.Controls.Add(this.label12);
@@ -1352,8 +1386,6 @@
             this.tabPage9.Controls.Add(this.btnMensajeError);
             this.tabPage9.Controls.Add(this.chkCerrarMensaje);
             this.tabPage9.Controls.Add(this.BtnWarning);
-            this.tabPage9.Controls.Add(this.txtContenidoMensaje);
-            this.tabPage9.Controls.Add(this.txtContenidoTitulo);
             this.tabPage9.Controls.Add(this.BtnMostrarMensajeOK);
             this.tabPage9.Controls.Add(this.chkIncluirTitulo);
             this.tabPage9.Location = new System.Drawing.Point(4, 26);
@@ -1589,74 +1621,6 @@
             this.BtnWarning.UseVisualStyleBackColor = false;
             this.BtnWarning.Click += new System.EventHandler(this.BtnWarning_Click);
             // 
-            // txtContenidoMensaje
-            // 
-            this.txtContenidoMensaje.AcceptReturn = false;
-            this.txtContenidoMensaje.AcceptTab = false;
-            this.txtContenidoMensaje.AllowDrops = false;
-            this.txtContenidoMensaje.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContenidoMensaje.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtContenidoMensaje.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtContenidoMensaje.BorderRadius = 0;
-            this.txtContenidoMensaje.BorderSize = 2;
-            this.txtContenidoMensaje.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtContenidoMensaje.ContextMenuStrips = null;
-            this.txtContenidoMensaje.Enable = true;
-            this.txtContenidoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContenidoMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContenidoMensaje.HideSelections = true;
-            this.txtContenidoMensaje.Location = new System.Drawing.Point(79, 93);
-            this.txtContenidoMensaje.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContenidoMensaje.Multiline = true;
-            this.txtContenidoMensaje.Name = "txtContenidoMensaje";
-            this.txtContenidoMensaje.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtContenidoMensaje.PasswordChar = false;
-            this.txtContenidoMensaje.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtContenidoMensaje.PlaceholderText = "";
-            this.txtContenidoMensaje.ReadsOnly = false;
-            this.txtContenidoMensaje.ScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.txtContenidoMensaje.Size = new System.Drawing.Size(358, 212);
-            this.txtContenidoMensaje.TabIndex = 6;
-            this.txtContenidoMensaje.Texts = "";
-            this.txtContenidoMensaje.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtContenidoMensaje.UnderlinedStyle = false;
-            this.txtContenidoMensaje.VisibleEr = false;
-            this.txtContenidoMensaje.WordWrapEr = true;
-            // 
-            // txtContenidoTitulo
-            // 
-            this.txtContenidoTitulo.AcceptReturn = false;
-            this.txtContenidoTitulo.AcceptTab = false;
-            this.txtContenidoTitulo.AllowDrops = false;
-            this.txtContenidoTitulo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtContenidoTitulo.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtContenidoTitulo.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtContenidoTitulo.BorderRadius = 0;
-            this.txtContenidoTitulo.BorderSize = 2;
-            this.txtContenidoTitulo.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtContenidoTitulo.ContextMenuStrips = null;
-            this.txtContenidoTitulo.Enable = true;
-            this.txtContenidoTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContenidoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtContenidoTitulo.HideSelections = true;
-            this.txtContenidoTitulo.Location = new System.Drawing.Point(79, 40);
-            this.txtContenidoTitulo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContenidoTitulo.Multiline = false;
-            this.txtContenidoTitulo.Name = "txtContenidoTitulo";
-            this.txtContenidoTitulo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtContenidoTitulo.PasswordChar = false;
-            this.txtContenidoTitulo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtContenidoTitulo.PlaceholderText = "";
-            this.txtContenidoTitulo.ReadsOnly = false;
-            this.txtContenidoTitulo.ScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.txtContenidoTitulo.Size = new System.Drawing.Size(358, 31);
-            this.txtContenidoTitulo.TabIndex = 4;
-            this.txtContenidoTitulo.Texts = "";
-            this.txtContenidoTitulo.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtContenidoTitulo.UnderlinedStyle = true;
-            this.txtContenidoTitulo.VisibleEr = false;
-            this.txtContenidoTitulo.WordWrapEr = true;
-            // 
             // BtnMostrarMensajeOK
             // 
             this.BtnMostrarMensajeOK.BackColor = System.Drawing.Color.Lime;
@@ -1769,50 +1733,74 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // rvProgressBar4
+            // txtContenidoTitulo
             // 
-            this.rvProgressBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rvProgressBar4.BackgroundBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rvProgressBar4.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rvProgressBar4.BackgroundTextColor = System.Drawing.Color.Plum;
-            this.rvProgressBar4.BarWidth = 5;
-            this.rvProgressBar4.Location = new System.Drawing.Point(1154, 62);
-            this.rvProgressBar4.Maximum = 350;
-            this.rvProgressBar4.Minimum = 0;
-            this.rvProgressBar4.Name = "rvProgressBar4";
-            this.rvProgressBar4.ProgressBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.rvProgressBar4.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.rvProgressBar4.ShowMaximun = false;
-            this.rvProgressBar4.ShowText = ControlesPersonalizados.HPositionText.None;
-            this.rvProgressBar4.Size = new System.Drawing.Size(5, 292);
-            this.rvProgressBar4.SymbolAfter = "";
-            this.rvProgressBar4.SymbolBefore = "";
-            this.rvProgressBar4.TabIndex = 17;
-            this.rvProgressBar4.Value = 0;
-            this.rvProgressBar4.VerticalPositionText = ControlesPersonalizados.VPositionText.Sliding;
+            this.txtContenidoTitulo.AcceptReturn = false;
+            this.txtContenidoTitulo.AcceptTab = false;
+            this.txtContenidoTitulo.AllowDrops = false;
+            this.txtContenidoTitulo.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContenidoTitulo.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtContenidoTitulo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(210)))));
+            this.txtContenidoTitulo.BorderRadius = 0;
+            this.txtContenidoTitulo.BorderSize = 2;
+            this.txtContenidoTitulo.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContenidoTitulo.ContextMenuStrips = null;
+            this.txtContenidoTitulo.Enable = true;
+            this.txtContenidoTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContenidoTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoTitulo.HideSelections = true;
+            this.txtContenidoTitulo.Location = new System.Drawing.Point(79, 44);
+            this.txtContenidoTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContenidoTitulo.Multiline = false;
+            this.txtContenidoTitulo.Name = "txtContenidoTitulo";
+            this.txtContenidoTitulo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContenidoTitulo.PasswordChar = false;
+            this.txtContenidoTitulo.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContenidoTitulo.PlaceholderText = "Título de la alerta";
+            this.txtContenidoTitulo.ReadsOnly = false;
+            this.txtContenidoTitulo.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txtContenidoTitulo.Size = new System.Drawing.Size(358, 31);
+            this.txtContenidoTitulo.TabIndex = 17;
+            this.txtContenidoTitulo.Texts = "";
+            this.txtContenidoTitulo.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContenidoTitulo.UnderlinedStyle = true;
+            this.txtContenidoTitulo.VisibleEr = false;
+            this.txtContenidoTitulo.WordWrapEr = true;
             // 
-            // rhProgressBar4
+            // txtContenidoMensaje
             // 
-            this.rhProgressBar4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rhProgressBar4.BackgroundBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.rhProgressBar4.BackgroundForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.rhProgressBar4.BackgroundTextColor = System.Drawing.Color.MediumOrchid;
-            this.rhProgressBar4.BarHeight = 5;
-            this.rhProgressBar4.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Right;
-            this.rhProgressBar4.Location = new System.Drawing.Point(53, 257);
-            this.rhProgressBar4.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.rhProgressBar4.Maximum = 350;
-            this.rhProgressBar4.Minimum = 0;
-            this.rhProgressBar4.Name = "rhProgressBar4";
-            this.rhProgressBar4.ProgressBarColor = System.Drawing.Color.Purple;
-            this.rhProgressBar4.RBackGrounColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.rhProgressBar4.ShowMaximun = false;
-            this.rhProgressBar4.ShowText = ControlesPersonalizados.TextVerticalPosition.None;
-            this.rhProgressBar4.Size = new System.Drawing.Size(350, 7);
-            this.rhProgressBar4.SymbolAfter = "";
-            this.rhProgressBar4.SymbolBefore = "";
-            this.rhProgressBar4.TabIndex = 18;
-            this.rhProgressBar4.Value = 0;
+            this.txtContenidoMensaje.AcceptReturn = false;
+            this.txtContenidoMensaje.AcceptTab = false;
+            this.txtContenidoMensaje.AllowDrops = false;
+            this.txtContenidoMensaje.BackColor = System.Drawing.SystemColors.Window;
+            this.txtContenidoMensaje.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtContenidoMensaje.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(210)))));
+            this.txtContenidoMensaje.BorderRadius = 0;
+            this.txtContenidoMensaje.BorderSize = 2;
+            this.txtContenidoMensaje.CharactersCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtContenidoMensaje.ContextMenuStrips = null;
+            this.txtContenidoMensaje.Enable = true;
+            this.txtContenidoMensaje.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContenidoMensaje.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtContenidoMensaje.HideSelections = true;
+            this.txtContenidoMensaje.Location = new System.Drawing.Point(79, 100);
+            this.txtContenidoMensaje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContenidoMensaje.Multiline = true;
+            this.txtContenidoMensaje.Name = "txtContenidoMensaje";
+            this.txtContenidoMensaje.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContenidoMensaje.PasswordChar = false;
+            this.txtContenidoMensaje.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContenidoMensaje.PlaceholderText = "";
+            this.txtContenidoMensaje.ReadsOnly = false;
+            this.txtContenidoMensaje.ScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.txtContenidoMensaje.Size = new System.Drawing.Size(358, 144);
+            this.txtContenidoMensaje.TabIndex = 18;
+            this.txtContenidoMensaje.Texts = "Lorem ipsum dolor sit amet consectetur adipiscing elit duis neque, rhoncus habita" +
+    "sse volutpat phasellus penatibus pharetra.";
+            this.txtContenidoMensaje.TextsAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtContenidoMensaje.UnderlinedStyle = false;
+            this.txtContenidoMensaje.VisibleEr = false;
+            this.txtContenidoMensaje.WordWrapEr = true;
             // 
             // Inicio
             // 
@@ -1853,7 +1841,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage8.ResumeLayout(false);
-            this.tabPage8.PerformLayout();
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -1867,7 +1854,7 @@
         }
 
         #endregion
-        private ControlesPersonalizados.ERButton btnSalir;
+        private ControlesPersonalizados.RButton btnSalir;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1884,67 +1871,64 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.Panel panel3;
-        private ControlesPersonalizados.ERButton erButton2;
+        private ControlesPersonalizados.RButton erButton2;
         private System.Windows.Forms.Label label6;
-        private ControlesPersonalizados.ERButton Normal;
+        private ControlesPersonalizados.RButton Normal;
         private System.Windows.Forms.Label label7;
-        private ControlesPersonalizados.ERToggleButton chkPersonalizado;
-        private ControlesPersonalizados.ERToggleButton chkBtnDefecto;
-        private ControlesPersonalizados.ERToggleButton chkBtn;
+        private ControlesPersonalizados.RToggleButton chkPersonalizado;
+        private ControlesPersonalizados.RToggleButton chkBtnDefecto;
+        private ControlesPersonalizados.RToggleButton chkBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private ControlesPersonalizados.ERDatePicker erDatePicker1;
-        private ControlesPersonalizados.ERDatePicker erDatePicker2;
+        private ControlesPersonalizados.RDatePicker erDatePicker1;
+        private ControlesPersonalizados.RDatePicker erDatePicker2;
         private System.Windows.Forms.Label label2;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox1;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox1;
         protected System.Windows.Forms.TabPage tabPage4;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox6;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox7;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox4;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox5;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox2;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox3;
-        private ControlesPersonalizados.ERCircularPictureBox erCircularPictureBox8;
-        private ControlesPersonalizados.ERButton erButton1;
-        private ControlesPersonalizados.ERComboBox cmbMunicipios;
-        private ControlesPersonalizados.ERComboBox erComboBox1;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox6;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox7;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox4;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox5;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox2;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox3;
+        private ControlesPersonalizados.RCircularPictureBox erCircularPictureBox8;
+        private ControlesPersonalizados.RButton erButton1;
+        private ControlesPersonalizados.RComboBox cmbMunicipios;
+        private ControlesPersonalizados.RComboBox erComboBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private ControlesPersonalizados.ERComboBox erComboBox2;
-        private ControlesPersonalizados.ERComboBox cmb3;
-        private ControlesPersonalizados.ERButton erButton3;
+        private ControlesPersonalizados.RComboBox erComboBox2;
+        private ControlesPersonalizados.RComboBox cmb3;
+        private ControlesPersonalizados.RButton erButton3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Timer timer1;
-        private ControlesPersonalizados.ERButton BtnActivarBarras;
+        private ControlesPersonalizados.RButton BtnActivarBarras;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
-        private ControlesPersonalizados.ERRadioButton erRadioButton3;
-        private ControlesPersonalizados.ERRadioButton erRadioButton2;
-        private ControlesPersonalizados.ERRadioButton erRadioButton1;
+        private ControlesPersonalizados.RRadioButton erRadioButton3;
+        private ControlesPersonalizados.RRadioButton erRadioButton2;
+        private ControlesPersonalizados.RRadioButton erRadioButton1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private ControlesPersonalizados.ERTextBox txtBox1;
-        private ControlesPersonalizados.ERButton erButton5;
-        private ControlesPersonalizados.ERButton erButton6;
+        private ControlesPersonalizados.RButton erButton5;
+        private ControlesPersonalizados.RButton erButton6;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.Label label9;
-        private ControlesPersonalizados.ERToggleButton chkIncluirTitulo;
-        private ControlesPersonalizados.ERTextBox txtContenidoMensaje;
+        private ControlesPersonalizados.RToggleButton chkIncluirTitulo;
         private System.Windows.Forms.Label label11;
-        private ControlesPersonalizados.ERTextBox txtContenidoTitulo;
         private System.Windows.Forms.Label label10;
-        private ControlesPersonalizados.ERButton BtnMostrarMensajeOK;
-        private ControlesPersonalizados.ERButton BtnWarning;
+        private ControlesPersonalizados.RButton BtnMostrarMensajeOK;
+        private ControlesPersonalizados.RButton BtnWarning;
         private System.Windows.Forms.Label label12;
-        private ControlesPersonalizados.ERToggleButton chkCerrarMensaje;
-        private ControlesPersonalizados.ERButton btnMensajeError;
-        private ControlesPersonalizados.ERButton btnMensajeInformacion;
-        private ControlesPersonalizados.ERButton btnMensajeDefaul;
-        private ControlesPersonalizados.ERButton btnPersonalizado;
+        private ControlesPersonalizados.RToggleButton chkCerrarMensaje;
+        private ControlesPersonalizados.RButton btnMensajeError;
+        private ControlesPersonalizados.RButton btnMensajeInformacion;
+        private ControlesPersonalizados.RButton btnMensajeDefaul;
+        private ControlesPersonalizados.RButton btnPersonalizado;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label19;
@@ -1953,12 +1937,7 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private ControlesPersonalizados.ERTextBox txt3;
-        private ControlesPersonalizados.ERButton erButton7;
-        private System.Windows.Forms.TextBox textBox1;
-        private ControlesPersonalizados.ERTextBox txtApend2;
-        private ControlesPersonalizados.ERTextBox txtBox0;
-        private ControlesPersonalizados.ERTextBox txtAppend;
+        private ControlesPersonalizados.RButton erButton7;
         private System.Windows.Forms.ProgressBar bp1;
         private ControlesPersonalizados.RVProgressBar rvProgressBar1;
         private ControlesPersonalizados.RHProgressBar rhProgressBar1;
@@ -1968,6 +1947,13 @@
         private ControlesPersonalizados.RHProgressBar rhProgressBar3;
         private ControlesPersonalizados.RHProgressBar rhProgressBar4;
         private ControlesPersonalizados.RVProgressBar rvProgressBar4;
+        private ControlesPersonalizados.RTextBox txtBox0;
+        private ControlesPersonalizados.RTextBox txt3;
+        private ControlesPersonalizados.RTextBox txtBox1;
+        private ControlesPersonalizados.RTextBox txtAppend;
+        private ControlesPersonalizados.RTextBox txtAppend2;
+        private ControlesPersonalizados.RTextBox txtContenidoTitulo;
+        private ControlesPersonalizados.RTextBox txtContenidoMensaje;
     }
 }
 

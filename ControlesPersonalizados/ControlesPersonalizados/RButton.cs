@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 
 namespace ControlesPersonalizados
 {
-    public partial class ERButton : Button
+    public partial class RButton : Button
     {
 
         //Campos
@@ -22,7 +22,7 @@ namespace ControlesPersonalizados
         private Color borderColor = Color.PaleVioletRed;
         
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderSize
         {
             get
@@ -37,7 +37,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderRadius
         {
             get
@@ -69,7 +69,7 @@ namespace ControlesPersonalizados
 
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor
         {
             get
@@ -84,7 +84,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BackGroundColor
         {
             get
@@ -106,7 +106,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color TextColor
         {
             get
@@ -120,7 +120,7 @@ namespace ControlesPersonalizados
         }
 
 
-        public ERButton()
+        public RButton()
         {
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;

@@ -11,7 +11,7 @@ using System.Drawing.Drawing2D;
 
 namespace ControlesPersonalizados
 {
-    public partial class ERToggleButton : CheckBox
+    public partial class RToggleButton : CheckBox
     {
         //Campos
         private Color onBackColor = Color.Lime;
@@ -20,7 +20,7 @@ namespace ControlesPersonalizados
         private Color offToggleColor = Color.Gainsboro;
         private bool solidStyle = true;
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color OnBackColor 
         {
             get 
@@ -34,7 +34,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color OnToggleColor
         {
             get
@@ -49,7 +49,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color OffBackColor
         {
             get 
@@ -63,7 +63,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color OffToggleColor
         {
             get 
@@ -91,7 +91,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER CheckBox")]
+        [Category("R CheckBox")]
         [DefaultValue(true)]
         public bool SolidStyle
         {
@@ -107,7 +107,7 @@ namespace ControlesPersonalizados
         }
 
         //Constructor
-        public ERToggleButton()
+        public RToggleButton()
         {
             this.MinimumSize = new Size(40, 22);
 

@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class ERDatePicker
+    partial class RDatePicker
     {
         /// <summary>
         /// Variable del diseñador necesaria.

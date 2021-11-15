@@ -12,7 +12,7 @@ using System.ComponentModel;
 
 namespace ControlesPersonalizados
 {
-    public partial class ERCircularPictureBox : PictureBox
+    public partial class RCircularPictureBox : PictureBox
     {//Campos
         private int borderSize = 2;
         private Color borderColor = Color.RoyalBlue;
@@ -22,14 +22,14 @@ namespace ControlesPersonalizados
         private float gradientAngle = 50F;
 
         //Constructor
-        public ERCircularPictureBox()
+        public RCircularPictureBox()
         {
             this.Size = new Size(100, 100);
             this.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         //Propiedades
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -40,7 +40,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -51,7 +51,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor2
         {
             get { return borderColor2; }
@@ -62,7 +62,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public DashStyle BorderLineStyle
         {
             get { return borderLineStyle; }
@@ -73,7 +73,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public DashCap BorderCapStyle
         {
             get { return borderCapStyle; }
@@ -84,7 +84,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public float GradientAngle
         {
             get { return gradientAngle; }

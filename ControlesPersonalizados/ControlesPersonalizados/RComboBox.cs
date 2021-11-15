@@ -13,7 +13,7 @@ using System.Drawing.Design;
 namespace ControlesPersonalizados
 {
     [DefaultEvent("OnSelectedIndexChanged")]
-   public class ERComboBox : UserControl
+   public class RComboBox : UserControl
     {
         #region -> Campos
         //Fields
@@ -34,7 +34,7 @@ namespace ControlesPersonalizados
         #endregion
 
         #region -> Constructor
-        public ERComboBox()
+        public RComboBox()
         {
             cmbList = new ComboBox();
             lblText = new Label();
@@ -87,7 +87,7 @@ namespace ControlesPersonalizados
 
         //Properties
         #region -> Propiedades de Apariencia
-        [Category("ER Control")]
+        [Category("R Control")]
         public new Color BackColor
         {
             get { return backColor; }
@@ -99,7 +99,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color IconColor
         {
             get { return iconColor; }
@@ -110,7 +110,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color ListBackColor
         {
             get { return listBackColor; }
@@ -121,7 +121,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color ListTextColor
         {
             get { return listTextColor; }
@@ -132,7 +132,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color BorderColor
         {
             get { return borderColor; }
@@ -143,7 +143,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public int BorderSize
         {
             get { return borderSize; }
@@ -155,7 +155,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public override Color ForeColor
         {
             get { return base.ForeColor; }
@@ -166,7 +166,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public override Font Font
         {
             get { return base.Font; }
@@ -178,14 +178,14 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public string Texts
         {
             get { return lblText.Text; }
             set { lblText.Text = value; }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public ComboBoxStyle DropDownStyle
         {
             get { return cmbList.DropDownStyle; }
@@ -199,7 +199,7 @@ namespace ControlesPersonalizados
 
         #region -> Propiedades de Datos
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         [Localizable(true)]
@@ -209,7 +209,7 @@ namespace ControlesPersonalizados
             get { return cmbList.Items; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [AttributeProvider(typeof(IListSource))]
         [DefaultValue(null)]
         public object DataSource
@@ -218,7 +218,7 @@ namespace ControlesPersonalizados
             set { cmbList.DataSource = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [Browsable(true)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Content)]
         [Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
@@ -230,7 +230,7 @@ namespace ControlesPersonalizados
             set { cmbList.AutoCompleteCustomSource = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [Browsable(true)]
         [DefaultValue(AutoCompleteSource.None)]
         [EditorBrowsable(EditorBrowsableState.Always)]
@@ -240,7 +240,7 @@ namespace ControlesPersonalizados
             set { cmbList.AutoCompleteSource = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [Browsable(true)]
         [DefaultValue(AutoCompleteMode.None)]
         [EditorBrowsable(EditorBrowsableState.Always)]
@@ -250,7 +250,7 @@ namespace ControlesPersonalizados
             set { cmbList.AutoCompleteMode = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [Bindable(true)]
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -260,7 +260,7 @@ namespace ControlesPersonalizados
             set { cmbList.SelectedItem = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public int SelectedIndex
@@ -269,7 +269,7 @@ namespace ControlesPersonalizados
             set { cmbList.SelectedIndex = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [DefaultValue("")]
         [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         [TypeConverter("System.Windows.Forms.Design.DataMemberFieldConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
@@ -279,7 +279,7 @@ namespace ControlesPersonalizados
             set { cmbList.DisplayMember = value; }
         }
 
-        [Category("ER Datos")]
+        [Category("R Datos")]
         [DefaultValue("")]
         [Editor("System.Windows.Forms.Design.DataMemberFieldEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", typeof(UITypeEditor))]
         public string ValueMember

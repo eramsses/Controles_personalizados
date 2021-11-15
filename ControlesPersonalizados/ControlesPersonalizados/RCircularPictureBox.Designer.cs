@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class ERCircularPictureBox
+    partial class RCircularPictureBox
     {
         /// <summary>
         /// Variable del diseñador necesaria.

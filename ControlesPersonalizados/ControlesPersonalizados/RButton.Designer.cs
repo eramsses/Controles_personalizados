@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class ERButton
+    partial class RButton
     {
         /// <summary>
         /// Variable del diseñador necesaria.

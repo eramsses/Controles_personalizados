@@ -42,29 +42,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ERDatePicker.cs">
+    <Compile Include="RDatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ERDatePicker.Designer.cs">
-      <DependentUpon>ERDatePicker.cs</DependentUpon>
+    <Compile Include="RDatePicker.Designer.cs">
+      <DependentUpon>RDatePicker.cs</DependentUpon>
     </Compile>
-    <Compile Include="ERButton.cs">
+    <Compile Include="RButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ERButton.Designer.cs">
-      <DependentUpon>ERButton.cs</DependentUpon>
+    <Compile Include="RButton.Designer.cs">
+      <DependentUpon>RButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="ERCircularPictureBox.cs">
+    <Compile Include="RCircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ERCircularPictureBox.Designer.cs">
-      <DependentUpon>ERCircularPictureBox.cs</DependentUpon>
+    <Compile Include="RCircularPictureBox.Designer.cs">
+      <DependentUpon>RCircularPictureBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="ERToggleButton.cs">
+    <Compile Include="RToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ERToggleButton.Designer.cs">
-      <DependentUpon>ERToggleButton.cs</DependentUpon>
+    <Compile Include="RToggleButton.Designer.cs">
+      <DependentUpon>RToggleButton.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -72,17 +72,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ERComboBox.cs">
+    <Compile Include="RComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ERRadioButton.cs">
+    <Compile Include="RRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ERTextBox.cs">
+    <Compile Include="RTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ERTextBox.designer.cs">
-      <DependentUpon>ERTextBox.cs</DependentUpon>
+    <Compile Include="RTextBox.designer.cs">
+      <DependentUpon>RTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="RHProgressBar.cs">
       <SubType>UserControl</SubType>
@@ -103,8 +103,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ERTextBox.resx">
-      <DependentUpon>ERTextBox.cs</DependentUpon>
+    <EmbeddedResource Include="RTextBox.resx">
+      <DependentUpon>RTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RHProgressBar.resx">
       <DependentUpon>RHProgressBar.cs</DependentUpon>

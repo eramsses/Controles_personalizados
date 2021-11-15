@@ -11,14 +11,14 @@ using System.ComponentModel;
 
 namespace ControlesPersonalizados
 {
-   public  class ERRadioButton : RadioButton
+   public  class RRadioButton : RadioButton
     {
         //Fields
         private Color checkedColor = Color.MediumSlateBlue;
         private Color unCheckedColor = Color.Gray;
 
         //Properties
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color CheckedColor
         {
             get
@@ -33,7 +33,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("ER Control")]
+        [Category("R Control")]
         public Color UnCheckedColor
         {
             get
@@ -49,7 +49,7 @@ namespace ControlesPersonalizados
         }
 
         //Constructor
-        public ERRadioButton()
+        public RRadioButton()
         {
             this.MinimumSize = new Size(0, 21);
             //Add a padding of 10 to the left to have a considerable distance between the text and the RadioButton.
