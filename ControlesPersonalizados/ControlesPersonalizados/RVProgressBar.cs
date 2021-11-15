@@ -428,7 +428,15 @@ namespace ControlesPersonalizados
                             break;
 
                         case HPositionText.Inside://Texto abajo por dentro
-                            pX = ((this.PnlSlider.Width - this.LblTextC.Width) / 2);
+
+                            if(LblTextC.Width > this.Width)
+                            {
+                                this.Width = LblTextC.Width;
+                                PnlChannel.Width = LblTextC.Width;
+                                PnlSlider.Width = LblTextC.Width;
+                            }
+
+                            pX = ((this.Width - this.LblTextC.Width) / 2);
                             pY = this.Height - LblTextC.Height - 1;
                             this.LblTextC.AutoSize = true;
                             this.LblTextC.Location = new Point(pX, pY);
@@ -468,6 +476,13 @@ namespace ControlesPersonalizados
                             break;
 
                         case HPositionText.Inside://Texto al medio por dentro 
+                            if (LblTextC.Width > this.Width)
+                            {
+                                this.Width = LblTextC.Width;
+                                PnlChannel.Width = LblTextC.Width;
+                                PnlSlider.Width = LblTextC.Width;
+                            }
+
                             pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
                             pY = (this.Height - this.LblTextC.Height) / 2;
 
@@ -509,6 +524,13 @@ namespace ControlesPersonalizados
                             break;
 
                         case HPositionText.Inside://Texto arriba por dentro
+                            if (LblTextC.Width > this.Width)
+                            {
+                                this.Width = LblTextC.Width;
+                                PnlChannel.Width = LblTextC.Width;
+                                PnlSlider.Width = LblTextC.Width;
+                            }
+
                             pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
                             
                             this.LblTextC.AutoSize = true;
@@ -543,9 +565,6 @@ namespace ControlesPersonalizados
                             if (pY > this.Height - LblTextL.Height)
                                 pY = this.Height - LblTextL.Height;
 
-                            //if ((pX + LblTextO.Width) > this.PnlChannel.Width)
-                            //    pX = this.PnlSlider.Width - LblTextO.Width;
-
                             this.LblTextL.AutoSize = true;
                             this.LblTextL.Location = new Point(pX, pY);
 
@@ -555,12 +574,16 @@ namespace ControlesPersonalizados
                             break;
 
                         case HPositionText.Inside://Texto deslizante por dentro
+                            if (LblTextC.Width > this.Width)
+                            {
+                                this.Width = LblTextC.Width;
+                                PnlChannel.Width = LblTextC.Width;
+                                PnlSlider.Width = LblTextC.Width;
+                            }
+
                             pY = (this.Height - PnlSlider.Height);
                             if (pY > this.Height - LblTextC.Height)
                                 pY = this.Height - LblTextC.Height;
-
-                            //if ((pX + LblTextI.Width) > this.PnlChannel.Width)
-                            //    pX = this.PnlSlider.Width - LblTextI.Width;
 
                             pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
 
@@ -577,8 +600,6 @@ namespace ControlesPersonalizados
                             if (pY > this.Height - LblTextR.Height)
                                 pY = this.Height - LblTextR.Height;
 
-                            //if ((pX + LblTextU.Width) > this.PnlChannel.Width)
-                            //    pX = this.PnlSlider.Width - LblTextU.Width;
 
                             pX = PnlChannel.Width + 1;
                             this.LblTextR.AutoSize = true;
@@ -629,17 +650,18 @@ namespace ControlesPersonalizados
                     {
                         PnlChannel.Width = txtWidth;
                         PnlSlider.Width = txtWidth;
+                        barWidth = txtWidth;
+                        this.Width = txtWidth;
                     }
                     else
                     {
                         PnlChannel.Width = barWidth;
                         PnlSlider.Width = barWidth;
+                        
+                        this.Width = barWidth;
                     }
 
-                    barWidth = PnlChannel.Width;
-                    this.Width = PnlChannel.Width;
-
-
+                    
                     break;
 
                 default:
