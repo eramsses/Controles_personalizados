@@ -1,6 +1,6 @@
 ﻿namespace ControlesPersonalizados
 {
-    partial class RProgressBar
+    partial class RHProgressBar
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

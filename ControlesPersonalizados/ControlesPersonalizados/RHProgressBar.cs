@@ -22,7 +22,7 @@ namespace ControlesPersonalizados
         None
     }
 
-    public partial class RProgressBar : UserControl
+    public partial class RHProgressBar : UserControl
     {
         private static Color darkText = Color.FromArgb(64, 64, 64);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
@@ -39,7 +39,7 @@ namespace ControlesPersonalizados
         private int barHeight = 5;
 
 
-        public RProgressBar()
+        public RHProgressBar()
         {
             InitializeComponent();
             ShowValueText();
