@@ -38,6 +38,7 @@
             this.PicIcon = new System.Windows.Forms.PictureBox();
             this.PnlMensaje = new System.Windows.Forms.Panel();
             this.LblMensaje = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.PnlTitulo.SuspendLayout();
             this.PnlBotones.SuspendLayout();
             this.PnlIcono.SuspendLayout();
@@ -66,13 +67,14 @@
             this.LblTitulo.Location = new System.Drawing.Point(13, 12);
             this.LblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTitulo.Name = "LblTitulo";
-            this.LblTitulo.Size = new System.Drawing.Size(398, 22);
+            this.LblTitulo.Size = new System.Drawing.Size(402, 22);
             this.LblTitulo.TabIndex = 0;
             this.LblTitulo.Text = "Título";
             this.LblTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LblTitulo_MouseDown);
             // 
             // PnlBotones
             // 
+            this.PnlBotones.Controls.Add(this.button1);
             this.PnlBotones.Controls.Add(this.RBtn3);
             this.PnlBotones.Controls.Add(this.RBtn2);
             this.PnlBotones.Controls.Add(this.RBtn1);
@@ -103,6 +105,8 @@
             this.RBtn3.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.RBtn3.UseVisualStyleBackColor = false;
             this.RBtn3.Click += new System.EventHandler(this.RBtn3_Click);
+            this.RBtn3.Enter += new System.EventHandler(this.RBtn3_Enter);
+            this.RBtn3.Leave += new System.EventHandler(this.RBtn3_Leave);
             // 
             // RBtn2
             // 
@@ -124,6 +128,8 @@
             this.RBtn2.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.RBtn2.UseVisualStyleBackColor = false;
             this.RBtn2.Click += new System.EventHandler(this.RBtn2_Click);
+            this.RBtn2.Enter += new System.EventHandler(this.RBtn2_Enter);
+            this.RBtn2.Leave += new System.EventHandler(this.RBtn2_Leave);
             // 
             // RBtn1
             // 
@@ -146,6 +152,8 @@
             this.RBtn1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.RBtn1.UseVisualStyleBackColor = false;
             this.RBtn1.Click += new System.EventHandler(this.RBtn1_Click);
+            this.RBtn1.Enter += new System.EventHandler(this.RBtn1_Enter);
+            this.RBtn1.Leave += new System.EventHandler(this.RBtn1_Leave);
             // 
             // PnlIcono
             // 
@@ -189,6 +197,15 @@
             this.LblMensaje.Size = new System.Drawing.Size(317, 108);
             this.LblMensaje.TabIndex = 0;
             this.LblMensaje.Text = "label1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FrmRMessageBox
             // 
@@ -235,6 +252,7 @@
         private ControlesPersonalizados.RButton RBtn3;
         private ControlesPersonalizados.RButton RBtn2;
         private ControlesPersonalizados.RButton RBtn1;
+        private System.Windows.Forms.Button button1;
     }
 }
 

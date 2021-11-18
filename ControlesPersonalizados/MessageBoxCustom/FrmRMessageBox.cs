@@ -62,16 +62,25 @@ namespace MessageBoxCustom
             {
                 case RMessageBoxDefaultButton.None:
                     this.ActiveControl = null;
-
+                    
+                    
                     break;
                 case RMessageBoxDefaultButton.Button1:
                     this.ActiveControl = RBtn3;
+                    RBtn3.BorderColor = Color.Red;
+                    RBtn3.BorderSize = 1;
                     break;
                 case RMessageBoxDefaultButton.Button2:
                     this.ActiveControl = RBtn2;
+                    RBtn2.BorderColor = Color.Red;
+                    RBtn2.BorderSize = 1;
+                    
                     break;
                 case RMessageBoxDefaultButton.Button3:
                     this.ActiveControl = RBtn1;
+                    RBtn1.BorderColor = Color.Red;
+                    RBtn1.BorderSize = 1;
+                    
                     break;
                 default:
 
@@ -248,6 +257,40 @@ namespace MessageBoxCustom
             resultado = resultadoBoton3;
         }
 
+        private void RBtn3_Enter(object sender, EventArgs e)
+        {
+            RBtn3.BorderSize = 1;
+            RBtn3.BorderColor = Color.Red;
+        }
 
+        private void RBtn3_Leave(object sender, EventArgs e)
+        {
+            RBtn3.BorderSize = 0;
+            RBtn3.BorderColor = Color.Red;
+        }
+
+        private void RBtn2_Enter(object sender, EventArgs e)
+        {
+            RBtn2.BorderSize = 1;
+            RBtn2.BorderColor = Color.Red;
+        }
+
+        private void RBtn2_Leave(object sender, EventArgs e)
+        {
+            RBtn2.BorderSize = 0;
+            RBtn2.BorderColor = Color.Red;
+        }
+
+        private void RBtn1_Enter(object sender, EventArgs e)
+        {
+            RBtn1.BorderSize = 1;
+            RBtn1.BorderColor = Color.Red;
+        }
+
+        private void RBtn1_Leave(object sender, EventArgs e)
+        {
+            RBtn1.BorderSize = 0;
+            RBtn1.BorderColor = Color.Red;
+        }
     }
 }
