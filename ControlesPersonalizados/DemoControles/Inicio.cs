@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ControlesPersonalizados;
+using System.Threading;
+using MessageBoxCustom;
 
 namespace DemoControles
 {
@@ -130,6 +132,11 @@ namespace DemoControles
             foreach (RHProgressBar pbH in PnlBarrasProgreso.Controls.OfType<RHProgressBar>().ToList())
             {
                 pbH.Value = i;
+            }
+
+            foreach (RCProgressBar pbC in PnlBarrasProgreso.Controls.OfType<RCProgressBar>().ToList())
+            {
+                pbC.Value = i;
             }
 
             if (i >= bp1.Maximum)
@@ -275,5 +282,37 @@ namespace DemoControles
             txtAppend2.AppendTexts(txt3.Texts + "\r\n");
         }
 
+        private void rButton1_Click(object sender, EventArgs e)
+        {
+
+            string idioma = Thread.CurrentThread.CurrentCulture.ToString();
+            //DialogResult r = MessageBox.Show(MessageBoxIcon.Question.ToString() + "lkjashd fljkshldkj flksdj fhlkasjdh flkjsdhf lkjsd hflkjsdh flkjsdh flkjsada fhlkjsdh flkjsdh flkjasdhf lkjsdh flkjsdh fkjsdh flkjsdh fkljshd fkljshdlkfhksldhf lksdjhf lkdsjh fhlksjdh flkdsjh flkasjdhflkas", "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            //lblResultadoMsgBox.Text = r.ToString();
+            //DialogResult r = MessageBox.Show(idioma, "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading);
+            //lblResultadoMsgBox.Text = r.ToString();
+            //r = MessageBox.Show(MessageBoxIcon.Exclamation.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
+            //lblResultadoMsgBox.Text = r.ToString();
+            //r = MessageBox.Show(MessageBoxIcon.Error.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
+            //lblResultadoMsgBox.Text = r.ToString();
+            // r = MessageBox.Show(MessageBoxIcon.Stop.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Stop);
+            //lblResultadoMsgBox.Text = r.ToString();
+            //r = MessageBox.Show(MessageBoxIcon.Hand.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Hand);
+            //lblResultadoMsgBox.Text = r.ToString();
+            //r = MessageBox.Show(MessageBoxIcon.None.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.None);
+            //lblResultadoMsgBox.Text = r.ToString();
+
+            RDialogResult r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.OK, RMessageBoxIcon.None);
+            lblResultadoMsgBox.Text = r2.ToString();
+            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.OKCancel, RMessageBoxIcon.Error, RMessageBoxDefaultButton.Button1);
+            lblResultadoMsgBox.Text = r2.ToString();
+            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.AbortRetryIgnore, RMessageBoxIcon.Ok, RMessageBoxDefaultButton.Button2);
+            lblResultadoMsgBox.Text = r2.ToString();
+            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button3);
+            lblResultadoMsgBox.Text = r2.ToString();
+            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning);
+            lblResultadoMsgBox.Text = r2.ToString();
+            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.RetryCancel);
+            lblResultadoMsgBox.Text = r2.ToString();
+        }
     }
 }

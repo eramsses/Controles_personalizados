@@ -4,13 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7C99832F-62F5-4F1E-813E-D8F791ED6730}</ProjectGuid>
+    <ProjectGuid>{E60C507D-E371-4F7E-ADD8-1A57764BDB82}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DemoControles</RootNamespace>
-    <AssemblyName>DemoControles</AssemblyName>
+    <RootNamespace>RMessageBox</RootNamespace>
+    <AssemblyName>RMessageBox</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,17 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inicio.cs">
+    <Compile Include="RDialogResult.cs" />
+    <Compile Include="FrmRMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
+    <Compile Include="FrmRMessageBox.Designer.cs">
+      <DependentUpon>FrmRMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="RMessageBox.cs" />
+    <Compile Include="RMessageBoxButtons.cs" />
+    <Compile Include="RMessageBoxIcon.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,6 +69,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="FrmRMessageBox.resx">
+      <DependentUpon>FrmRMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,26 +86,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\rostro-mujer-adulta.jpg" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_close_window_64px_2.png" />
+    <None Include="Resources\icons8_error_64px.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8_like_it_64px.png" />
+    <None Include="Resources\icons8_info_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_warning_64px.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ControlesPersonalizados\ControlesPersonalizados.csproj">
-      <Project>{1f8e9d49-da8c-4840-8f49-c36248d13d47}</Project>
+      <Project>{1F8E9D49-DA8C-4840-8F49-C36248D13D47}</Project>
       <Name>ControlesPersonalizados</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MessageBoxCustom\MessageBoxCustom.csproj">
-      <Project>{f8fc8edd-9fc8-4a30-a57e-9d8c6d14ad79}</Project>
-      <Name>MessageBoxCustom</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Notificaciones\Notificaciones.csproj">
-      <Project>{dbda2284-82ab-4087-afdc-5ba09440942b}</Project>
-      <Name>Notificaciones</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

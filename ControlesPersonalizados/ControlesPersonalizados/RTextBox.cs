@@ -32,6 +32,7 @@ namespace ControlesPersonalizados
         //private char passChar = '';
 
 
+
         //Events
         public event EventHandler _TextChanged;
 
@@ -218,10 +219,14 @@ namespace ControlesPersonalizados
             get { return borderRadius; }
             set
             {
-                if (value >= 0)
+                if (value > 5)
                 {
                     ValidarRadioMinimo(value);
                     this.Invalidate();//Redraw control
+                }
+                else
+                {
+                    borderRadius = value;
                 }
             }
         }
@@ -405,7 +410,8 @@ namespace ControlesPersonalizados
             }
         }
 
-        
+
+
 
         #endregion
 
@@ -434,7 +440,7 @@ namespace ControlesPersonalizados
                 int smoothSize = borderSize > 0 ? borderSize : 1;
 
                 using (GraphicsPath pathBorderSmooth = GetFigurePath(rectBorderSmooth, borderRadius))
-                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius - borderSize))
+                using (GraphicsPath pathBorder = GetFigurePath(rectBorder, borderRadius))
                 using (Pen penBorderSmooth = new Pen(this.Parent.BackColor, smoothSize))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
@@ -532,7 +538,7 @@ namespace ControlesPersonalizados
                     borderRadius = v;
                 }
 
-                    
+                Console.WriteLine(borderRadius);
 
             }
 
@@ -566,7 +572,7 @@ namespace ControlesPersonalizados
             GraphicsPath pathTxt;
             if (Multiline)
             {
-                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius - borderSize);
+                pathTxt = GetFigurePath(textBox1.ClientRectangle, borderRadius);
                 textBox1.Region = new Region(pathTxt);
             }
             else

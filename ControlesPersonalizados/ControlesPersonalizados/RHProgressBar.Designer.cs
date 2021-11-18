@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.PnlChannel = new System.Windows.Forms.Panel();
-            this.PnlSlider = new System.Windows.Forms.Panel();
             this.LblTextI = new System.Windows.Forms.Label();
+            this.PnlSlider = new System.Windows.Forms.Panel();
             this.LblTextU = new System.Windows.Forms.Label();
             this.LblTextO = new System.Windows.Forms.Label();
             this.PnlChannel.SuspendLayout();
@@ -48,14 +48,6 @@
             this.PnlChannel.Size = new System.Drawing.Size(340, 48);
             this.PnlChannel.TabIndex = 2;
             // 
-            // PnlSlider
-            // 
-            this.PnlSlider.BackColor = System.Drawing.Color.Lime;
-            this.PnlSlider.Location = new System.Drawing.Point(0, 0);
-            this.PnlSlider.Name = "PnlSlider";
-            this.PnlSlider.Size = new System.Drawing.Size(80, 48);
-            this.PnlSlider.TabIndex = 3;
-            // 
             // LblTextI
             // 
             this.LblTextI.BackColor = System.Drawing.Color.Blue;
@@ -65,6 +57,14 @@
             this.LblTextI.Size = new System.Drawing.Size(37, 20);
             this.LblTextI.TabIndex = 8;
             this.LblTextI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PnlSlider
+            // 
+            this.PnlSlider.BackColor = System.Drawing.Color.Lime;
+            this.PnlSlider.Location = new System.Drawing.Point(0, 0);
+            this.PnlSlider.Name = "PnlSlider";
+            this.PnlSlider.Size = new System.Drawing.Size(80, 48);
+            this.PnlSlider.TabIndex = 3;
             // 
             // LblTextU
             // 
@@ -86,7 +86,7 @@
             this.LblTextO.TabIndex = 7;
             this.LblTextO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // RProgressBar
+            // RHProgressBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +94,7 @@
             this.Controls.Add(this.LblTextO);
             this.Controls.Add(this.LblTextU);
             this.Controls.Add(this.PnlChannel);
-            this.Name = "RProgressBar";
+            this.Name = "RHProgressBar";
             this.Size = new System.Drawing.Size(340, 98);
             this.PnlChannel.ResumeLayout(false);
             this.ResumeLayout(false);

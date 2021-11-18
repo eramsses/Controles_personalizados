@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,14 @@ namespace ControlesPersonalizados
         Sliding
     }
 
+    public enum ModeColorVerticalBar
+    {
+        Solid,
+        Gradient1,
+        Gradient2
+
+    }
+
     public partial class RVProgressBar : UserControl
     {
 
@@ -36,6 +45,9 @@ namespace ControlesPersonalizados
 
         private VPositionText verticalPositionText = VPositionText.Down;
         private HPositionText showTextValue = HPositionText.Right;
+        private ModeColorVerticalBar modeColorVerticalBar = ModeColorVerticalBar.Gradient1;
+        private Color barColor1 = Color.Lime;
+        private Color barColor2 = Color.Purple;
         private bool showMaximun = false;
         private string symbolBefore = "";
         private string symbolAfter = "";
@@ -43,6 +55,7 @@ namespace ControlesPersonalizados
         private int maximum = 100;
         private int value = 0;
         private int barWidth = 10;
+        private int angleColorBar = 90;
 
 
         public RVProgressBar()
@@ -118,24 +131,62 @@ namespace ControlesPersonalizados
 
             set
             {
-                barWidth = value;
+
+                if (value < 1)
+                    value = 1;
+
+                this.barWidth = value;
                 ShowValueText();
-                
+
             }
         }
-
         [Category("R Control Bar")]
-        public Color ProgressBarColor
+        public Color ProgressBarColor1
         {
             get
             {
-                return PnlSlider.BackColor;
+                return barColor1;
             }
 
             set
             {
-                PnlSlider.BackColor = value;
+                barColor1 = value;
+                SetSliderValue();
                 this.Invalidate();
+            }
+        }
+
+        [Category("R Control Bar")]
+        public Color ProgressBarColor2
+        {
+            get
+            {
+                return barColor2;
+            }
+
+            set
+            {
+                barColor2 = value;
+                SetSliderValue();
+                this.Invalidate();
+            }
+        }
+
+
+        [Category("R Control Bar")]
+        public ModeColorVerticalBar ModeColorVerticalBar
+        {
+            get
+            {
+                return modeColorVerticalBar;
+            }
+
+            set
+            {
+                modeColorVerticalBar = value;
+                SetSliderValue();
+                this.Invalidate();
+
             }
         }
 
@@ -150,6 +201,22 @@ namespace ControlesPersonalizados
             set
             {
                 PnlChannel.BackColor = value;
+                this.Invalidate();
+            }
+        }
+
+
+        [Category("R Control Bar")]
+        public int AngleColorBar
+        {
+            get
+            {
+                return angleColorBar - 90;
+            }
+            set
+            {
+                angleColorBar = value + 90;
+                SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -316,10 +383,53 @@ namespace ControlesPersonalizados
             int sliderHeight = (int)(this.Height * scaleFactor);
 
             PnlSlider.Height = sliderHeight;
-            
+
 
             PnlSlider.Location = new Point(0, (this.Height - sliderHeight));
+            SetBackColorBar();
+        }
 
+        private void SetBackColorBar()
+        {
+            Graphics g = this.PnlSlider.CreateGraphics();
+            switch (modeColorVerticalBar)
+            {
+                case ModeColorVerticalBar.Solid://Fondo Solido
+                    this.PnlSlider.BackColor = barColor1;
+                    break;
+
+                case ModeColorVerticalBar.Gradient1://Color que avanza con el slider
+                    double scaleFactor = (((double)this.value - this.minimum) / ((double)this.maximum - this.minimum));
+                    int sliderHeight = (int)(this.Height * scaleFactor);
+
+                    if (sliderHeight > 0)
+                    {
+                        //Color degradado
+                        Point startPoint = new Point(0, 0);
+                        Size size = new Size(BarWidth, sliderHeight);
+
+                        Rectangle rectangle = new Rectangle(startPoint, size);
+
+                        LinearGradientBrush gradientBrush = new LinearGradientBrush(rectangle, barColor1, barColor2, angleColorBar);
+
+                        g.FillRectangle(gradientBrush, 0, 0, BarWidth, sliderHeight);
+                    }
+
+                    break;
+
+                case ModeColorVerticalBar.Gradient2:// Color ya esta  para toda la barra
+                    //Color degradado
+                    Point startPointG2 = new Point(0, 0);
+                    Size sizeG2 = new Size(BarWidth, this.PnlChannel.Height);
+                    
+                    Rectangle rectangleG1 = new Rectangle(startPointG2, sizeG2);
+
+                    LinearGradientBrush gradientBrushG2 = new LinearGradientBrush(rectangleG1, barColor1, barColor2, angleColorBar);
+
+                    g.FillRectangle(gradientBrushG2, 0, 0, this.PnlChannel.Width, this.PnlChannel.Height);
+                    break;
+
+            }
         }
 
         #endregion
@@ -415,7 +525,7 @@ namespace ControlesPersonalizados
 
                         case HPositionText.Inside://Texto abajo por dentro
 
-                            if(LblTextC.Width > this.Width)
+                            if (LblTextC.Width > this.Width)
                             {
                                 this.Width = LblTextC.Width;
                                 PnlChannel.Width = LblTextC.Width;
@@ -447,7 +557,7 @@ namespace ControlesPersonalizados
                     break;
 
                 case VPositionText.Middle://Texto al medio
-                    
+
                     switch (showTextValue)
                     {
                         case HPositionText.Left://Texto al medio a la izquierda
@@ -481,7 +591,7 @@ namespace ControlesPersonalizados
                             break;
 
                         case HPositionText.Right://Texto al medio a la derecha
-                            pX = PnlChannel.Width  + 1;
+                            pX = PnlChannel.Width + 1;
                             pY = (this.Height - this.LblTextR.Height) / 2;
 
                             this.LblTextR.AutoSize = true;
@@ -500,7 +610,7 @@ namespace ControlesPersonalizados
                     switch (showTextValue)
                     {
                         case HPositionText.Left://Texto arriba a la izquierda
-                            
+
                             this.LblTextL.AutoSize = true;
                             this.LblTextL.Location = new Point(pX, pY);
 
@@ -518,7 +628,7 @@ namespace ControlesPersonalizados
                             }
 
                             pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
-                            
+
                             this.LblTextC.AutoSize = true;
                             this.LblTextC.Location = new Point(pX, pY);
 
@@ -615,10 +725,10 @@ namespace ControlesPersonalizados
 
             if (showTextValue == HPositionText.Left) txtWidth = LblTextL.Width;
             else if (showTextValue == HPositionText.Inside) txtWidth = LblTextC.Width;
-            else if(showTextValue == HPositionText.Right) txtWidth = LblTextR.Width;
+            else if (showTextValue == HPositionText.Right) txtWidth = LblTextR.Width;
 
             //Altura de los textos
-            
+
 
             switch (showTextValue)
             {
@@ -643,11 +753,11 @@ namespace ControlesPersonalizados
                     {
                         PnlChannel.Width = barWidth;
                         PnlSlider.Width = barWidth;
-                        
+
                         this.Width = barWidth;
                     }
 
-                    
+
                     break;
 
                 default:

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace ControlesPersonalizados
@@ -22,14 +23,26 @@ namespace ControlesPersonalizados
         None
     }
 
+    public enum ModeColorHorizontalBar
+    {
+        Solid,
+        Gradient1,
+        Gradient2
+
+    }
+
+
     public partial class RHProgressBar : UserControl
     {
         private static Color darkText = Color.FromArgb(64, 64, 64);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
-        
-        
+
+
         private TextVerticalPosition showTextValue = TextVerticalPosition.Over;
         private HorizontalPositionText horizontalPositionText = HorizontalPositionText.Right;
+        private ModeColorHorizontalBar modeColorHorizontalBar = ModeColorHorizontalBar.Gradient1;
+        private Color barColor1 = Color.Lime;
+        private Color barColor2 = Color.Purple;
         private bool showMaximun = false;
         private string symbolBefore = "";
         private string symbolAfter = "";
@@ -37,6 +50,7 @@ namespace ControlesPersonalizados
         private int maximum = 100;
         private int value = 0;
         private int barHeight = 5;
+        private int angleColorBar = 0;
 
 
         public RHProgressBar()
@@ -51,7 +65,8 @@ namespace ControlesPersonalizados
         {
             SetSliderValue();
             ShowValueText();
-           
+            this.Invalidate();
+
         }
 
         #region ->  Propiedades de la barra de progreso
@@ -112,23 +127,57 @@ namespace ControlesPersonalizados
             set
             {
                 barHeight = value;
-                ShowValueText();
+                SetSliderValue();
                 UpdateControlHeight();
             }
         }
 
         [Category("R Control Bar")]
-        public Color ProgressBarColor
+        public Color ProgressBarColor1
         {
             get
             {
-                return PnlSlider.BackColor;
+                return barColor1;
             }
 
             set
             {
-                PnlSlider.BackColor = value;
+                barColor1 = value;
+                SetSliderValue();
                 this.Invalidate();
+            }
+        }
+
+        [Category("R Control Bar")]
+        public Color ProgressBarColor2
+        {
+            get
+            {
+                return barColor2;
+            }
+
+            set
+            {
+                barColor2 = value;
+                SetSliderValue();
+                this.Invalidate();
+            }
+        }
+
+        [Category("R Control Bar")]
+        public ModeColorHorizontalBar ModeColorHorizontalBar
+        {
+            get
+            {
+                return modeColorHorizontalBar;
+            }
+
+            set
+            {
+                modeColorHorizontalBar = value;
+                SetSliderValue();
+                this.Invalidate();
+
             }
         }
 
@@ -143,13 +192,14 @@ namespace ControlesPersonalizados
             set
             {
                 PnlChannel.BackColor = value;
+                SetSliderValue();
                 this.Invalidate();
             }
         }
 
         [Category("R Control")]
-        public Color RBackGrounColor 
-        { 
+        public Color RBackGrounColor
+        {
             get
             {
                 return this.BackColor;
@@ -157,6 +207,21 @@ namespace ControlesPersonalizados
             set
             {
                 this.BackColor = value;
+                this.Invalidate();
+            }
+        }
+
+        [Category("R Control Bar")]
+        public int AngleColorBar
+        {
+            get
+            {
+                return angleColorBar;
+            }
+            set 
+            { 
+                angleColorBar = value;
+                SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -182,7 +247,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        
+
 
         [Category("R Control Text")]
         public string SymbolBefore
@@ -273,7 +338,7 @@ namespace ControlesPersonalizados
         }
 
         [Category("R Control Text")]
-        public Color BackgroundForeColor
+        public Color TextColor
         {
             get
             {
@@ -306,7 +371,52 @@ namespace ControlesPersonalizados
             int sliderWidth = (int)(PnlChannel.Width * scaleFactor);
 
             PnlSlider.Width = sliderWidth;
-               
+
+            SetBackColorBar();
+
+
+        }
+
+        private void SetBackColorBar()
+        {
+            Graphics g = this.PnlSlider.CreateGraphics();
+            switch (modeColorHorizontalBar)
+            {
+                case ModeColorHorizontalBar.Solid://Fondo Solido
+                    this.PnlSlider.BackColor = barColor1;
+                    break;
+
+                case ModeColorHorizontalBar.Gradient1://Color que avanza con el slider
+                    double scaleFactor = (((double)this.value - this.minimum) / ((double)this.maximum - this.minimum));
+                    int sliderWidth = (int)(PnlChannel.Width * scaleFactor);
+
+                    if(sliderWidth > 0)
+                    {
+                        //Color degradado
+                        Point startPoint = new Point(0, 0);
+                        Size size = new Size(sliderWidth, barHeight);
+
+                        Rectangle rectangle = new Rectangle(startPoint, size);
+
+                        LinearGradientBrush gradientBrush = new LinearGradientBrush(rectangle, barColor1, barColor2, angleColorBar);
+
+                        g.FillRectangle(gradientBrush, 0, 0, sliderWidth, barHeight);
+                    }
+
+                    break;
+
+                case ModeColorHorizontalBar.Gradient2:// Color ya esta  para toda la barra
+                    Point startPointG2 = new Point(0, 0);
+                    Size sizeG2 = new Size(this.PnlChannel.Width, barHeight);
+
+                    Rectangle rectangleG1 = new Rectangle(startPointG2, sizeG2);
+
+                    LinearGradientBrush gradientBrushG2 = new LinearGradientBrush(rectangleG1, barColor1, barColor2, angleColorBar);
+
+                    g.FillRectangle(gradientBrushG2, 0, 0, this.PnlChannel.Width, barHeight);
+                    break;
+
+            }
         }
 
         #endregion
@@ -395,13 +505,13 @@ namespace ControlesPersonalizados
             switch (horizontalPositionText)
             {
                 case HorizontalPositionText.Left://Texto a la izquierda
-                    
+
                     switch (showTextValue)
                     {
                         case TextVerticalPosition.Over://Texto sobre la barra a la izquierda
-                            
+
                             this.LblTextO.AutoSize = true;
-                            this.LblTextO.Location = new Point( pX, pY);
+                            this.LblTextO.Location = new Point(pX, pY);
 
                             break;
 
@@ -409,7 +519,7 @@ namespace ControlesPersonalizados
                             pY = ((this.PnlSlider.Height - this.LblTextI.Height) / 2);
                             this.LblTextI.AutoSize = true;
                             this.LblTextI.Location = new Point(pX, pY);
-                            
+
 
                             break;
 
@@ -424,7 +534,7 @@ namespace ControlesPersonalizados
                     break;
 
                 case HorizontalPositionText.Center://Texto centrado
-                    
+
                     switch (showTextValue)
                     {
                         case TextVerticalPosition.Over://Texto sobre la barra a la centrado
@@ -455,7 +565,7 @@ namespace ControlesPersonalizados
                     break;
 
                 case HorizontalPositionText.Right://Texto a la derecha
-                    
+
                     switch (showTextValue)
                     {
                         case TextVerticalPosition.Over://Texto sobre la barra a la derecha
@@ -486,7 +596,7 @@ namespace ControlesPersonalizados
                     break;
 
                 case HorizontalPositionText.Sliding:
-                    
+
 
                     switch (showTextValue)
                     {
@@ -543,13 +653,13 @@ namespace ControlesPersonalizados
         #region Metodos para el control
         private void UpdateControlHeight()
         {
-            int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height +1;
+            int txtHeight = TextRenderer.MeasureText("Text", this.Font).Height + 1;
 
             //Altura de los textos
             LblTextO.Height = txtHeight;
             LblTextI.Height = txtHeight;
             LblTextU.Height = txtHeight;
-            
+
             switch (showTextValue)
             {
 
