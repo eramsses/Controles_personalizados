@@ -141,6 +141,8 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1981,7 +1983,9 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label21);
             this.tabPage6.Controls.Add(this.lblResultadoMsgBox);
+            this.tabPage6.Controls.Add(this.label20);
             this.tabPage6.Controls.Add(this.rButton1);
             this.tabPage6.Location = new System.Drawing.Point(4, 26);
             this.tabPage6.Name = "tabPage6";
@@ -1994,9 +1998,10 @@
             // lblResultadoMsgBox
             // 
             this.lblResultadoMsgBox.AutoSize = true;
-            this.lblResultadoMsgBox.Location = new System.Drawing.Point(378, 126);
+            this.lblResultadoMsgBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultadoMsgBox.Location = new System.Drawing.Point(798, 451);
             this.lblResultadoMsgBox.Name = "lblResultadoMsgBox";
-            this.lblResultadoMsgBox.Size = new System.Drawing.Size(134, 17);
+            this.lblResultadoMsgBox.Size = new System.Drawing.Size(164, 21);
             this.lblResultadoMsgBox.TabIndex = 1;
             this.lblResultadoMsgBox.Text = "lblResultadoMsgBox";
             // 
@@ -2010,11 +2015,11 @@
             this.rButton1.FlatAppearance.BorderSize = 0;
             this.rButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.rButton1.Location = new System.Drawing.Point(222, 114);
+            this.rButton1.Location = new System.Drawing.Point(352, 441);
             this.rButton1.Name = "rButton1";
-            this.rButton1.Size = new System.Drawing.Size(150, 40);
+            this.rButton1.Size = new System.Drawing.Size(225, 40);
             this.rButton1.TabIndex = 0;
-            this.rButton1.Text = "Mostrar";
+            this.rButton1.Text = "Mostrar RMessageCustom";
             this.rButton1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
             this.rButton1.UseVisualStyleBackColor = false;
             this.rButton1.Click += new System.EventHandler(this.rButton1_Click);
@@ -2094,6 +2099,26 @@
             // 
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(626, 452);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(175, 19);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Valor RDialogResult = ";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(69, 25);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(279, 32);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "MessageBoxCustom";
             // 
             // Inicio
             // 
@@ -2261,6 +2286,8 @@
         private System.Windows.Forms.TabPage tabPage6;
         private ControlesPersonalizados.RButton rButton1;
         private System.Windows.Forms.Label lblResultadoMsgBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
     }
 }
 

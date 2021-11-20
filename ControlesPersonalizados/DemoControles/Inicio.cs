@@ -40,7 +40,7 @@ namespace DemoControles
             {
                 lblPersonalizado.Text = "Personalizado  Apagado";
             }
-            
+
         }
 
         private void chkBtnDefecto_CheckedChanged(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace DemoControles
             {
                 lblDefecto.Text = "Valores por defecto Apagado";
             }
-            
+
         }
 
         private void chkBtn_CheckedChanged_1(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace DemoControles
 
         private void erButton1_Click(object sender, EventArgs e)
         {
-            if(cmbMunicipios.SelectedItem != null) 
+            if (cmbMunicipios.SelectedItem != null)
             {
                 String municipio = cmbMunicipios.SelectedItem.ToString();
                 MessageBox.Show("El municipio es " + municipio);
@@ -84,7 +84,7 @@ namespace DemoControles
             {
                 MessageBox.Show("No hay ningún municipio seleccionado");
             }
-            
+
         }
 
         private void erButton3_Click(object sender, EventArgs e)
@@ -105,26 +105,26 @@ namespace DemoControles
 
             if (subir)
                 i += 2;
-            else 
+            else
                 i -= 2;
 
-            if(i <= bp1.Minimum)
+            if (i <= bp1.Minimum)
                 subir = true;
             else if (i >= bp1.Maximum)
                 subir = false;
 
-            if(i < bp1.Minimum)
+            if (i < bp1.Minimum)
                 i = bp1.Minimum;
 
-            if(i > bp1.Maximum)
+            if (i > bp1.Maximum)
                 i = bp1.Maximum;
-            
 
-            
+
+
             bp1.Value = i;
-           
 
-            foreach(RVProgressBar pbV in PnlBarrasProgreso.Controls.OfType<RVProgressBar>().ToList())
+
+            foreach (RVProgressBar pbV in PnlBarrasProgreso.Controls.OfType<RVProgressBar>().ToList())
             {
                 pbV.Value = i;
             }
@@ -144,13 +144,13 @@ namespace DemoControles
                 //timer1.Stop();
                 //i = 0;
             }
-                
+
 
         }
 
         private void BtnActivarBarras_Click(object sender, EventArgs e)
         {
-            if(!barrasActivas)
+            if (!barrasActivas)
             {
                 //bp0.Value = 0;
                 //bp1.Value = 0;
@@ -161,20 +161,20 @@ namespace DemoControles
                 //bp6.Value = 0;
 
                 //i = 0;
-                
+
                 timer1.Start();
                 barrasActivas = true;
-                
+
                 BtnActivarBarras.Text = "Detener Barras";
             }
             else
             {
                 timer1.Stop();
                 barrasActivas = false;
-                
+
                 BtnActivarBarras.Text = "Iniciar Barras";
             }
-            
+
         }
 
         private void erButton5_Click(object sender, EventArgs e)
@@ -194,7 +194,7 @@ namespace DemoControles
             bool autoCerrar = chkCerrarMensaje.Checked;
             if (chkIncluirTitulo.Checked)
             {
-                
+
                 Notificacion.Mostrar(txtContenidoMensaje.Texts, txtContenidoTitulo.Texts, Notificacion.OK, autoCerrar);
             }
             else
@@ -285,33 +285,48 @@ namespace DemoControles
         private void rButton1_Click(object sender, EventArgs e)
         {
 
-            string idioma = Thread.CurrentThread.CurrentCulture.ToString();
-            //DialogResult r = MessageBox.Show(MessageBoxIcon.Question.ToString() + "lkjashd fljkshldkj flksdj fhlkasjdh flkjsdhf lkjsd hflkjsdh flkjsdh flkjsada fhlkjsdh flkjsdh flkjasdhf lkjsdh flkjsdh fkjsdh flkjsdh fkljshd fkljshdlkfhksldhf lksdjhf lkdsjh fhlksjdh flkdsjh flkasjdhflkas", "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            //lblResultadoMsgBox.Text = r.ToString();
-            //DialogResult r = MessageBox.Show(idioma, "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2, MessageBoxOptions.RtlReading);
-            //lblResultadoMsgBox.Text = r.ToString();
-            //r = MessageBox.Show(MessageBoxIcon.Exclamation.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-            //lblResultadoMsgBox.Text = r.ToString();
-            //r = MessageBox.Show(MessageBoxIcon.Error.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Error);
-            //lblResultadoMsgBox.Text = r.ToString();
-            // r = MessageBox.Show(MessageBoxIcon.Stop.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Stop);
-            //lblResultadoMsgBox.Text = r.ToString();
-            //r = MessageBox.Show(MessageBoxIcon.Hand.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Hand);
-            //lblResultadoMsgBox.Text = r.ToString();
-            //r = MessageBox.Show(MessageBoxIcon.None.ToString(), "Título", MessageBoxButtons.YesNoCancel, MessageBoxIcon.None);
-            //lblResultadoMsgBox.Text = r.ToString();
+            //Personalización
 
-            RDialogResult r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.OK, RMessageBoxIcon.None);
+            //RMessageBox.HoldCustom = true;
+            string[] b = { "Botón 1", "Botón 2", "Botón 3" };
+
+            string msj = "Mensaje estandar solo título y mensaje";
+            RDialogResult r2 = RMessageBox.Show(msj, "Titulo para mi mensaje");
             lblResultadoMsgBox.Text = r2.ToString();
-            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.OKCancel, RMessageBoxIcon.Error, RMessageBoxDefaultButton.Button1);
+
+
+            RMessageBox.HeaderColor = Color.Gainsboro;
+            RMessageBox.BodyColor = Color.Aquamarine;
+            RMessageBox.FooterColor = Color.NavajoWhite;
+            RMessageBox.ButtonLeftColor = Color.Green;
+            RMessageBox.ButtonCenterColor = Color.Red;
+            RMessageBox.ButtonRightColor = Color.White;
+            RMessageBox.HoldCustom = true;
+
+            msj = "Personalizació de los colores en cada elemento, colores de los botones y manteniendo la configuración para los siguiente mensaje";
+            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button1);
             lblResultadoMsgBox.Text = r2.ToString();
-            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.AbortRetryIgnore, RMessageBoxIcon.Ok, RMessageBoxDefaultButton.Button2);
+
+
+            RMessageBox.HoldCustom = false;
+            RMessageBox.TextColor = Color.Violet;
+
+            msj = "Cambio en el color del texto y eliminar la personalización después de este mensaje, textos de los botones personalizado";
+            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.AbortRetryIgnore, RMessageBoxIcon.Ok, RMessageBoxDefaultButton.Button2,b);
             lblResultadoMsgBox.Text = r2.ToString();
-            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button3);
+
+
+            RMessageBox.ButtonLeftColor = Color.Green;
+            RMessageBox.ButtonCenterColor = Color.Red;
+            RMessageBox.ButtonRightColor = Color.White;
+
+            msj = "Colores por defecto cambio solo en los colores de los botones sin guardar la personalización para los demas mensajes";
+            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button3);
             lblResultadoMsgBox.Text = r2.ToString();
-            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning);
-            lblResultadoMsgBox.Text = r2.ToString();
-            r2 = RMessageBox.Show("Contenido del mensaje", "Titulo para mi mensaje", RMessageBoxButtons.RetryCancel);
+
+            msj = "Vuelve a la configuración por defecto automáticamente ";
+            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning, RMessageBoxDefaultButton.Button2);
+            
             lblResultadoMsgBox.Text = r2.ToString();
         }
     }

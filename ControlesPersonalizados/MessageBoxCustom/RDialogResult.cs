@@ -51,6 +51,9 @@ namespace MessageBoxCustom
         // Resumen:
         //     El valor devuelto por el cuadro de diálogo es No (suele enviarse desde un botón
         //     de etiqueta No).
-        No
+        No,
+        x,
+        y,
+        z
     }
 }

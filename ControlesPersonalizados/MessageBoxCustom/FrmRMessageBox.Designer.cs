@@ -38,7 +38,6 @@
             this.PicIcon = new System.Windows.Forms.PictureBox();
             this.PnlMensaje = new System.Windows.Forms.Panel();
             this.LblMensaje = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.PnlTitulo.SuspendLayout();
             this.PnlBotones.SuspendLayout();
             this.PnlIcono.SuspendLayout();
@@ -74,7 +73,6 @@
             // 
             // PnlBotones
             // 
-            this.PnlBotones.Controls.Add(this.button1);
             this.PnlBotones.Controls.Add(this.RBtn3);
             this.PnlBotones.Controls.Add(this.RBtn2);
             this.PnlBotones.Controls.Add(this.RBtn1);
@@ -168,7 +166,7 @@
             // PicIcon
             // 
             this.PicIcon.Image = global::MessageBoxCustom.Properties.Resources.icons8_ok_64px;
-            this.PicIcon.Location = new System.Drawing.Point(9, 43);
+            this.PicIcon.Location = new System.Drawing.Point(9, 23);
             this.PicIcon.Margin = new System.Windows.Forms.Padding(4);
             this.PicIcon.Name = "PicIcon";
             this.PicIcon.Size = new System.Drawing.Size(64, 64);
@@ -198,15 +196,6 @@
             this.LblMensaje.TabIndex = 0;
             this.LblMensaje.Text = "label1";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(13, 16);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FrmRMessageBox
             // 
             this.AcceptButton = this.RBtn3;
@@ -231,6 +220,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.TopMost = true;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRMessageBox_KeyDown);
             this.PnlTitulo.ResumeLayout(false);
             this.PnlBotones.ResumeLayout(false);
             this.PnlIcono.ResumeLayout(false);
@@ -252,7 +242,6 @@
         private ControlesPersonalizados.RButton RBtn3;
         private ControlesPersonalizados.RButton RBtn2;
         private ControlesPersonalizados.RButton RBtn1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

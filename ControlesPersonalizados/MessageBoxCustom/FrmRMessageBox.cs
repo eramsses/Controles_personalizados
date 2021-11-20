@@ -14,24 +14,182 @@ namespace MessageBoxCustom
 {
     public partial class FrmRMessageBox : Form
     {
+
+        private static Color darkText = Color.FromArgb(64, 64, 64);
+        private static Color ligthText = Color.FromArgb(220, 220, 220);
+
         private RDialogResult resultado = RDialogResult.None;
         private RDialogResult resultadoBoton1 = RDialogResult.None;
         private RDialogResult resultadoBoton2 = RDialogResult.None;
         private RDialogResult resultadoBoton3 = RDialogResult.None;
 
+        #region -> Propiedades de Personalización
 
-        private string idioma = Thread.CurrentThread.CurrentCulture.ToString();
+        public Color TextColor
+        {
+            set
+            {
+                if (value != darkText && value != ligthText)
+                {
+                    this.LblTitulo.ForeColor = value;
+                    this.LblMensaje.ForeColor = value;
+                }
+            }
+        }
 
+        public Color TextColorTittle
+        {
+            set
+            {
+                if (value != darkText && value != ligthText)
+                {
+                    this.LblTitulo.ForeColor = value;
+                }
+            }
+        }
+
+        public Color TextColorMessage
+        {
+            set
+            {
+                if (value != darkText && value != ligthText)
+                {
+                    this.LblMensaje.ForeColor = value;
+                }
+            }
+        }
+
+        public Color HeaderColor
+        {
+            set
+            {
+                //if (this.LblTitulo.ForeColor == darkText || this.LblTitulo.ForeColor == ligthText)
+                //{
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    LblTitulo.ForeColor = darkText;
+                }
+                else
+                {
+                    LblTitulo.ForeColor = ligthText;
+                }
+                //}
+                this.PnlTitulo.BackColor = value;
+            }
+        }
+
+        public Color BodyColor
+        {
+            set
+            {
+                //if (this.LblMensaje.ForeColor == darkText || this.LblMensaje.ForeColor == ligthText)
+                //{
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    LblMensaje.ForeColor = darkText;
+                }
+                else
+                {
+                    LblMensaje.ForeColor = ligthText;
+                }
+                //}
+                this.PnlIcono.BackColor = value;
+                this.PnlMensaje.BackColor = value;
+            }
+        }
+
+        public Color FooterColor
+        {
+            set
+            {
+                this.PnlBotones.BackColor = value;
+            }
+        }
+
+        public Color AllButtonColor
+        {
+            set
+            {
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    RBtn1.TextColor = darkText;
+                    RBtn2.TextColor = darkText;
+                    RBtn3.TextColor = darkText;
+                }
+                else
+                {
+                    RBtn1.TextColor = ligthText;
+                    RBtn2.TextColor = ligthText;
+                    RBtn3.TextColor = ligthText;
+                }
+                RBtn1.BackColor = value;
+                RBtn2.BackColor = value;
+                RBtn3.BackColor = value;
+            }
+        }
+
+        public Color ButtonLeftColor
+        {
+            set
+            {
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    RBtn1.TextColor = darkText;
+                }
+                else
+                {
+                    RBtn1.TextColor = ligthText;
+                }
+                RBtn1.BackColor = value;
+
+            }
+        }
+
+        public Color ButtonCenterColor
+        {
+            set
+            {
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    RBtn2.TextColor = darkText;
+                }
+                else
+                {
+                    RBtn2.TextColor = ligthText;
+                }
+                RBtn2.BackColor = value;
+            }
+        }
+
+        public Color ButtonRightColor
+        {
+            set
+            {
+                if (value.GetBrightness() >= 0.6F)
+                {
+                    RBtn3.TextColor = darkText;
+                }
+                else
+                {
+                    RBtn3.TextColor = ligthText;
+                }
+                RBtn3.BackColor = value;
+            }
+
+        }
+
+
+
+        #endregion
 
 
         #region Constructores
         public FrmRMessageBox()
         {
             InitializeComponent();
-
         }
 
-        public FrmRMessageBox(string mensaje, string titulo, RMessageBoxButtons buttons, Image icon, RMessageBoxDefaultButton buttonDefault)
+        public FrmRMessageBox(string mensaje, string titulo, RMessageBoxButtons buttons, Image icon, RMessageBoxDefaultButton buttonDefault, string[] txtButtons)
         {
             InitializeComponent();
             this.LblTitulo.Text = titulo;
@@ -46,24 +204,50 @@ namespace MessageBoxCustom
             }
 
             SetDefaultButton(buttonDefault);
+            SetTxtValueButtons(txtButtons);
         }
+
+
 
 
         #endregion
 
         #region Contrucción de Botones
 
+        private void SetTxtValueButtons(string[] txtButtons)
+        {
+            for (int i = 0; i < txtButtons.Length; i++)
+            {
+                if (i == 0 && txtButtons[i].Length > 0)
+                {
+                    RBtn3.Text = txtButtons[i];
+                    resultadoBoton3 = RDialogResult.x;
+                }
+                else if (i == 1 && txtButtons[i].Length > 0)
+                {
+                    RBtn2.Text = txtButtons[i];
+                    resultadoBoton2 = RDialogResult.y;
+                }
+                else if (i == 2 && txtButtons[i].Length > 0)
+                {
+                    RBtn1.Text = txtButtons[i];
+                    resultadoBoton1 = RDialogResult.z;
+                }
+            }
+        }
+
+
 
         private void SetDefaultButton(RMessageBoxDefaultButton buttonDefault)
         {
 
-            
+
             switch (buttonDefault)
             {
                 case RMessageBoxDefaultButton.None:
                     this.ActiveControl = null;
-                    
-                    
+
+
                     break;
                 case RMessageBoxDefaultButton.Button1:
                     this.ActiveControl = RBtn3;
@@ -74,16 +258,14 @@ namespace MessageBoxCustom
                     this.ActiveControl = RBtn2;
                     RBtn2.BorderColor = Color.Red;
                     RBtn2.BorderSize = 1;
-                    
                     break;
                 case RMessageBoxDefaultButton.Button3:
                     this.ActiveControl = RBtn1;
                     RBtn1.BorderColor = Color.Red;
                     RBtn1.BorderSize = 1;
-                    
                     break;
                 default:
-
+                    this.ActiveControl = null;
                     break;
             }
         }
@@ -291,6 +473,17 @@ namespace MessageBoxCustom
         {
             RBtn1.BorderSize = 0;
             RBtn1.BorderColor = Color.Red;
+        }
+
+        private void FrmRMessageBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+
+            if (e.Modifiers == Keys.None && e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+                this.Dispose();
+            }
         }
     }
 }
