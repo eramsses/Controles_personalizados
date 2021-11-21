@@ -103,5 +103,149 @@
       <Name>ControlesPersonalizados</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asterisk_color_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asterisk_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asterisk_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamation_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamation_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamation_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_dark_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Key_light_50px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like_color_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Like_light_50px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock_color_50px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lock_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_dark_50px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Question_light_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_dark_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop_light_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_color_50px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trash_light_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlock_light_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_light_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_color_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_dark_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning_light_50px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

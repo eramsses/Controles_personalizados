@@ -1,6 +1,6 @@
 ﻿namespace DemoControles
 {
-    partial class Inicio
+    partial class FrmInicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -132,7 +132,9 @@
             this.BtnMostrarMensajeOK = new ControlesPersonalizados.RButton();
             this.chkIncluirTitulo = new ControlesPersonalizados.RToggleButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label21 = new System.Windows.Forms.Label();
             this.lblResultadoMsgBox = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.rButton1 = new ControlesPersonalizados.RButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -141,8 +143,6 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1983,6 +1983,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.SystemColors.Window;
             this.tabPage6.Controls.Add(this.label21);
             this.tabPage6.Controls.Add(this.lblResultadoMsgBox);
             this.tabPage6.Controls.Add(this.label20);
@@ -1993,7 +1994,16 @@
             this.tabPage6.Size = new System.Drawing.Size(1363, 580);
             this.tabPage6.TabIndex = 9;
             this.tabPage6.Text = "MessageBox";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(69, 25);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(279, 32);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "MessageBoxCustom";
             // 
             // lblResultadoMsgBox
             // 
@@ -2004,6 +2014,16 @@
             this.lblResultadoMsgBox.Size = new System.Drawing.Size(164, 21);
             this.lblResultadoMsgBox.TabIndex = 1;
             this.lblResultadoMsgBox.Text = "lblResultadoMsgBox";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(626, 452);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(175, 19);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Valor RDialogResult = ";
             // 
             // rButton1
             // 
@@ -2082,6 +2102,7 @@
             // 
             // toolStripTextBox1
             // 
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             // 
@@ -2100,31 +2121,11 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(626, 452);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(175, 19);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Valor RDialogResult = ";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(69, 25);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(279, 32);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "MessageBoxCustom";
-            // 
-            // Inicio
+            // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.BackColor = System.Drawing.Color.DarkOrange;
             this.ClientSize = new System.Drawing.Size(1371, 736);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -2132,7 +2133,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Inicio";
+            this.Name = "FrmInicio";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

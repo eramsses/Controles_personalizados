@@ -179,6 +179,20 @@ namespace MessageBoxCustom
         }
 
 
+        public Image IconMessage
+        { 
+            set
+            {
+                PicIcon.Image = value;
+                if (value == null)
+                {
+                    PnlIcono.Visible = false;
+                }
+            }
+        }
+
+
+
 
         #endregion
 
@@ -189,26 +203,19 @@ namespace MessageBoxCustom
             InitializeComponent();
         }
 
-        public FrmRMessageBox(string mensaje, string titulo, RMessageBoxButtons buttons, Image icon, RMessageBoxDefaultButton buttonDefault, string[] txtButtons)
+        public FrmRMessageBox(string mensaje, string titulo, RMessageBoxButtons buttons, RMessageBoxDefaultButton buttonDefault, string[] txtButtons)
         {
             InitializeComponent();
             this.LblTitulo.Text = titulo;
             this.LblMensaje.Text = mensaje;
             MostrarBotones(buttons);
-            PicIcon.Image = icon;
-
-
-            if (icon == null)
-            {
-                PnlIcono.Visible = false;
-            }
-
+            
             SetDefaultButton(buttonDefault);
             SetTxtValueButtons(txtButtons);
         }
 
 
-
+        
 
         #endregion
 

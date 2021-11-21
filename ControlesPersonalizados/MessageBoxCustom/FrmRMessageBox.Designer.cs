@@ -165,7 +165,7 @@
             // 
             // PicIcon
             // 
-            this.PicIcon.Image = global::MessageBoxCustom.Properties.Resources.icons8_ok_64px;
+            this.PicIcon.Image = global::MessageBoxCustom.Properties.Resources.OK_light_50px;
             this.PicIcon.Location = new System.Drawing.Point(9, 23);
             this.PicIcon.Margin = new System.Windows.Forms.Padding(4);
             this.PicIcon.Name = "PicIcon";

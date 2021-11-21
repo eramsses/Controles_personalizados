@@ -14,9 +14,9 @@ using MessageBoxCustom;
 
 namespace DemoControles
 {
-    public partial class Inicio : Form
+    public partial class FrmInicio : Form
     {
-        public Inicio()
+        public FrmInicio()
         {
             InitializeComponent();
         }
@@ -286,12 +286,14 @@ namespace DemoControles
         {
 
             //Personalización
+            
 
             //RMessageBox.HoldCustom = true;
             string[] b = { "Botón 1", "Botón 2", "Botón 3" };
+            //RMessageBox.HeaderColor = Color.Gainsboro;
 
-            string msj = "Mensaje estandar solo título y mensaje";
-            RDialogResult r2 = RMessageBox.Show(msj, "Titulo para mi mensaje");
+            string msj = "Mensaje estandar solo título y mensaje Color:" + this.BackColor.Name;
+            RDialogResult r2 = RMessageBox.Show(Color.Empty, msj, "Titulo para mi mensaje");
             lblResultadoMsgBox.Text = r2.ToString();
 
 
@@ -304,29 +306,31 @@ namespace DemoControles
             RMessageBox.HoldCustom = true;
 
             msj = "Personalizació de los colores en cada elemento, colores de los botones y manteniendo la configuración para los siguiente mensaje";
-            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button1);
+            r2 = RMessageBox.Show(this.BackColor, msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button1);
             lblResultadoMsgBox.Text = r2.ToString();
 
 
             RMessageBox.HoldCustom = false;
             RMessageBox.TextColor = Color.Violet;
+            RMessageBox.BodyColor = Color.DarkViolet;
 
             msj = "Cambio en el color del texto y eliminar la personalización después de este mensaje, textos de los botones personalizado";
-            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.AbortRetryIgnore, RMessageBoxIcon.Ok, RMessageBoxDefaultButton.Button2,b);
+            r2 = RMessageBox.Show(this.BackColor, msj, "Titulo para mi mensaje", RMessageBoxButtons.AbortRetryIgnore, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button2, b);
             lblResultadoMsgBox.Text = r2.ToString();
 
 
             RMessageBox.ButtonLeftColor = Color.Green;
             RMessageBox.ButtonCenterColor = Color.Red;
             RMessageBox.ButtonRightColor = Color.White;
+            RMessageBox.CustomIcon = Properties.Resources.rostro_mujer_adulta;
 
-            msj = "Colores por defecto cambio solo en los colores de los botones sin guardar la personalización para los demas mensajes";
-            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Information, RMessageBoxDefaultButton.Button3);
+            msj = "Colores por defthis.BackColor, ecto cambio solo en los colores de los botones sin guardar la personalización para los demas mensajes";
+            r2 = RMessageBox.Show(this.BackColor, msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNoCancel, RMessageBoxIcon.Custom, RMessageBoxDefaultButton.Button3);
             lblResultadoMsgBox.Text = r2.ToString();
 
             msj = "Vuelve a la configuración por defecto automáticamente ";
-            r2 = RMessageBox.Show(msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning, RMessageBoxDefaultButton.Button2);
-            
+            r2 = RMessageBox.Show(this.BackColor, msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning_Color, RMessageBoxDefaultButton.Button2);
+
             lblResultadoMsgBox.Text = r2.ToString();
         }
     }

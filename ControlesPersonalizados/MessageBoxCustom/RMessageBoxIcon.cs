@@ -18,6 +18,31 @@ namespace MessageBoxCustom
         Error,
         Warning,
         Information,
-        Ok
+        Ok,
+        Like,
+        User,
+        Trash,
+        Save,
+        Lock,
+        Unlock,
+        Key,
+        Hand_Color,
+        Question_Color,
+        Exclamation_Color,
+        Asterisk_Color,
+        Stop_Color,
+        Error_Color,
+        Warning_Color,
+        Information_Color,
+        Ok_Color,
+        Like_Color,
+        User_Color,
+        Trash_Color,
+        Save_Color,
+        Lock_Color,
+        Unlock_Color,
+        Key_Color,
+        Custom
+
     }
 }
