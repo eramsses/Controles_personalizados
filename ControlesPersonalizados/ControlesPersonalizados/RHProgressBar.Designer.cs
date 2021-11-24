@@ -94,6 +94,7 @@
             this.Controls.Add(this.LblTextO);
             this.Controls.Add(this.LblTextU);
             this.Controls.Add(this.PnlChannel);
+            this.DoubleBuffered = true;
             this.Name = "RHProgressBar";
             this.Size = new System.Drawing.Size(340, 98);
             this.PnlChannel.ResumeLayout(false);
@@ -102,10 +103,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel PnlChannel;
-        private System.Windows.Forms.Panel PnlSlider;
-        private System.Windows.Forms.Label LblTextU;
-        private System.Windows.Forms.Label LblTextO;
-        private System.Windows.Forms.Label LblTextI;
+
+        public System.Windows.Forms.Panel PnlChannel;
+        public System.Windows.Forms.Panel PnlSlider;
+        public System.Windows.Forms.Label LblTextU;
+        public System.Windows.Forms.Label LblTextO;
+        public System.Windows.Forms.Label LblTextI;
     }
 }

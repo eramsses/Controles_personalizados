@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControlesPersonalizados
@@ -41,6 +36,13 @@ namespace ControlesPersonalizados
 
         #region ->  Propiedades de la barra de progreso
 
+        public void Increment(int value = 1)
+        {
+            this.value += value;
+            SetSliderValue();
+            this.Invalidate();
+        }
+
         [Category("R Control Bar")]
         public int Value
         {
@@ -52,6 +54,7 @@ namespace ControlesPersonalizados
             set
             {
                 this.value = value;
+                
                 SetSliderValue();
 
                 this.Invalidate();
@@ -268,22 +271,6 @@ namespace ControlesPersonalizados
 
         #endregion
 
-        private void Control_Resize(object sender, EventArgs e)
-        {
-            this.Width = this.Height;
-            ValidarGrosorDeBarra(this.barWidth);
-        }
-
-        private void ValidarGrosorDeBarra(int value)
-        {
-            if (value < 0)
-                BarWidth = 0;
-            else if (value > ((this.Width / 2) - 5))
-                BarWidth = (this.Width / 2) - 5;
-            else
-                barWidth = value;
-        }
-
         #region -> Metodos de la barra de progreso
         private void SetSliderValue()
         {
@@ -305,27 +292,23 @@ namespace ControlesPersonalizados
 
         }
 
-        #endregion
-
         private void RCProgressBar_Paint(object sender, PaintEventArgs e)
         {
             e.Graphics.TranslateTransform(this.Width / 2, this.Height / 2);
-            e.Graphics.RotateTransform(startingAngle);
+            //e.Graphics.RotateTransform(startingAngle);
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
+            Rectangle obj_rect = new Rectangle(0 - (this.Height / 2) + 3, 0 - (this.Height / 2) + 3, this.Width - 6, this.Height - 6);
+            Rectangle obj_rect_grad = new Rectangle(0 - (this.Height / 2) + 2, 0 - (this.Height / 2) + 2, this.Width - 4, this.Height - 4);
 
-
-
-            Rectangle obj_rect = new Rectangle(0 - (this.Height / 2) + 2, 0 - (this.Height / 2) + 2, this.Width - 4, this.Height - 4);
-
-            LinearGradientBrush gradientColorBrush = new LinearGradientBrush(obj_rect, barColor, barColor2, gradientAngleColorBar);
+            LinearGradientBrush gradientColorBrush = new LinearGradientBrush(obj_rect_grad, barColor, barColor2, gradientAngleColorBar);
 
             SolidBrush brush = new SolidBrush(barColor);
 
             Pen obj_pen = new Pen(gradientColorBrush);
             //Dibujar el Progreso
-            e.Graphics.DrawPie(obj_pen, obj_rect, 0, this.progress);
-            e.Graphics.FillPie(gradientColorBrush, obj_rect, 0, this.progress);
+            e.Graphics.DrawPie(obj_pen, obj_rect, startingAngle, this.progress);
+            e.Graphics.FillPie(gradientColorBrush, obj_rect, startingAngle, this.progress);
 
 
 
@@ -334,14 +317,14 @@ namespace ControlesPersonalizados
             brush = new SolidBrush(interiorColor);
             obj_pen = new Pen(gradientColorBrush);
             
-            obj_rect = new Rectangle(0 - (this.Height / 2) + barWidth + 2, 0 - (this.Height / 2) + barWidth + 2, this.Width - (barWidth * 2) - 4, this.Height - (barWidth * 2) - 4);
-            e.Graphics.DrawPie(obj_pen, obj_rect, 0, 306);
+            obj_rect = new Rectangle(0 - (this.Height / 2) + barWidth + 3, 0 - (this.Height / 2) + barWidth + 3, this.Width - (barWidth * 2) - 6, this.Height - (barWidth * 2) - 6);
+            e.Graphics.DrawPie(obj_pen, obj_rect, 0, 360);
             e.Graphics.FillPie(gradientColorBrush, obj_rect, 0, 360);
 
 
 
             //Texto
-            e.Graphics.RotateTransform(-startingAngle);
+            //e.Graphics.RotateTransform(-startingAngle);
             StringFormat ft = new StringFormat();
             ft.Alignment = StringAlignment.Center;
             ft.LineAlignment = StringAlignment.Center;
@@ -351,6 +334,24 @@ namespace ControlesPersonalizados
             e.Graphics.DrawString(this.texto, font, textBrush, obj_rect, ft);
 
         }
+
+        private void Control_Resize(object sender, EventArgs e)
+        {
+            this.Width = this.Height;
+            ValidarGrosorDeBarra(this.barWidth);
+        }
+
+        private void ValidarGrosorDeBarra(int value)
+        {
+            if (value < 0)
+                BarWidth = 0;
+            else if (value > ((this.Width / 2) - 5))
+                BarWidth = (this.Width / 2) - 5;
+            else
+                barWidth = value;
+        }
+
+        #endregion
 
     }
 }

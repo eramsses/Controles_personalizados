@@ -220,7 +220,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
             this.TopMost = true;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRMessageBox_KeyDown);
             this.PnlTitulo.ResumeLayout(false);
             this.PnlBotones.ResumeLayout(false);
             this.PnlIcono.ResumeLayout(false);

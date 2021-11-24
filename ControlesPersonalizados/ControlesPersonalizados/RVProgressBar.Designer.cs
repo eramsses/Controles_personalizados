@@ -44,6 +44,7 @@
             this.LblTextL.Size = new System.Drawing.Size(13, 13);
             this.LblTextL.TabIndex = 0;
             this.LblTextL.Text = "0";
+            this.LblTextL.Visible = false;
             // 
             // LblTextC
             // 
@@ -87,6 +88,7 @@
             this.Controls.Add(this.PnlChannel);
             this.Controls.Add(this.LblTextR);
             this.Controls.Add(this.LblTextL);
+            this.DoubleBuffered = true;
             this.Name = "RVProgressBar";
             this.Size = new System.Drawing.Size(177, 292);
             this.PnlChannel.ResumeLayout(false);

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MessageBoxCustom
@@ -196,7 +189,6 @@ namespace MessageBoxCustom
 
         #endregion
 
-
         #region Constructores
         public FrmRMessageBox()
         {
@@ -219,7 +211,7 @@ namespace MessageBoxCustom
 
         #endregion
 
-        #region Contrucción de Botones
+        #region -> Contrucción de Botones
 
         private void SetTxtValueButtons(string[] txtButtons)
         {
@@ -243,18 +235,12 @@ namespace MessageBoxCustom
             }
         }
 
-
-
         private void SetDefaultButton(RMessageBoxDefaultButton buttonDefault)
         {
-
-
             switch (buttonDefault)
             {
                 case RMessageBoxDefaultButton.None:
                     this.ActiveControl = null;
-
-
                     break;
                 case RMessageBoxDefaultButton.Button1:
                     this.ActiveControl = RBtn3;
@@ -300,7 +286,6 @@ namespace MessageBoxCustom
                     RBtn3.Text = Traductor.Traducir("Ok");
 
                     break;
-
                 case RMessageBoxButtons.OKCancel:
                     //valor devuelto
                     resultadoBoton1 = RDialogResult.None;
@@ -317,7 +302,6 @@ namespace MessageBoxCustom
                     RBtn3.Text = Traductor.Traducir("Cancel");
 
                     break;
-
                 case RMessageBoxButtons.AbortRetryIgnore:
                     //valor devuelto
                     resultadoBoton1 = RDialogResult.Abort;
@@ -333,7 +317,6 @@ namespace MessageBoxCustom
                     RBtn1.Text = Traductor.Traducir("Abort");
                     RBtn2.Text = Traductor.Traducir("Retry");
                     RBtn3.Text = Traductor.Traducir("Ignore");
-
 
                     break;
                 case RMessageBoxButtons.YesNoCancel:
@@ -352,7 +335,6 @@ namespace MessageBoxCustom
                     RBtn2.Text = Traductor.Traducir("No");
                     RBtn3.Text = Traductor.Traducir("Cancel");
 
-
                     break;
                 case RMessageBoxButtons.YesNo:
                     //valor devuelto
@@ -368,7 +350,6 @@ namespace MessageBoxCustom
                     RBtn1.Text = Traductor.Traducir("");
                     RBtn2.Text = Traductor.Traducir("Yes");
                     RBtn3.Text = Traductor.Traducir("No");
-
 
                     break;
                 case RMessageBoxButtons.RetryCancel:
@@ -386,17 +367,15 @@ namespace MessageBoxCustom
                     RBtn2.Text = Traductor.Traducir("Retry");
                     RBtn3.Text = Traductor.Traducir("Cancel");
 
-
                     break;
             }
 
 
         }
 
-
-
         #endregion
 
+        #region -> Resultado
         public RDialogResult Resultado
         {
             get
@@ -405,6 +384,10 @@ namespace MessageBoxCustom
             }
 
         }
+
+        #endregion
+
+        #region -> PPermitir el arrastre de la vantana
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -423,6 +406,10 @@ namespace MessageBoxCustom
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        #endregion
+
+        #region -> Resultados según boton
 
         private void RBtn1_Click(object sender, EventArgs e)
         {
@@ -482,15 +469,16 @@ namespace MessageBoxCustom
             RBtn1.BorderColor = Color.Red;
         }
 
-        private void FrmRMessageBox_KeyDown(object sender, KeyEventArgs e)
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) // Cerrar con el Tecla Esc
         {
-            base.OnKeyDown(e);
-
-            if (e.Modifiers == Keys.None && e.KeyCode == Keys.Escape)
+            if (keyData == Keys.Escape)
             {
                 this.Close();
-                this.Dispose();
+                return true;
             }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        #endregion
     }
 }

@@ -329,7 +329,7 @@ namespace DemoControles
             lblResultadoMsgBox.Text = r2.ToString();
 
             msj = "Vuelve a la configuración por defecto automáticamente ";
-            r2 = RMessageBox.Show(this.BackColor, msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning_Color, RMessageBoxDefaultButton.Button2);
+            r2 = RMessageBox.Show(Color.Transparent, msj, "Titulo para mi mensaje", RMessageBoxButtons.YesNo, RMessageBoxIcon.Warning, RMessageBoxDefaultButton.Button2);
 
             lblResultadoMsgBox.Text = r2.ToString();
         }

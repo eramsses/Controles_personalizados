@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows.Forms;
 
 namespace MessageBoxCustom
@@ -26,9 +21,7 @@ namespace MessageBoxCustom
         private static Color buttonRightColor = Color.Empty;
         private static Image customIcon = null;
 
-
-        private static bool holdCustom = true;
-
+        private static bool holdCustom = false;
 
         #region -> Propiedades de personalización
 
@@ -124,7 +117,6 @@ namespace MessageBoxCustom
 
         #region -> Implementación
 
-
         public static RDialogResult Show(Color colorBase, string mensaje)
         {
             return ShowCore(colorBase, mensaje, null, RMessageBoxButtons.OK, RMessageBoxIcon.None, RMessageBoxDefaultButton.None, noChangeText);
@@ -195,7 +187,6 @@ namespace MessageBoxCustom
 
         #region -> Metodos
 
-
         private static void SetDefaultBackColor(Color colorBase, FrmRMessageBox frm)
         {
             if (colorBase != Color.Empty)
@@ -254,7 +245,6 @@ namespace MessageBoxCustom
         {
             if (!holdCustom)
             {
-
                 textColor = darkText;
                 textColorTittle = darkText;
                 textColorMessage = darkText;
@@ -270,7 +260,6 @@ namespace MessageBoxCustom
 
                 
             }
-
         }
 
         private static Image GetIcon(RMessageBoxIcon icon)
@@ -463,7 +452,6 @@ namespace MessageBoxCustom
             }
         }
 
-        
 
         #endregion
 
