@@ -66,6 +66,12 @@
     <Compile Include="RCircularPictureBox.Designer.cs">
       <DependentUpon>RCircularPictureBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="RPanelRounded.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPanelRounded.Designer.cs">
+      <DependentUpon>RPanelRounded.cs</DependentUpon>
+    </Compile>
     <Compile Include="RToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -14,7 +14,7 @@ namespace ControlesPersonalizados
     [DefaultEvent("_TextChanged")]
     public partial class RTextBox : UserControl
     {
-        #region -> Fields
+        #region -> Campos
         //Fields
         private static Color darkText = Color.FromArgb(64, 64, 64);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
@@ -52,7 +52,7 @@ namespace ControlesPersonalizados
             ValidarRadioMinimo(borderRadius);
         }
 
-        #region -> Properties
+        #region -> Propiedades
         [Category("R Control")]
         public Color BorderColor
         {
@@ -538,7 +538,7 @@ namespace ControlesPersonalizados
                     borderRadius = v;
                 }
 
-                Console.WriteLine(borderRadius);
+                
 
             }
 
