@@ -18,7 +18,9 @@ namespace ControlesPersonalizados
         private int borderRadius = 0;
         private int borderSize = 0;
         private Color borderColor = Color.DimGray;
-        private Color backgroundColor = Color.LightGray;
+        private Color backgroundColor1 = Color.LightGray;
+        private Color backgroundColor2 = Color.LightGray;
+        private int angleColor = 0;
 
         #endregion
 
@@ -78,22 +80,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        [Category("R Control")]
-        public Color SetBackColor
-        {
-            get
-            {
-                return this.backgroundColor;
-            }
-
-            set
-            {
-                this.backgroundColor = value;
-                PintarPanel();
-                this.Invalidate();
-            }
-        }
-
+        
         [Category("R Control")]
         public int BorderSize
         {
@@ -105,6 +92,54 @@ namespace ControlesPersonalizados
             set
             {
                 borderSize = value;
+                PintarPanel();
+                this.Invalidate();
+            }
+        }
+
+        [Category("R Control")]
+        public Color BackColor1
+        {
+            get
+            {
+                return this.backgroundColor1;
+            }
+
+            set
+            {
+                this.backgroundColor1 = value;
+                PintarPanel();
+                this.Invalidate();
+            }
+        }
+
+        [Category("R Control")]
+        public Color BackColor2
+        {
+            get
+            {
+                return backgroundColor2;
+            }
+
+            set
+            {
+                backgroundColor2 = value;
+                PintarPanel();
+                this.Invalidate();
+            }
+        }
+
+        [Category("R Control")]
+        public int AngleColor
+        {
+            get
+            {
+                return angleColor;
+            }
+
+            set
+            {
+                angleColor = value;
                 PintarPanel();
                 this.Invalidate();
             }
@@ -133,34 +168,40 @@ namespace ControlesPersonalizados
             var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
 
             if (borderRadius > 1)//Panel redondeado
-            { 
+            {
                 GraphicsPath path = GetFigurePath(rectBorder, borderRadius);
                 graph.SmoothingMode = SmoothingMode.AntiAlias;
 
+                using (LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
                 using (Pen pen = new Pen(borderColor, borderSize))
-                using (var backGroundColor = new SolidBrush(backgroundColor))
+                using (var backGroundColor = new SolidBrush(backgroundColor1))
                 {
                     pen.Alignment = PenAlignment.Inset;
 
-                    if(borderSize > 0)
-                    graph.DrawPath(new Pen(borderColor, borderSize), path);
+                    graph.FillPath(gradientBrush, path);
 
-                    graph.FillPath(backGroundColor, path);
+                    if (borderSize > 0)
+                        graph.DrawPath(new Pen(borderColor, borderSize), path);
+
+                    
                 }
 
             }
             else //Panel cuadrado Normal
             {
-                using (var backGroundColor = new SolidBrush(backgroundColor))
+                using(LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
+                using (var backGroundColor = new SolidBrush(backgroundColor1))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
-                    penBorder.Alignment = PenAlignment.Inset;
+                    //penBorder.Alignment = PenAlignment.Inset;
+
+                    graph.FillRectangle(gradientBrush, rectBorder);
 
                     if (borderSize > 0)
                         graph.DrawRectangle(penBorder, rectBorder);
 
 
-                    graph.FillRectangle(backGroundColor, rectBorder);
+
                 }
             }
         }
@@ -203,20 +244,10 @@ namespace ControlesPersonalizados
             float curveSize = radius;
             path.StartFigure();
 
-            if (rect.Width > rect.Height)
-            {
-                path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
-                path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
-                path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
-                path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
-            }
-            else
-            {
-                curveSize = radius * 2F;
-                path.AddArc(rect.X, rect.Y - 2, rect.Width, rect.Height + 3, 90, 180);//A la izquuierda
-
-            }
-
+            path.AddArc(rect.X, rect.Y, curveSize, curveSize, 180, 90);
+            path.AddArc(rect.Right - curveSize, rect.Y, curveSize, curveSize, 270, 90);
+            path.AddArc(rect.Right - curveSize, rect.Bottom - curveSize, curveSize, curveSize, 0, 90);
+            path.AddArc(rect.X, rect.Bottom - curveSize, curveSize, curveSize, 90, 90);
 
             path.CloseFigure();
             return path;

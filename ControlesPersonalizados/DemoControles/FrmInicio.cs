@@ -34,11 +34,11 @@ namespace DemoControles
         {
             if (chkPersonalizado.Checked)
             {
-                lblPersonalizado.Text = "Personalizado  Encendido";
+                LblPersonalizado.Text = "Personalizado  Encendido";
             }
             else
             {
-                lblPersonalizado.Text = "Personalizado  Apagado";
+                LblPersonalizado.Text = "Personalizado  Apagado";
             }
 
         }
@@ -47,11 +47,13 @@ namespace DemoControles
         {
             if (chkBtnDefecto.Checked)
             {
-                lblDefecto.Text = "Valores por defecto Encendido";
+                lblDefecto.Text = "Con bordes";
+                rPanelRounded1.BorderSize = 2;
             }
             else
             {
-                lblDefecto.Text = "Valores por defecto Apagado";
+                lblDefecto.Text = "Sin bordes";
+                rPanelRounded1.BorderSize = 0;
             }
 
         }
@@ -60,11 +62,13 @@ namespace DemoControles
         {
             if (chkBtn.Checked)
             {
-                lblChk.Text = "Encendido";
+                lblChkRedondeado.Text = "Redondeado";
+                rPanelRounded1.BorderRadius = 100;
             }
             else
             {
-                lblChk.Text = "Apagado";
+                lblChkRedondeado.Text = "Cuadrado";
+                rPanelRounded1.BorderRadius = 0;
             }
         }
 
