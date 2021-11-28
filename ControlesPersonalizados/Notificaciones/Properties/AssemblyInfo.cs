@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Notificaciones")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Notificaciones W10")]
+[assembly: AssemblyDescription("Notificaciones estilo windows")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Notificaciones")]
+[assembly: AssemblyCompany("R@MSSES")]
+[assembly: AssemblyProduct("Notificaciones W10")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
