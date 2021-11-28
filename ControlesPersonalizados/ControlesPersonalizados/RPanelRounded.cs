@@ -173,6 +173,8 @@ namespace ControlesPersonalizados
 
                 //TextureBrush brush = new TextureBrush(Properties.Resources.Asterisk_dark_50px) 
 
+                //graph.Clear(this.BackColor);
+
                 using (LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
                 using (Pen pen = new Pen(borderColor, borderSize))
                 using (var backGroundColor = new SolidBrush(backgroundColor1))

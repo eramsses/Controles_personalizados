@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -136,7 +137,32 @@ namespace ControlesPersonalizados
         {
             int toggleSize = this.Height - 5;
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+
             pevent.Graphics.Clear(this.Parent.BackColor);
+            //try
+            //{
+
+            //    if (this.Parent.GetType() == typeof(RPanelRounded))
+            //    {
+
+            //        RPanelRounded panelPadre = (RPanelRounded)this.Parent;
+            //        this.BackColor = panelPadre.BackColor1;
+            //    }
+
+
+
+            //    else
+            //    {
+            //        this.BackColor = this.Parent.BackColor;
+            //    }
+
+            //}
+            //catch (Exception e)
+            //{
+            //    pevent.Graphics.Clear(this.Parent.BackColor);
+            //}
+
+
 
             if (this.Checked)//Control encendido
             {

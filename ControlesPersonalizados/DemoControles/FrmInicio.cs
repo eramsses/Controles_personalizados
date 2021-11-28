@@ -290,7 +290,7 @@ namespace DemoControles
         {
 
             //Personalización
-            
+
 
             //RMessageBox.HoldCustom = true;
             string[] b = { "Botón 1", "Botón 2", "Botón 3" };
@@ -337,6 +337,5 @@ namespace DemoControles
 
             lblResultadoMsgBox.Text = r2.ToString();
         }
-
     }
 }

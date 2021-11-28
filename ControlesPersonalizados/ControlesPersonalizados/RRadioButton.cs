@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using System;
 
 namespace ControlesPersonalizados
 {
@@ -54,6 +55,7 @@ namespace ControlesPersonalizados
             this.MinimumSize = new Size(0, 21);
             //Agregado de padding de 10 a la izquierda para tener espacio entre el texto y el RRadioButton.
             this.Padding = new Padding(10, 0, 0, 0);
+            //this.BackColor = Color.FromArgb(0, 255, 255, 255);
         }
 
         #endregion
@@ -61,15 +63,35 @@ namespace ControlesPersonalizados
         #region Métodos
         protected override void OnPaint(PaintEventArgs pevent)
         {
+            Graphics graphics = pevent.Graphics;
 
-            if (this.Parent.GetType() == typeof(RPanelRounded))
+            try
             {
-                RPanelRounded panelPadre = (RPanelRounded)this.Parent;
-                this.BackColor = panelPadre.BackColor1;
+                if (this.BackColor == Color.Transparent)
+                {
+
+
+                    if (this.Parent.GetType() == typeof(RPanelRounded))
+                    {
+
+                        RPanelRounded panelPadre = (RPanelRounded)this.Parent;
+                        graphics.Clear(panelPadre.BackColor);
+                        //this.BackColor = panelPadre.BackColor1;
+                    }
+                    else
+                    {
+                        //this.BackColor = this.Parent.BackColor;
+                        graphics.Clear(this.Parent.BackColor);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
             }
 
             //Campos
-            Graphics graphics = pevent.Graphics;
+
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             float rbBorderSize = 18F;
             float rbCheckSize = 12F;
@@ -108,7 +130,7 @@ namespace ControlesPersonalizados
                 }
                 //Draw text
                 graphics.DrawString(this.Text, this.Font, brushText,
-                    rbBorderSize + 8, (this.Height - TextRenderer.MeasureText(this.Text, this.Font).Height) / 2);//Y=Center
+                                rbBorderSize + 8, (this.Height - TextRenderer.MeasureText(this.Text, this.Font).Height) / 2);//Y=Center
             }
         }
 
