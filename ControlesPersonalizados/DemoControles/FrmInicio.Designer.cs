@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LblPersonalizado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -143,7 +144,8 @@
             this.rButton1 = new ControlesPersonalizados.RButton();
             this.btnSalir = new ControlesPersonalizados.RButton();
             this.rPanelRounded1 = new ControlesPersonalizados.RPanelRounded(this.components);
-            this.LblPersonalizado = new System.Windows.Forms.Label();
+            this.rRadioButton1 = new ControlesPersonalizados.RRadioButton();
+            this.rRadioButton2 = new ControlesPersonalizados.RRadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -194,8 +196,8 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
-            this.tabPage1.Controls.Add(this.LblPersonalizado);
             this.tabPage1.Controls.Add(this.rPanelRounded1);
+            this.tabPage1.Controls.Add(this.LblPersonalizado);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.label3);
@@ -212,6 +214,16 @@
             this.tabPage1.Size = new System.Drawing.Size(1363, 580);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Toggle Button";
+            // 
+            // LblPersonalizado
+            // 
+            this.LblPersonalizado.AutoSize = true;
+            this.LblPersonalizado.Location = new System.Drawing.Point(359, 151);
+            this.LblPersonalizado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPersonalizado.Name = "LblPersonalizado";
+            this.LblPersonalizado.Size = new System.Drawing.Size(169, 17);
+            this.LblPersonalizado.TabIndex = 12;
+            this.LblPersonalizado.Text = "Personalizado  Apagado";
             // 
             // label1
             // 
@@ -455,6 +467,8 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage7.Controls.Add(this.rRadioButton2);
+            this.tabPage7.Controls.Add(this.rRadioButton1);
             this.tabPage7.Controls.Add(this.groupBox2);
             this.tabPage7.Controls.Add(this.groupBox1);
             this.tabPage7.Location = new System.Drawing.Point(4, 26);
@@ -2115,27 +2129,47 @@
             // 
             // rPanelRounded1
             // 
-            this.rPanelRounded1.AngleColor = 45;
+            this.rPanelRounded1.AngleColor = 0;
             this.rPanelRounded1.BackColor = System.Drawing.Color.Transparent;
-            this.rPanelRounded1.BackColor1 = System.Drawing.SystemColors.Info;
+            this.rPanelRounded1.BackColor1 = System.Drawing.Color.LightGray;
             this.rPanelRounded1.BackColor2 = System.Drawing.Color.LightGray;
-            this.rPanelRounded1.BorderColor = System.Drawing.Color.DarkOrange;
+            this.rPanelRounded1.BorderColor = System.Drawing.Color.DimGray;
             this.rPanelRounded1.BorderRadius = 50;
-            this.rPanelRounded1.BorderSize = 1;
-            this.rPanelRounded1.Location = new System.Drawing.Point(657, 134);
+            this.rPanelRounded1.BorderSize = 0;
+            this.rPanelRounded1.Location = new System.Drawing.Point(755, 167);
             this.rPanelRounded1.Name = "rPanelRounded1";
-            this.rPanelRounded1.Size = new System.Drawing.Size(427, 285);
-            this.rPanelRounded1.TabIndex = 11;
+            this.rPanelRounded1.Size = new System.Drawing.Size(317, 240);
+            this.rPanelRounded1.TabIndex = 13;
             // 
-            // LblPersonalizado
+            // rRadioButton1
             // 
-            this.LblPersonalizado.AutoSize = true;
-            this.LblPersonalizado.Location = new System.Drawing.Point(359, 151);
-            this.LblPersonalizado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.LblPersonalizado.Name = "LblPersonalizado";
-            this.LblPersonalizado.Size = new System.Drawing.Size(169, 17);
-            this.LblPersonalizado.TabIndex = 12;
-            this.LblPersonalizado.Text = "Personalizado  Apagado";
+            this.rRadioButton1.AutoSize = true;
+            this.rRadioButton1.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rRadioButton1.Location = new System.Drawing.Point(489, 359);
+            this.rRadioButton1.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rRadioButton1.Name = "rRadioButton1";
+            this.rRadioButton1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rRadioButton1.Size = new System.Drawing.Size(127, 21);
+            this.rRadioButton1.TabIndex = 8;
+            this.rRadioButton1.TabStop = true;
+            this.rRadioButton1.Text = "rRadioButton1";
+            this.rRadioButton1.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // rRadioButton2
+            // 
+            this.rRadioButton2.AutoSize = true;
+            this.rRadioButton2.CheckedColor = System.Drawing.Color.MediumSlateBlue;
+            this.rRadioButton2.Location = new System.Drawing.Point(496, 410);
+            this.rRadioButton2.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rRadioButton2.Name = "rRadioButton2";
+            this.rRadioButton2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rRadioButton2.Size = new System.Drawing.Size(127, 21);
+            this.rRadioButton2.TabIndex = 9;
+            this.rRadioButton2.TabStop = true;
+            this.rRadioButton2.Text = "rRadioButton2";
+            this.rRadioButton2.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rRadioButton2.UseVisualStyleBackColor = true;
             // 
             // FrmInicio
             // 
@@ -2163,6 +2197,7 @@
             this.tabPage5.PerformLayout();
             this.PnlBarrasProgreso.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -2304,8 +2339,10 @@
         private System.Windows.Forms.Label lblResultadoMsgBox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private ControlesPersonalizados.RPanelRounded rPanelRounded1;
         private System.Windows.Forms.Label LblPersonalizado;
+        private ControlesPersonalizados.RPanelRounded rPanelRounded1;
+        private ControlesPersonalizados.RRadioButton rRadioButton2;
+        private ControlesPersonalizados.RRadioButton rRadioButton1;
     }
 }
 

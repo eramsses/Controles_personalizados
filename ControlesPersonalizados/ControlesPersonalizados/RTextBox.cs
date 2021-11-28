@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace ControlesPersonalizados
 {
@@ -38,7 +33,7 @@ namespace ControlesPersonalizados
 
         #endregion
 
-        //-> Constructor
+        #region -> Constructor
         public RTextBox()
         {
             //Created by designer
@@ -51,6 +46,8 @@ namespace ControlesPersonalizados
         {
             ValidarRadioMinimo(borderRadius);
         }
+
+        #endregion Constructor
 
         #region -> Propiedades
         [Category("R Control")]
@@ -73,7 +70,7 @@ namespace ControlesPersonalizados
                 {
                     borderFocusColor = borderColorFocusLight;
                 }
-                
+
                 borderColor = value;
                 this.Invalidate();
             }
@@ -111,7 +108,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        
+
 
         [Category("R Control")]
         public bool Multiline
@@ -181,22 +178,22 @@ namespace ControlesPersonalizados
             }
         }
 
-        public void AppendTexts (string value)
+        public void AppendTexts(string value)
         {
-               textBox1.AppendText(value);
+            textBox1.AppendText(value);
         }
 
         [DefaultValue("Both")]
         [Category("R Control")]
-        public ScrollBars ScrollBar 
-        { 
+        public ScrollBars ScrollBar
+        {
             get
             {
                 return textBox1.ScrollBars;
             }
             set
             {
-                textBox1.ScrollBars = value;    
+                textBox1.ScrollBars = value;
             }
         }
 
@@ -249,7 +246,7 @@ namespace ControlesPersonalizados
             get { return placeholderText; }
             set
             {
-                if(value != "")
+                if (value != "")
                 {
                     placeholderText = value;
                     textBox1.Text = "";
@@ -260,7 +257,7 @@ namespace ControlesPersonalizados
                     placeholderText = value;
                     SetPlaceholder();
                 }
-                
+
             }
         }
         #endregion
@@ -371,7 +368,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        
+
         [Category("R Comportamiento")]
         public bool PasswordChar
         {
@@ -538,7 +535,7 @@ namespace ControlesPersonalizados
                     borderRadius = v;
                 }
 
-                
+
 
             }
 

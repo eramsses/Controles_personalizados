@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using System.Windows.Forms;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -11,13 +6,15 @@ using System.ComponentModel;
 
 namespace ControlesPersonalizados
 {
-   public  class RRadioButton : RadioButton
+    public partial class RRadioButton : RadioButton
     {
-        //Fields
+        #region -> Campos
         private Color checkedColor = Color.MediumSlateBlue;
         private Color unCheckedColor = Color.Gray;
 
-        //Properties
+        #endregion Campos
+
+        #region -> Propiedades
         [Category("R Control")]
         public Color CheckedColor
         {
@@ -48,18 +45,30 @@ namespace ControlesPersonalizados
             }
         }
 
-        //Constructor
+        #endregion
+
+        #region -> Constructor
+
         public RRadioButton()
         {
             this.MinimumSize = new Size(0, 21);
-            //Add a padding of 10 to the left to have a considerable distance between the text and the RadioButton.
-            this.Padding = new Padding(10,0,0,0);
+            //Agregado de padding de 10 a la izquierda para tener espacio entre el texto y el RRadioButton.
+            this.Padding = new Padding(10, 0, 0, 0);
         }
 
-        //Overridden methods
+        #endregion
+
+        #region Métodos
         protected override void OnPaint(PaintEventArgs pevent)
         {
-            //Fields
+
+            if (this.Parent.GetType() == typeof(RPanelRounded))
+            {
+                RPanelRounded panelPadre = (RPanelRounded)this.Parent;
+                this.BackColor = panelPadre.BackColor1;
+            }
+
+            //Campos
             Graphics graphics = pevent.Graphics;
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             float rbBorderSize = 18F;
@@ -79,14 +88,14 @@ namespace ControlesPersonalizados
                 Height = rbCheckSize
             };
 
-            //Drawing
+            //Dibujando
             using (Pen penBorder = new Pen(checkedColor, 1.6F))
             using (SolidBrush brushRbCheck = new SolidBrush(checkedColor))
             using (SolidBrush brushText = new SolidBrush(this.ForeColor))
             {
-                //Draw surface
+                //Dibujado de la superficie
                 graphics.Clear(this.BackColor);
-                //Draw Radio Button
+                //Dibujando Radio Button
                 if (this.Checked)
                 {
                     graphics.DrawEllipse(penBorder, rectRbBorder);//Circle border
@@ -102,6 +111,8 @@ namespace ControlesPersonalizados
                     rbBorderSize + 8, (this.Height - TextRenderer.MeasureText(this.Text, this.Font).Height) / 2);//Y=Center
             }
         }
+
+        #endregion
 
     }
 }

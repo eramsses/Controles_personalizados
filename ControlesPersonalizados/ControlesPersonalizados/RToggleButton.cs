@@ -1,34 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace ControlesPersonalizados
 {
     public partial class RToggleButton : CheckBox
     {
-        //Campos
+        #region -> Campos
         private Color onBackColor = Color.Lime;
         private Color onToggleColor = Color.WhiteSmoke;
         private Color offBackColor = Color.Gray;
         private Color offToggleColor = Color.Gainsboro;
         private bool solidStyle = true;
 
+        #endregion Campos
+
+        #region -> Propiedades
+
         [Category("R Control")]
-        public Color OnBackColor 
+        public Color OnBackColor
         {
-            get 
-            { 
-                return onBackColor; 
+            get
+            {
+                return onBackColor;
             }
-            set 
-            { 
+            set
+            {
                 onBackColor = value;
                 this.Invalidate();
             }
@@ -52,9 +50,9 @@ namespace ControlesPersonalizados
         [Category("R Control")]
         public Color OffBackColor
         {
-            get 
-            { 
-                return offBackColor; 
+            get
+            {
+                return offBackColor;
             }
             set
             {
@@ -66,9 +64,9 @@ namespace ControlesPersonalizados
         [Category("R Control")]
         public Color OffToggleColor
         {
-            get 
-            { 
-                return offToggleColor; 
+            get
+            {
+                return offToggleColor;
             }
             set
             {
@@ -87,7 +85,7 @@ namespace ControlesPersonalizados
 
             set
             {
-                
+
             }
         }
 
@@ -106,14 +104,18 @@ namespace ControlesPersonalizados
             }
         }
 
-        //Constructor
+        #endregion Propiedades
+
+        #region -> Constructor
         public RToggleButton()
         {
             this.MinimumSize = new Size(40, 22);
 
         }
 
-        //Metodos
+        #endregion Constructor
+
+        #region -> Métodos
         private GraphicsPath GetFigurePath()
         {
             int arcSize = this.Height - 1;
@@ -165,6 +167,8 @@ namespace ControlesPersonalizados
                 pevent.Graphics.FillEllipse(new SolidBrush(offToggleColor), new Rectangle(2, 2, toggleSize, toggleSize));
             }
         }
+
+        #endregion Métodos
     }
 }
 

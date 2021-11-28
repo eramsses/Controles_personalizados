@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.Windows.Forms;
 using System.Drawing;
@@ -13,7 +8,9 @@ using System.ComponentModel;
 namespace ControlesPersonalizados
 {
     public partial class RCircularPictureBox : PictureBox
-    {//Campos
+    {
+
+        #region -> Campos
         private int borderSize = 2;
         private Color borderColor = Color.RoyalBlue;
         private Color borderColor2 = Color.HotPink;
@@ -21,14 +18,19 @@ namespace ControlesPersonalizados
         private DashCap borderCapStyle = DashCap.Flat;
         private float gradientAngle = 50F;
 
-        //Constructor
+        #endregion
+
+        #region -> Constructor
+
         public RCircularPictureBox()
         {
             this.Size = new Size(100, 100);
             this.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
-        //Propiedades
+        #endregion Constructor
+
+        #region -> Propiedades
         [Category("R Control")]
         public int BorderSize
         {
@@ -95,7 +97,9 @@ namespace ControlesPersonalizados
             }
         }
 
-        //Overridden methods
+        #endregion Propiedades
+
+        #region -> Métodos
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
@@ -128,5 +132,7 @@ namespace ControlesPersonalizados
                     graph.DrawEllipse(penBorder, rectBorder);
             }
         }
+
+        #endregion Métodos
     }
 }

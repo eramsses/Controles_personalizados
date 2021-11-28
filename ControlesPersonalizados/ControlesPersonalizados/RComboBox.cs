@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Windows.Forms;
-using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.ComponentModel;
+using System.Drawing;
 using System.Drawing.Design;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace ControlesPersonalizados
 {
     [DefaultEvent("OnSelectedIndexChanged")]
-   public class RComboBox : UserControl
+    public class RComboBox : UserControl
     {
         #region -> Campos
         //Fields
@@ -82,10 +77,18 @@ namespace ControlesPersonalizados
             base.BackColor = borderColor; //Border Color
             this.ResumeLayout();
             AdjustComboBoxDimensions();
+
+
         }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            AdjustComboBoxDimensions();
+        }
+
         #endregion
 
-        //Properties
         #region -> Propiedades de Apariencia
         [Category("R Control")]
         public new Color BackColor
@@ -192,7 +195,7 @@ namespace ControlesPersonalizados
             set
             {
                 //if (cmbList.DropDownStyle != ComboBoxStyle.Simple)
-                    cmbList.DropDownStyle = value;
+                cmbList.DropDownStyle = value;
             }
         }
         #endregion
@@ -365,14 +368,6 @@ namespace ControlesPersonalizados
             this.OnMouseEnter(e);
         }
         //::::+
-        #endregion
-
-        #region -> Overridden methods
-        protected override void OnResize(EventArgs e)
-        {
-            base.OnResize(e);
-            AdjustComboBoxDimensions();
-        }
         #endregion
 
     }

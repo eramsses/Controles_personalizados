@@ -2,11 +2,12 @@
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace ControlesPersonalizados
 {
+
+    #region -> Enumeradores
 
     public enum HorizontalPositionText
     {
@@ -31,10 +32,11 @@ namespace ControlesPersonalizados
         Gradient2
 
     }
-
+    #endregion Enumeradores
 
     public partial class RHProgressBar : UserControl
     {
+        #region -> Campos
 
         private static Color darkText = Color.FromArgb(64, 64, 64);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
@@ -54,8 +56,9 @@ namespace ControlesPersonalizados
         private int barHeight = 5;
         private int angleColorBar = 0;
 
+        #endregion Campos
 
-
+        #region -> Constructor
 
         public RHProgressBar()
         {
@@ -72,6 +75,8 @@ namespace ControlesPersonalizados
             this.Invalidate();
 
         }
+
+        #endregion Constructor
 
         #region ->  Propiedades de la barra de progreso
         [Category("R Control Bar")]
@@ -736,10 +741,6 @@ namespace ControlesPersonalizados
         }
 
         #endregion
-
-
-
-
 
     }
 }

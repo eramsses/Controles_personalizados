@@ -8,6 +8,8 @@ namespace ControlesPersonalizados
 {
     public partial class RCProgressBar : UserControl
     {
+
+        #region -> Campos
         private Color barColor = Color.DarkOrange;
         private Color barColor2 = Color.Purple;
         private Color interiorColor = Color.DimGray;
@@ -27,12 +29,16 @@ namespace ControlesPersonalizados
         private int gradientAngleColorBar = 0;
         private int gradientAngleColorCenter = 0;
 
+        #endregion Campos
 
+        #region -> Constructor
         public RCProgressBar()
         {
             InitializeComponent();
             this.Resize += new EventHandler(Control_Resize);
         }
+
+        #endregion Constructor
 
         #region ->  Propiedades de la barra de progreso
 
@@ -54,7 +60,7 @@ namespace ControlesPersonalizados
             set
             {
                 this.value = value;
-                
+
                 SetSliderValue();
 
                 this.Invalidate();
@@ -173,7 +179,7 @@ namespace ControlesPersonalizados
         }
 
 
-        #endregion
+        #endregion propiedades de la barra de progreso
 
         #region -> Propiedades del texto
         [Category("R Control Text")]
@@ -269,7 +275,7 @@ namespace ControlesPersonalizados
         }
 
 
-        #endregion
+        #endregion propiedades del Texto
 
         #region -> Metodos de la barra de progreso
         private void SetSliderValue()
@@ -316,7 +322,7 @@ namespace ControlesPersonalizados
             gradientColorBrush = new LinearGradientBrush(obj_rect, interiorColor, interiorColor2, gradientAngleColorCenter);
             brush = new SolidBrush(interiorColor);
             obj_pen = new Pen(gradientColorBrush);
-            
+
             obj_rect = new Rectangle(0 - (this.Height / 2) + barWidth + 3, 0 - (this.Height / 2) + barWidth + 3, this.Width - (barWidth * 2) - 6, this.Height - (barWidth * 2) - 6);
             e.Graphics.DrawPie(obj_pen, obj_rect, 0, 360);
             e.Graphics.FillPie(gradientColorBrush, obj_rect, 0, 360);
@@ -351,7 +357,7 @@ namespace ControlesPersonalizados
                 barWidth = value;
         }
 
-        #endregion
+        #endregion metodos de la barra de progreso
 
     }
 }

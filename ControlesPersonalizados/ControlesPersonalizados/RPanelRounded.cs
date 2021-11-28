@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControlesPersonalizados
@@ -24,7 +19,7 @@ namespace ControlesPersonalizados
 
         #endregion
 
-
+        #region -> Constructores
 
         public RPanelRounded()
         {
@@ -46,6 +41,7 @@ namespace ControlesPersonalizados
             InitializeComponent();
         }
 
+        #endregion Constructores
 
         #region -> Propiedades
 
@@ -80,7 +76,7 @@ namespace ControlesPersonalizados
             }
         }
 
-        
+
         [Category("R Control")]
         public int BorderSize
         {
@@ -147,6 +143,8 @@ namespace ControlesPersonalizados
 
         #endregion
 
+        #region -> Métodos
+
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
@@ -172,6 +170,9 @@ namespace ControlesPersonalizados
                 GraphicsPath path = GetFigurePath(rectBorder, borderRadius);
                 graph.SmoothingMode = SmoothingMode.AntiAlias;
 
+
+                //TextureBrush brush = new TextureBrush(Properties.Resources.Asterisk_dark_50px) 
+
                 using (LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
                 using (Pen pen = new Pen(borderColor, borderSize))
                 using (var backGroundColor = new SolidBrush(backgroundColor1))
@@ -183,13 +184,13 @@ namespace ControlesPersonalizados
                     if (borderSize > 0)
                         graph.DrawPath(new Pen(borderColor, borderSize), path);
 
-                    
+
                 }
 
             }
             else //Panel cuadrado Normal
             {
-                using(LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
+                using (LinearGradientBrush gradientBrush = new LinearGradientBrush(rectBorder, backgroundColor1, backgroundColor2, angleColor, true))
                 using (var backGroundColor = new SolidBrush(backgroundColor1))
                 using (Pen penBorder = new Pen(borderColor, borderSize))
                 {
@@ -252,5 +253,7 @@ namespace ControlesPersonalizados
             path.CloseFigure();
             return path;
         }
+
+        #endregion Métodos
     }
 }

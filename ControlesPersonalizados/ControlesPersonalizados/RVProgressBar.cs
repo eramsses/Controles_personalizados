@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ControlesPersonalizados
 {
-
+    #region -> Enumeradores
     public enum HPositionText
     {
         Left,
@@ -36,8 +31,12 @@ namespace ControlesPersonalizados
 
     }
 
+    #endregion Enumeradores
+
     public partial class RVProgressBar : UserControl
     {
+
+        #region -> Campos
 
         private static Color darkText = Color.FromArgb(64, 64, 64);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
@@ -57,7 +56,9 @@ namespace ControlesPersonalizados
         private int barWidth = 10;
         private int angleColorBar = 90;
 
+        #endregion Campos
 
+        #region -> Constructor
         public RVProgressBar()
         {
             InitializeComponent();
@@ -72,6 +73,8 @@ namespace ControlesPersonalizados
             ShowValueText();
 
         }
+
+        #endregion Constructor
 
         #region ->  Propiedades de la barra de progreso
 
@@ -246,7 +249,6 @@ namespace ControlesPersonalizados
 
         #endregion
 
-
         #region -> Propiedades del texto
 
         [Category("R Control Text")]
@@ -377,7 +379,6 @@ namespace ControlesPersonalizados
 
         #endregion
 
-
         #region -> Metodos de la barra de progreso
         private void SetSliderValue()
         {
@@ -441,7 +442,6 @@ namespace ControlesPersonalizados
         }
 
         #endregion
-
 
         #region -> Metodos Texto
         private void SetFont(Font value)
@@ -720,7 +720,6 @@ namespace ControlesPersonalizados
 
 
         #endregion
-
 
         #region Metodos para el control
         private void UpdateControlWidth()

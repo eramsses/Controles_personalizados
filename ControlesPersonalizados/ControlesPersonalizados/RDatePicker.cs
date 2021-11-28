@@ -13,8 +13,10 @@ using System.ComponentModel;
 namespace ControlesPersonalizados
 {
     public partial class RDatePicker : DateTimePicker
-    {//Campos
-        //-> Apariencia
+    {
+
+        #region -> Campos
+        // Apariencia
         private static Color darkText = Color.FromArgb(70, 70, 70);
         private static Color ligthText = Color.FromArgb(220, 220, 220);
         private Color skinColor = Color.OrangeRed;
@@ -29,7 +31,9 @@ namespace ControlesPersonalizados
         private const int calendarIconWidth = 34;
         private const int arrowIconWidth = 17;
 
-        //Propiedades
+        #endregion Campos
+
+        #region -> Propiedades
         [Category("R Control")]
         public Color SkinColor
         {
@@ -47,7 +51,7 @@ namespace ControlesPersonalizados
                     calendarIcon = Properties.Resources.calendarWhite;
                     textColor = ligthText;
                 }
-                    
+
                 this.Invalidate();
             }
         }
@@ -85,7 +89,9 @@ namespace ControlesPersonalizados
             }
         }
 
-        //Constructor
+        #endregion propiedades
+
+        #region -> Constructor
         public RDatePicker()
         {
             this.SetStyle(ControlStyles.UserPaint, true);
@@ -93,7 +99,9 @@ namespace ControlesPersonalizados
             this.Font = new Font(this.Font.Name, 9.5F);
         }
 
-        //Overridden methods
+        #endregion Constructor
+
+        #region -> Métodos
         protected override void OnDropDown(EventArgs eventargs)
         {
             base.OnDropDown(eventargs);
@@ -159,5 +167,7 @@ namespace ControlesPersonalizados
                 return calendarIconWidth;
             else return arrowIconWidth;
         }
+
+        #endregion Métodos
     }
 }
