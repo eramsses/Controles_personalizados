@@ -181,7 +181,10 @@ namespace ControlesPersonalizados
                 {
                     pen.Alignment = PenAlignment.Inset;
 
-                    graph.FillPath(gradientBrush, path);
+                    if (backgroundColor1 != backgroundColor2)
+                        graph.FillPath(gradientBrush, path);
+                    else
+                        graph.Clear(backgroundColor1);
 
                     if (borderSize > 0)
                         graph.DrawPath(new Pen(borderColor, borderSize), path);
@@ -198,7 +201,12 @@ namespace ControlesPersonalizados
                 {
                     //penBorder.Alignment = PenAlignment.Inset;
 
-                    graph.FillRectangle(gradientBrush, rectBorder);
+                    if (backgroundColor1 != backgroundColor2)
+                        graph.FillRectangle(gradientBrush, rectBorder);
+                    else
+                        graph.Clear(backgroundColor1);
+
+                    
 
                     if (borderSize > 0)
                         graph.DrawRectangle(penBorder, rectBorder);

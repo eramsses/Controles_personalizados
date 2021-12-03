@@ -31,13 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.chkPersonalizado = new ControlesPersonalizados.RToggleButton();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.rRadioButton5 = new ControlesPersonalizados.RRadioButton();
+            this.rRadioButton3 = new ControlesPersonalizados.RRadioButton();
+            this.rRadioButton4 = new ControlesPersonalizados.RRadioButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rToggleButton1 = new ControlesPersonalizados.RToggleButton();
             this.rPanelRounded1 = new ControlesPersonalizados.RPanelRounded(this.components);
-            this.chkPersonalizado = new ControlesPersonalizados.RToggleButton();
-            this.rRadioButton3 = new ControlesPersonalizados.RRadioButton();
-            this.rRadioButton4 = new ControlesPersonalizados.RRadioButton();
             this.LblPersonalizado = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -151,9 +152,10 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.rcProgressBar7 = new ControlesPersonalizados.RCProgressBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -178,7 +180,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -204,10 +205,10 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Window;
+            this.tabPage1.Controls.Add(this.chkPersonalizado);
             this.tabPage1.Controls.Add(this.groupBox4);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Controls.Add(this.rPanelRounded1);
-            this.tabPage1.Controls.Add(this.chkPersonalizado);
             this.tabPage1.Controls.Add(this.LblPersonalizado);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.checkBox1);
@@ -225,60 +226,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Toggle Button";
             // 
-            // rRadioButton5
-            // 
-            this.rRadioButton5.AutoSize = true;
-            this.rRadioButton5.BackColor = System.Drawing.SystemColors.Window;
-            this.rRadioButton5.CheckedColor = System.Drawing.Color.Yellow;
-            this.rRadioButton5.Location = new System.Drawing.Point(42, 52);
-            this.rRadioButton5.MinimumSize = new System.Drawing.Size(0, 21);
-            this.rRadioButton5.Name = "rRadioButton5";
-            this.rRadioButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.rRadioButton5.Size = new System.Drawing.Size(127, 21);
-            this.rRadioButton5.TabIndex = 16;
-            this.rRadioButton5.TabStop = true;
-            this.rRadioButton5.Text = "rRadioButton5";
-            this.rRadioButton5.UnCheckedColor = System.Drawing.Color.Gray;
-            this.rRadioButton5.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.rToggleButton1);
-            this.panel4.Location = new System.Drawing.Point(722, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 161);
-            this.panel4.TabIndex = 16;
-            // 
-            // rToggleButton1
-            // 
-            this.rToggleButton1.AutoSize = true;
-            this.rToggleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.rToggleButton1.Location = new System.Drawing.Point(67, 68);
-            this.rToggleButton1.MinimumSize = new System.Drawing.Size(40, 22);
-            this.rToggleButton1.Name = "rToggleButton1";
-            this.rToggleButton1.OffBackColor = System.Drawing.Color.Gray;
-            this.rToggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.rToggleButton1.OnBackColor = System.Drawing.Color.Lime;
-            this.rToggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.rToggleButton1.Size = new System.Drawing.Size(40, 22);
-            this.rToggleButton1.TabIndex = 0;
-            this.rToggleButton1.UseVisualStyleBackColor = false;
-            // 
-            // rPanelRounded1
-            // 
-            this.rPanelRounded1.AngleColor = 0;
-            this.rPanelRounded1.BackColor = System.Drawing.Color.Transparent;
-            this.rPanelRounded1.BackColor1 = System.Drawing.Color.Tomato;
-            this.rPanelRounded1.BackColor2 = System.Drawing.Color.Tomato;
-            this.rPanelRounded1.BorderColor = System.Drawing.Color.DimGray;
-            this.rPanelRounded1.BorderRadius = 0;
-            this.rPanelRounded1.BorderSize = 0;
-            this.rPanelRounded1.Location = new System.Drawing.Point(850, 244);
-            this.rPanelRounded1.Name = "rPanelRounded1";
-            this.rPanelRounded1.Size = new System.Drawing.Size(401, 292);
-            this.rPanelRounded1.TabIndex = 13;
-            // 
             // chkPersonalizado
             // 
             this.chkPersonalizado.BackColor = System.Drawing.SystemColors.Window;
@@ -295,12 +242,40 @@
             this.chkPersonalizado.UseVisualStyleBackColor = false;
             this.chkPersonalizado.CheckedChanged += new System.EventHandler(this.chkPersonalizado_CheckedChanged);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.rRadioButton5);
+            this.groupBox4.Controls.Add(this.rRadioButton3);
+            this.groupBox4.Controls.Add(this.rRadioButton4);
+            this.groupBox4.Location = new System.Drawing.Point(541, 295);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(233, 156);
+            this.groupBox4.TabIndex = 17;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // rRadioButton5
+            // 
+            this.rRadioButton5.AutoSize = true;
+            this.rRadioButton5.BackColor = System.Drawing.Color.Transparent;
+            this.rRadioButton5.CheckedColor = System.Drawing.Color.Yellow;
+            this.rRadioButton5.Location = new System.Drawing.Point(27, 100);
+            this.rRadioButton5.MinimumSize = new System.Drawing.Size(0, 21);
+            this.rRadioButton5.Name = "rRadioButton5";
+            this.rRadioButton5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.rRadioButton5.Size = new System.Drawing.Size(127, 21);
+            this.rRadioButton5.TabIndex = 16;
+            this.rRadioButton5.TabStop = true;
+            this.rRadioButton5.Text = "rRadioButton5";
+            this.rRadioButton5.UnCheckedColor = System.Drawing.Color.Gray;
+            this.rRadioButton5.UseVisualStyleBackColor = false;
+            // 
             // rRadioButton3
             // 
             this.rRadioButton3.AutoSize = true;
-            this.rRadioButton3.BackColor = System.Drawing.SystemColors.Window;
+            this.rRadioButton3.BackColor = System.Drawing.Color.Transparent;
             this.rRadioButton3.CheckedColor = System.Drawing.Color.Lime;
-            this.rRadioButton3.Location = new System.Drawing.Point(42, 79);
+            this.rRadioButton3.Location = new System.Drawing.Point(27, 46);
             this.rRadioButton3.MinimumSize = new System.Drawing.Size(0, 21);
             this.rRadioButton3.Name = "rRadioButton3";
             this.rRadioButton3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -314,9 +289,9 @@
             // rRadioButton4
             // 
             this.rRadioButton4.AutoSize = true;
-            this.rRadioButton4.BackColor = System.Drawing.SystemColors.Window;
+            this.rRadioButton4.BackColor = System.Drawing.Color.Transparent;
             this.rRadioButton4.CheckedColor = System.Drawing.Color.Red;
-            this.rRadioButton4.Location = new System.Drawing.Point(42, 106);
+            this.rRadioButton4.Location = new System.Drawing.Point(27, 73);
             this.rRadioButton4.MinimumSize = new System.Drawing.Size(0, 21);
             this.rRadioButton4.Name = "rRadioButton4";
             this.rRadioButton4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -326,6 +301,45 @@
             this.rRadioButton4.Text = "rRadioButton4";
             this.rRadioButton4.UnCheckedColor = System.Drawing.Color.Gray;
             this.rRadioButton4.UseVisualStyleBackColor = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.Controls.Add(this.rcProgressBar7);
+            this.panel4.Controls.Add(this.rToggleButton1);
+            this.panel4.Location = new System.Drawing.Point(633, 7);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(343, 204);
+            this.panel4.TabIndex = 16;
+            // 
+            // rToggleButton1
+            // 
+            this.rToggleButton1.AutoSize = true;
+            this.rToggleButton1.BackColor = System.Drawing.Color.Transparent;
+            this.rToggleButton1.Location = new System.Drawing.Point(22, 170);
+            this.rToggleButton1.MinimumSize = new System.Drawing.Size(40, 22);
+            this.rToggleButton1.Name = "rToggleButton1";
+            this.rToggleButton1.OffBackColor = System.Drawing.Color.Gray;
+            this.rToggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.rToggleButton1.OnBackColor = System.Drawing.Color.Lime;
+            this.rToggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.rToggleButton1.Size = new System.Drawing.Size(40, 22);
+            this.rToggleButton1.TabIndex = 0;
+            this.rToggleButton1.UseVisualStyleBackColor = false;
+            // 
+            // rPanelRounded1
+            // 
+            this.rPanelRounded1.AngleColor = 0;
+            this.rPanelRounded1.BackColor = System.Drawing.Color.White;
+            this.rPanelRounded1.BackColor1 = System.Drawing.Color.Tomato;
+            this.rPanelRounded1.BackColor2 = System.Drawing.Color.Red;
+            this.rPanelRounded1.BorderColor = System.Drawing.Color.DimGray;
+            this.rPanelRounded1.BorderRadius = 0;
+            this.rPanelRounded1.BorderSize = 0;
+            this.rPanelRounded1.Location = new System.Drawing.Point(850, 244);
+            this.rPanelRounded1.Name = "rPanelRounded1";
+            this.rPanelRounded1.Size = new System.Drawing.Size(401, 292);
+            this.rPanelRounded1.TabIndex = 13;
             // 
             // LblPersonalizado
             // 
@@ -2141,7 +2155,7 @@
             this.label21.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(69, 25);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(280, 32);
+            this.label21.Size = new System.Drawing.Size(279, 32);
             this.label21.TabIndex = 3;
             this.label21.Text = "MessageBoxCustom";
             // 
@@ -2205,7 +2219,7 @@
             this.label5.Location = new System.Drawing.Point(473, 3);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(395, 44);
+            this.label5.Size = new System.Drawing.Size(394, 44);
             this.label5.TabIndex = 0;
             this.label5.Text = "Controles Extendidos";
             // 
@@ -2261,17 +2275,27 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // groupBox4
+            // rcProgressBar7
             // 
-            this.groupBox4.Controls.Add(this.rRadioButton5);
-            this.groupBox4.Controls.Add(this.rRadioButton4);
-            this.groupBox4.Controls.Add(this.rRadioButton3);
-            this.groupBox4.Location = new System.Drawing.Point(556, 337);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(233, 156);
-            this.groupBox4.TabIndex = 17;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.rcProgressBar7.BackColor = System.Drawing.Color.Transparent;
+            this.rcProgressBar7.BarWidth = 20;
+            this.rcProgressBar7.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rcProgressBar7.GradientAngleColorBar = 0;
+            this.rcProgressBar7.GradientAngleColorCenter = 0;
+            this.rcProgressBar7.InteriorColor1 = System.Drawing.Color.DimGray;
+            this.rcProgressBar7.InteriorColor2 = System.Drawing.Color.Gainsboro;
+            this.rcProgressBar7.Location = new System.Drawing.Point(155, 25);
+            this.rcProgressBar7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rcProgressBar7.Maximum = 100;
+            this.rcProgressBar7.Minimum = 0;
+            this.rcProgressBar7.Name = "rcProgressBar7";
+            this.rcProgressBar7.ProgressBarColor1 = System.Drawing.Color.DarkOrange;
+            this.rcProgressBar7.ProgressBarColor2 = System.Drawing.Color.Purple;
+            this.rcProgressBar7.ShowText = true;
+            this.rcProgressBar7.Size = new System.Drawing.Size(150, 150);
+            this.rcProgressBar7.StartingAngle = 0;
+            this.rcProgressBar7.TabIndex = 0;
+            this.rcProgressBar7.Value = 0;
             // 
             // FrmInicio
             // 
@@ -2290,6 +2314,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -2325,8 +2351,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2455,6 +2479,7 @@
         private System.Windows.Forms.Panel panel4;
         private ControlesPersonalizados.RToggleButton rToggleButton1;
         private System.Windows.Forms.GroupBox groupBox4;
+        private ControlesPersonalizados.RCProgressBar rcProgressBar7;
     }
 }
 

@@ -139,6 +139,8 @@ namespace ControlesPersonalizados
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             pevent.Graphics.Clear(this.Parent.BackColor);
+
+
             //try
             //{
 

@@ -65,30 +65,7 @@ namespace ControlesPersonalizados
         {
             Graphics graphics = pevent.Graphics;
 
-            try
-            {
-                if (this.BackColor == Color.Transparent)
-                {
-
-
-                    if (this.Parent.GetType() == typeof(RPanelRounded))
-                    {
-
-                        RPanelRounded panelPadre = (RPanelRounded)this.Parent;
-                        graphics.Clear(panelPadre.BackColor);
-                        //this.BackColor = panelPadre.BackColor1;
-                    }
-                    else
-                    {
-                        //this.BackColor = this.Parent.BackColor;
-                        graphics.Clear(this.Parent.BackColor);
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-
-            }
+            
 
             //Campos
 
@@ -116,7 +93,31 @@ namespace ControlesPersonalizados
             using (SolidBrush brushText = new SolidBrush(this.ForeColor))
             {
                 //Dibujado de la superficie
-                graphics.Clear(this.BackColor);
+                //graphics.Clear(this.BackColor);
+
+                try
+                {
+                    if (this.BackColor == Color.Transparent)
+                    {
+                        if (this.Parent.GetType() == typeof(RPanelRounded))
+                        {
+
+                            RPanelRounded panelPadre = (RPanelRounded)this.Parent;
+                            graphics.Clear(panelPadre.BackColor1);
+                            //this.BackColor = panelPadre.BackColor1;
+                        }
+                        else
+                        {
+                            //this.BackColor = this.Parent.BackColor;
+                            graphics.Clear(this.Parent.BackColor);
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    graphics.Clear(this.Parent.BackColor);
+                }
+
                 //Dibujando Radio Button
                 if (this.Checked)
                 {
