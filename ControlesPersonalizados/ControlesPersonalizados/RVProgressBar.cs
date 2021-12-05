@@ -744,8 +744,6 @@ namespace ControlesPersonalizados
                     if (h > hM)
                         h = hM;
 
-                    //if (h < txtHeight)
-                    //    h = txtHeight;
 
                     startPoint.Y = h;
                     ft.LineAlignment = StringAlignment.Near;
@@ -769,8 +767,6 @@ namespace ControlesPersonalizados
         {
             
             int txtWidth = TextRenderer.MeasureText(this.text, font).Width + 1;
-
-            //Altura de los textos
 
 
             switch (showTextValue)
@@ -818,8 +814,6 @@ namespace ControlesPersonalizados
             {
 
             }
-
-
 
 
         }
