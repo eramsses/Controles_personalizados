@@ -153,6 +153,8 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.rvProgressBar7 = new ControlesPersonalizados.RVProgressBar();
+            this.rhProgressBar6 = new ControlesPersonalizados.RHProgressBar();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -935,6 +937,8 @@
             // PnlBarrasProgreso
             // 
             this.PnlBarrasProgreso.BackColor = System.Drawing.SystemColors.Window;
+            this.PnlBarrasProgreso.Controls.Add(this.rhProgressBar6);
+            this.PnlBarrasProgreso.Controls.Add(this.rvProgressBar7);
             this.PnlBarrasProgreso.Controls.Add(this.rvProgressBar1);
             this.PnlBarrasProgreso.Controls.Add(this.rhProgressBar5);
             this.PnlBarrasProgreso.Controls.Add(this.rhProgressBar4);
@@ -967,9 +971,9 @@
             this.rvProgressBar1.AngleColorBar = 0;
             this.rvProgressBar1.BackColor = System.Drawing.Color.Transparent;
             this.rvProgressBar1.BackgroundBarColor = System.Drawing.Color.LightGray;
-            this.rvProgressBar1.BarWidth = 36;
+            this.rvProgressBar1.BarWidth = 5;
             this.rvProgressBar1.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rvProgressBar1.Location = new System.Drawing.Point(1001, 34);
+            this.rvProgressBar1.Location = new System.Drawing.Point(1014, 34);
             this.rvProgressBar1.Maximum = 300;
             this.rvProgressBar1.Minimum = 0;
             this.rvProgressBar1.ModeColorVerticalBar = ControlesPersonalizados.ModeColorVerticalBar.Gradient1;
@@ -980,7 +984,7 @@
             this.rvProgressBar1.ShowMaximun = false;
             this.rvProgressBar1.ShowPercent = true;
             this.rvProgressBar1.ShowText = ControlesPersonalizados.HPositionText.Left;
-            this.rvProgressBar1.Size = new System.Drawing.Size(82, 310);
+            this.rvProgressBar1.Size = new System.Drawing.Size(51, 310);
             this.rvProgressBar1.SymbolAfter = "";
             this.rvProgressBar1.SymbolBefore = "";
             this.rvProgressBar1.TabIndex = 36;
@@ -1135,7 +1139,7 @@
             this.rvProgressBar6.BackgroundBarColor = System.Drawing.Color.Gainsboro;
             this.rvProgressBar6.BarWidth = 10;
             this.rvProgressBar6.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rvProgressBar6.Location = new System.Drawing.Point(1307, 34);
+            this.rvProgressBar6.Location = new System.Drawing.Point(1312, 34);
             this.rvProgressBar6.Maximum = 100;
             this.rvProgressBar6.Minimum = 0;
             this.rvProgressBar6.ModeColorVerticalBar = ControlesPersonalizados.ModeColorVerticalBar.Gradient2;
@@ -1185,7 +1189,7 @@
             this.rvProgressBar2.BackgroundBarColor = System.Drawing.Color.Gainsboro;
             this.rvProgressBar2.BarWidth = 20;
             this.rvProgressBar2.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.rvProgressBar2.Location = new System.Drawing.Point(1100, 34);
+            this.rvProgressBar2.Location = new System.Drawing.Point(1110, 34);
             this.rvProgressBar2.Maximum = 300;
             this.rvProgressBar2.Minimum = 0;
             this.rvProgressBar2.ModeColorVerticalBar = ControlesPersonalizados.ModeColorVerticalBar.Gradient1;
@@ -1209,6 +1213,7 @@
             this.rvProgressBar5.BackColor = System.Drawing.Color.Transparent;
             this.rvProgressBar5.BackgroundBarColor = System.Drawing.Color.Gainsboro;
             this.rvProgressBar5.BarWidth = 20;
+            this.rvProgressBar5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rvProgressBar5.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rvProgressBar5.Location = new System.Drawing.Point(1168, 34);
             this.rvProgressBar5.Maximum = 300;
@@ -2308,6 +2313,58 @@
             this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // rvProgressBar7
+            // 
+            this.rvProgressBar7.AngleColorBar = 0;
+            this.rvProgressBar7.BackColor = System.Drawing.Color.Transparent;
+            this.rvProgressBar7.BackgroundBarColor = System.Drawing.Color.LightGray;
+            this.rvProgressBar7.BarWidth = 10;
+            this.rvProgressBar7.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rvProgressBar7.Location = new System.Drawing.Point(788, 456);
+            this.rvProgressBar7.Maximum = 100;
+            this.rvProgressBar7.Minimum = 0;
+            this.rvProgressBar7.ModeColorVerticalBar = ControlesPersonalizados.ModeColorVerticalBar.Gradient1;
+            this.rvProgressBar7.Name = "rvProgressBar7";
+            this.rvProgressBar7.ProgressBarColor1 = System.Drawing.Color.Lime;
+            this.rvProgressBar7.ProgressBarColor2 = System.Drawing.Color.Purple;
+            this.rvProgressBar7.RBackGrounColor = System.Drawing.Color.Transparent;
+            this.rvProgressBar7.ShowMaximun = false;
+            this.rvProgressBar7.ShowPercent = false;
+            this.rvProgressBar7.ShowText = ControlesPersonalizados.HPositionText.Right;
+            this.rvProgressBar7.Size = new System.Drawing.Size(29, 85);
+            this.rvProgressBar7.SymbolAfter = "";
+            this.rvProgressBar7.SymbolBefore = "";
+            this.rvProgressBar7.TabIndex = 37;
+            this.rvProgressBar7.Value = 0;
+            this.rvProgressBar7.VerticalPositionText = ControlesPersonalizados.VPositionText.Down;
+            // 
+            // rhProgressBar6
+            // 
+            this.rhProgressBar6.AngleColorBar = 0;
+            this.rhProgressBar6.BackColor = System.Drawing.Color.Transparent;
+            this.rhProgressBar6.BackgroundBarColor = System.Drawing.Color.LightGray;
+            this.rhProgressBar6.BarHeight = 5;
+            this.rhProgressBar6.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rhProgressBar6.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Right;
+            this.rhProgressBar6.Location = new System.Drawing.Point(847, 459);
+            this.rhProgressBar6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rhProgressBar6.Maximum = 100;
+            this.rhProgressBar6.Minimum = 0;
+            this.rhProgressBar6.ModeColorHorizontalBar = ControlesPersonalizados.ModeColorHorizontalBar.Gradient1;
+            this.rhProgressBar6.Name = "rhProgressBar6";
+            this.rhProgressBar6.ProgressBarColor1 = System.Drawing.Color.Lime;
+            this.rhProgressBar6.ProgressBarColor2 = System.Drawing.Color.Purple;
+            this.rhProgressBar6.RBackGroundColor = System.Drawing.Color.Transparent;
+            this.rhProgressBar6.ShowMaximun = false;
+            this.rhProgressBar6.ShowPercent = false;
+            this.rhProgressBar6.ShowText = ControlesPersonalizados.TextVerticalPosition.Over;
+            this.rhProgressBar6.Size = new System.Drawing.Size(370, 24);
+            this.rhProgressBar6.SymbolAfter = "";
+            this.rhProgressBar6.SymbolBefore = "";
+            this.rhProgressBar6.TabIndex = 38;
+            this.rhProgressBar6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rhProgressBar6.Value = 0;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -2491,6 +2548,8 @@
         private ControlesPersonalizados.RHProgressBar rhProgressBar4;
         private ControlesPersonalizados.RHProgressBar rhProgressBar5;
         private ControlesPersonalizados.RVProgressBar rvProgressBar1;
+        private ControlesPersonalizados.RHProgressBar rhProgressBar6;
+        private ControlesPersonalizados.RVProgressBar rvProgressBar7;
     }
 }
 
