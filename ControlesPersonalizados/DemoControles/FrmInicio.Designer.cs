@@ -971,7 +971,7 @@
             this.rhProgressBar4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rhProgressBar4.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rhProgressBar4.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Left;
-            this.rhProgressBar4.Location = new System.Drawing.Point(51, 315);
+            this.rhProgressBar4.Location = new System.Drawing.Point(51, 148);
             this.rhProgressBar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rhProgressBar4.Maximum = 100;
             this.rhProgressBar4.Minimum = 0;
@@ -1000,7 +1000,7 @@
             this.rhProgressBar3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rhProgressBar3.FontColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.rhProgressBar3.HorizontalPositionText = ControlesPersonalizados.HorizontalPositionText.Sliding;
-            this.rhProgressBar3.Location = new System.Drawing.Point(51, 172);
+            this.rhProgressBar3.Location = new System.Drawing.Point(51, 92);
             this.rhProgressBar3.Margin = new System.Windows.Forms.Padding(4);
             this.rhProgressBar3.Maximum = 100;
             this.rhProgressBar3.Minimum = 0;
