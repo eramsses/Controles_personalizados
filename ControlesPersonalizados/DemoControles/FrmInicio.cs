@@ -337,5 +337,14 @@ namespace DemoControles
 
             lblResultadoMsgBox.Text = r2.ToString();
         }
+
+        private void rhProgressBar2_MouseDown(object sender, MouseEventArgs e)
+        {
+            int x = rhProgressBar2.Location.X;
+            int eX = e.Location.X;
+
+            RMessageBox.Show(Color.Empty, x.ToString(), eX.ToString());
+        }
+
     }
 }
