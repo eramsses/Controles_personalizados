@@ -34,10 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.DoubleBuffered = true;
             this.Name = "RHProgressBar";
-            this.Size = new System.Drawing.Size(340, 98);
+            this.Size = new System.Drawing.Size(340, 45);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.RHProgressBar_Paint);
             this.ResumeLayout(false);
 

@@ -74,15 +74,13 @@ namespace ControlesPersonalizados
         public RHProgressBar()
         {
             InitializeComponent();
-            //ShowValueText();
+            
             this.Resize += new EventHandler(ProgressBar_Resize);
 
         }
 
         private void ProgressBar_Resize(object sender, EventArgs e)
         {
-            //SetSliderValue();
-            //ShowValueText();
             this.Invalidate();
 
         }
@@ -132,17 +130,12 @@ namespace ControlesPersonalizados
             {
                 this.value = value;
                 this.Invalidate();
-                //SetSliderValue();
-                //ShowValueText();
-
             }
         }
 
         public void Increment(int value = 1)
         {
-            this.value = this.value + value;
-            //SetSliderValue();
-            //ShowValueText();
+            this.value += value;
             this.Invalidate();
         }
 
@@ -157,8 +150,6 @@ namespace ControlesPersonalizados
             set
             {
                 barHeight = value;
-                //SetSliderValue();
-                UpdateControlHeight();
                 this.Invalidate();
             }
         }
@@ -174,7 +165,6 @@ namespace ControlesPersonalizados
             set
             {
                 barColor1 = value;
-                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -190,7 +180,6 @@ namespace ControlesPersonalizados
             set
             {
                 barColor2 = value;
-                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -206,7 +195,6 @@ namespace ControlesPersonalizados
             set
             {
                 modeColorHorizontalBar = value;
-                //SetSliderValue();
                 this.Invalidate();
 
             }
@@ -223,7 +211,6 @@ namespace ControlesPersonalizados
             set
             {
                 channelColor = value;
-                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -252,7 +239,6 @@ namespace ControlesPersonalizados
             set
             {
                 angleColorBar = value;
-                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -270,11 +256,10 @@ namespace ControlesPersonalizados
             {
                 base.Font = value;
                 font = value;
-                //SetFont(value);
+                
                 if (this.DesignMode)
                     UpdateControlHeight();
 
-                //ShowValueText();
                 this.Invalidate();
             }
         }
@@ -301,7 +286,6 @@ namespace ControlesPersonalizados
             set
             {
                 symbolBefore = value;
-                //ShowValueText();
                 this.Invalidate();
             }
         }
@@ -313,7 +297,6 @@ namespace ControlesPersonalizados
             set
             {
                 symbolAfter = value;
-                //ShowValueText();
                 this.Invalidate();
             }
         }
@@ -329,7 +312,6 @@ namespace ControlesPersonalizados
             set
             {
                 horizontalPositionText = value;
-                //ShowValueText();
                 this.Invalidate();
 
             }
@@ -346,7 +328,6 @@ namespace ControlesPersonalizados
             set
             {
                 showTextValue = value;
-                //ShowValueText();
                 this.Invalidate();
 
             }
@@ -359,7 +340,6 @@ namespace ControlesPersonalizados
             set
             {
                 showMaximun = value;
-                //ShowValueText();
                 this.Invalidate();
             }
         }
@@ -436,7 +416,7 @@ namespace ControlesPersonalizados
             Size sizeChannel = new Size(this.Width, barHeight);
             Rectangle rectangleChannel = new Rectangle(startPoint, sizeChannel);
 
-            SolidBrush brushChannel = new SolidBrush(BackgroundBarColor);
+            SolidBrush brushChannel = new SolidBrush(channelColor);
 
             g.FillRectangle(brushChannel, rectangleChannel);
 
@@ -449,9 +429,9 @@ namespace ControlesPersonalizados
             {
                 case ModeColorHorizontalBar.Solid://Fondo Solido
 
-                    using (SolidBrush brushSolido = new SolidBrush(barColor1))
+                    using (SolidBrush brushSolidSlider = new SolidBrush(barColor1))
                     {
-                        g.FillRectangle(brushSolido, rectangleSlider);
+                        g.FillRectangle(brushSolidSlider, rectangleSlider);
                     }
 
                     break;
@@ -470,9 +450,12 @@ namespace ControlesPersonalizados
 
                 case ModeColorHorizontalBar.Gradient2:// Color ya esta para toda la barra
 
-                    using (LinearGradientBrush gradientBrushFull = new LinearGradientBrush(rectangleChannel, barColor1, barColor2, angleColorBar))
+                    if (sliderWidth > 0)
                     {
-                        g.FillRectangle(gradientBrushFull, rectangleSlider);
+                        using (LinearGradientBrush gradientBrushFull = new LinearGradientBrush(rectangleChannel, barColor1, barColor2, angleColorBar))
+                        {
+                            g.FillRectangle(gradientBrushFull, rectangleSlider);
+                        }
                     }
 
                     break;
@@ -531,8 +514,8 @@ namespace ControlesPersonalizados
 
 
             Point startPoint = new Point(0, 0);
-            Size sizeChannel = new Size(this.Width, this.Height);
-            Rectangle rectangleText = new Rectangle(startPoint, sizeChannel);
+            Size sizeRecText = new Size(this.Width, this.Height);
+            Rectangle rectangleText = new Rectangle(startPoint, sizeRecText);
 
             StringFormat ft = new StringFormat();
             ft.Alignment = StringAlignment.Center;
@@ -543,14 +526,18 @@ namespace ControlesPersonalizados
             switch (showTextValue)
             {
                 case TextVerticalPosition.Over://Texto sobre la barra a la izquierda
-                    if (this.BackColor.GetBrightness() >= 0.6F)
+                    if(fontColor == darkText || fontColor == ligthText)
                     {
-                        this.fontColor = darkText;
+                        if (this.BackColor.GetBrightness() >= 0.6F)
+                        {
+                            this.fontColor = darkText;
+                        }
+                        else
+                        {
+                            this.fontColor = ligthText;
+                        }
                     }
-                    else
-                    {
-                        this.fontColor = ligthText;
-                    }
+                    
 
                     textBrush = new SolidBrush(fontColor);
                     ft.LineAlignment = StringAlignment.Near;
@@ -558,107 +545,109 @@ namespace ControlesPersonalizados
                     break;
 
                 case TextVerticalPosition.InSide://Texto dentro a la izquierda
-                    if(HorizontalPositionText == HorizontalPositionText.Sliding)
+                    if (fontColor == darkText || fontColor == ligthText)
                     {
-                        if (scaleFactor >= 0.1)
+                        if (HorizontalPositionText == HorizontalPositionText.Sliding)
                         {
-                            if (this.barColor2.GetBrightness() >= 0.6F)
+                            if (scaleFactor >= 0.1)
                             {
-                                this.fontColor = darkText;
+                                if (this.barColor2.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
                             }
                             else
                             {
-                                this.fontColor = ligthText;
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
                             }
                         }
-                        else
+                        else if (HorizontalPositionText == HorizontalPositionText.Left)
                         {
-                            if (this.channelColor.GetBrightness() >= 0.6F)
+                            if (scaleFactor >= 0.1)
                             {
-                                this.fontColor = darkText;
+                                if (this.barColor1.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
                             }
                             else
                             {
-                                this.fontColor = ligthText;
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                        else if (HorizontalPositionText == HorizontalPositionText.Right)
+                        {
+                            if (scaleFactor >= 0.95)
+                            {
+                                if (this.barColor2.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                        else if (HorizontalPositionText == HorizontalPositionText.Center)
+                        {
+                            if (scaleFactor >= 0.5)
+                            {
+                                if (this.barColor1.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
                             }
                         }
                     }
-                    else if (HorizontalPositionText == HorizontalPositionText.Left)
-                    {
-                        if (scaleFactor >= 0.1)
-                        {
-                            if (this.barColor1.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                        else
-                        {
-                            if (this.channelColor.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                    }
-                    else if (HorizontalPositionText == HorizontalPositionText.Right)
-                    {
-                        if (scaleFactor >= 0.95)
-                        {
-                            if (this.barColor2.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                        else
-                        {
-                            if (this.channelColor.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                    }
-                    else if (HorizontalPositionText == HorizontalPositionText.Center)
-                    {
-                        if (scaleFactor >= 0.5)
-                        {
-                            if (this.barColor1.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                        else
-                        {
-                            if (this.channelColor.GetBrightness() >= 0.6F)
-                            {
-                                this.fontColor = darkText;
-                            }
-                            else
-                            {
-                                this.fontColor = ligthText;
-                            }
-                        }
-                    }
-                    
 
                     textBrush = new SolidBrush(fontColor);
                     ft.LineAlignment = StringAlignment.Center;
@@ -666,15 +655,17 @@ namespace ControlesPersonalizados
                     break;
 
                 case TextVerticalPosition.Under://Texto abajo a la izquierda
-                    if (this.BackColor.GetBrightness() >= 0.6F)
+                    if (fontColor == darkText || fontColor == ligthText)
                     {
-                        this.fontColor = darkText;
+                        if (this.BackColor.GetBrightness() >= 0.6F)
+                        {
+                            this.fontColor = darkText;
+                        }
+                        else
+                        {
+                            this.fontColor = ligthText;
+                        }
                     }
-                    else
-                    {
-                        this.fontColor = ligthText;
-                    }
-
                     textBrush = new SolidBrush(fontColor);
                     ft.LineAlignment = StringAlignment.Far;
 
@@ -715,8 +706,8 @@ namespace ControlesPersonalizados
                         w = txtWidth;
 
                     ft.Alignment = StringAlignment.Far;
-                    sizeChannel = new Size(w, this.Height);
-                    rectangleText = new Rectangle(startPoint, sizeChannel);
+                    sizeRecText = new Size(w, this.Height);
+                    rectangleText = new Rectangle(startPoint, sizeRecText);
 
                     break;
             }

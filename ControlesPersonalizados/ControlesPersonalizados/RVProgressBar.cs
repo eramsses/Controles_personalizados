@@ -10,7 +10,7 @@ namespace ControlesPersonalizados
     public enum HPositionText
     {
         Left,
-        Inside,
+        InSide,
         Right,
         None
     }
@@ -56,6 +56,17 @@ namespace ControlesPersonalizados
         private int barWidth = 10;
         private int angleColorBar = 90;
 
+        private Color channelColor = Color.LightGray;
+
+        private Color fontColor = Color.FromArgb(64, 64, 64);
+        private Font font = new Font("Arial", 12);
+
+        private int sliderHeight = 0;
+
+        private string text = "";
+
+        private bool showPercent = false;
+
         #endregion Campos
 
         #region -> Constructor
@@ -68,10 +79,7 @@ namespace ControlesPersonalizados
 
         private void ProgressBar_Resize(object sender, EventArgs e)
         {
-            SetSliderValue();
-            //PnlSlider.Location = new Point(0, PnlChannel.Height);
-            ShowValueText();
-
+            this.Invalidate();
         }
 
         #endregion Constructor
@@ -80,9 +88,8 @@ namespace ControlesPersonalizados
 
         public void Increment(int value = 1)
         {
-            this.value = this.value + value;
-            SetSliderValue();
-            ShowValueText();
+            this.value += value;
+            
             this.Invalidate();
         }
 
@@ -127,8 +134,7 @@ namespace ControlesPersonalizados
             set
             {
                 this.value = value;
-                SetSliderValue();
-                ShowValueText();
+                this.Invalidate();
             }
         }
 
@@ -147,7 +153,7 @@ namespace ControlesPersonalizados
                     value = 1;
 
                 this.barWidth = value;
-                ShowValueText();
+                this.Invalidate();
 
             }
         }
@@ -162,7 +168,7 @@ namespace ControlesPersonalizados
             set
             {
                 barColor1 = value;
-                SetSliderValue();
+                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -178,7 +184,7 @@ namespace ControlesPersonalizados
             set
             {
                 barColor2 = value;
-                SetSliderValue();
+                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -195,7 +201,7 @@ namespace ControlesPersonalizados
             set
             {
                 modeColorVerticalBar = value;
-                SetSliderValue();
+                //SetSliderValue();
                 this.Invalidate();
 
             }
@@ -206,12 +212,12 @@ namespace ControlesPersonalizados
         {
             get
             {
-                return PnlChannel.BackColor;
+                return channelColor;
             }
 
             set
             {
-                PnlChannel.BackColor = value;
+                channelColor = value;
                 this.Invalidate();
             }
         }
@@ -227,7 +233,7 @@ namespace ControlesPersonalizados
             set
             {
                 angleColorBar = value + 90;
-                SetSliderValue();
+                //SetSliderValue();
                 this.Invalidate();
             }
         }
@@ -258,11 +264,10 @@ namespace ControlesPersonalizados
             set
             {
                 base.Font = value;
-                SetFont(value);
+                font = value;
                 if (this.DesignMode)
                     UpdateControlWidth();
 
-                ShowValueText();
                 this.Invalidate();
             }
         }
@@ -276,7 +281,6 @@ namespace ControlesPersonalizados
             set
             {
                 symbolBefore = value;
-                ShowValueText();
                 this.Invalidate();
             }
         }
@@ -288,7 +292,6 @@ namespace ControlesPersonalizados
             set
             {
                 symbolAfter = value;
-                ShowValueText();
                 this.Invalidate();
             }
         }
@@ -304,7 +307,6 @@ namespace ControlesPersonalizados
             set
             {
                 showTextValue = value;
-                ShowValueText();
                 this.Invalidate();
 
             }
@@ -321,7 +323,6 @@ namespace ControlesPersonalizados
             set
             {
                 verticalPositionText = value;
-                ShowValueText();
                 this.Invalidate();
 
             }
@@ -334,54 +335,50 @@ namespace ControlesPersonalizados
             set
             {
                 showMaximun = value;
-                ShowValueText();
                 this.Invalidate();
             }
         }
 
         [Category("R Control Text")]
-        public Color BackgroundTextColor
+        public Color FontColor
         {
             get
             {
-                return LblTextR.BackColor;
+                return fontColor;
             }
 
             set
             {
-                LblTextL.BackColor = value;
-                LblTextC.BackColor = value;
-                LblTextR.BackColor = value;
-
+                fontColor = value;
                 this.Invalidate();
             }
         }
 
         [Category("R Control Text")]
-        public Color BackgroundForeColor
+        public bool ShowPercent
         {
             get
             {
-                return LblTextR.ForeColor;
+                return showPercent;
             }
 
             set
             {
-                LblTextL.ForeColor = value;
-                LblTextC.ForeColor = value;
-                LblTextR.ForeColor = value;
-
+                showPercent = value;
                 this.Invalidate();
             }
         }
-
 
 
         #endregion
 
         #region -> Metodos de la barra de progreso
-        private void SetSliderValue()
+
+        private void RVProgressBar_Paint(object sender, PaintEventArgs e)
         {
+
+            Graphics g = e.Graphics;
+
             //evitar que reciba valores mayores o menores
             if (this.value > this.maximum)
                 this.value = this.maximum;
@@ -389,334 +386,380 @@ namespace ControlesPersonalizados
                 this.value = this.minimum;
 
             double scaleFactor = (((double)this.value - this.minimum) / ((double)this.maximum - this.minimum));
-            int sliderHeight = (int)(this.Height * scaleFactor);
+            sliderHeight = (int)(this.Height * scaleFactor);
 
-            HacerCambio(() => PnlSlider.Height = sliderHeight);
+            int txtWidth = TextRenderer.MeasureText(text, font).Width + 1;
+
+            if (showTextValue == HPositionText.InSide && txtWidth > barWidth)
+            {
+                barWidth = txtWidth;
+            }
+
+            //preparar el texto
+            if (showPercent)
+            {
+                int vP = (int)(scaleFactor * 100);
+                text = vP.ToString() + " %";
+            }
+            else
+            {
+                text = symbolBefore + this.value.ToString() + symbolAfter;
+                if (showMaximun) text = text + "/" + symbolBefore + this.maximum.ToString() + symbolAfter;
+            }
 
 
-            HacerCambio(() => PnlSlider.Location = new Point(0, (this.Height - sliderHeight)));
-            SetBackColorBar();
-        }
+            Point startPoint = GetStartPointBar();
 
-        private void SetBackColorBar()
-        {
-            Graphics g = this.PnlSlider.CreateGraphics();
+            if (this.Parent.BackColor != null)
+            {
+                g.Clear(this.Parent.BackColor);
+            }
+            else
+            {
+                g.Clear(this.BackColor);
+            }
+
+            g.SmoothingMode = SmoothingMode.AntiAlias;
+
+            //Dibujar Channel
+            Size sizeChannel = new Size(barWidth, this.Height);
+            Rectangle rectangleChannel = new Rectangle(GetStartPointChannel(), sizeChannel);
+
+            SolidBrush brushChannel = new SolidBrush(channelColor);
+
+            g.FillRectangle(brushChannel, rectangleChannel);
+
+
+            //Slider
+            Size sizeSlider = new Size(barWidth, sliderHeight);
+            Rectangle rectangleSlider = new Rectangle(startPoint, sizeSlider);
+
+
+
+
+            
             switch (modeColorVerticalBar)
             {
                 case ModeColorVerticalBar.Solid://Fondo Solido
-                    HacerCambio(() => this.PnlSlider.BackColor = barColor1);
+
+                    using(SolidBrush brushSolidSlider = new SolidBrush(barColor1))
+                    {
+                        g.FillRectangle(brushSolidSlider, rectangleSlider);
+                    }
+
                     break;
 
                 case ModeColorVerticalBar.Gradient1://Color que avanza con el slider
-                    double scaleFactor = (((double)this.value - this.minimum) / ((double)this.maximum - this.minimum));
-                    int sliderHeight = (int)(this.Height * scaleFactor);
+
+
 
                     if (sliderHeight > 0)
                     {
-                        //Color degradado
-                        Point startPoint = new Point(0, 0);
-                        Size size = new Size(BarWidth, sliderHeight);
-
-                        Rectangle rectangle = new Rectangle(startPoint, size);
-
-                        LinearGradientBrush gradientBrush = new LinearGradientBrush(rectangle, barColor1, barColor2, angleColorBar);
-
-                        g.FillRectangle(gradientBrush, 0, 0, BarWidth, sliderHeight);
+                        using (LinearGradientBrush gradientBrush = new LinearGradientBrush(rectangleSlider, barColor1, barColor2, angleColorBar))
+                        {
+                            g.FillRectangle(gradientBrush, rectangleSlider);
+                        }   
                     }
 
                     break;
 
                 case ModeColorVerticalBar.Gradient2:// Color ya esta  para toda la barra
-                    //Color degradado
-                    Point startPointG2 = new Point(0, 0);
-                    Size sizeG2 = new Size(BarWidth, this.PnlChannel.Height);
+                                                    
 
-                    Rectangle rectangleG1 = new Rectangle(startPointG2, sizeG2);
+                    if (sliderHeight > 0)
+                    {
+                        using (LinearGradientBrush gradientBrushFull = new LinearGradientBrush(rectangleChannel, barColor1, barColor2, angleColorBar))
+                        {
+                            g.FillRectangle(gradientBrushFull, rectangleSlider);
+                        }
+                    }
 
-                    LinearGradientBrush gradientBrushG2 = new LinearGradientBrush(rectangleG1, barColor1, barColor2, angleColorBar);
-
-                    g.FillRectangle(gradientBrushG2, 0, 0, this.PnlChannel.Width, this.PnlChannel.Height);
                     break;
 
             }
+
+            ShowValueText(g);
         }
+
+        private Point GetStartPointBar()
+        {
+            Point p = new Point(0, 0);
+
+            int txtWidth = TextRenderer.MeasureText(text, font).Width + 1;
+
+            int posY = this.Height - sliderHeight;
+
+            switch (showTextValue)
+            {
+                case HPositionText.Left://Texto a la izquierda
+                    p = new Point(txtWidth + 1, posY);
+
+                    break;
+                case HPositionText.InSide://Texto dentro de la barra
+                    p = new Point(0, posY);
+
+                    break;
+                case HPositionText.Right://Texto bajo la barra
+                    p = new Point(0, posY);
+
+                    break;
+                case HPositionText.None:
+                    p = new Point(0, posY);
+
+                    break;
+            }
+            return p;
+        }
+
+        private Point GetStartPointChannel()
+        {
+            Point p = new Point(0, 0);
+
+            int txtWidth = TextRenderer.MeasureText(text, font).Width + 1;
+
+            int posY = this.Height - sliderHeight;
+
+            switch (showTextValue)
+            {
+                case HPositionText.Left://Texto a la izquierda
+                    p = new Point(txtWidth + 1, 0);
+
+                    break;
+                case HPositionText.InSide://Texto dentro de la barra
+                    p = new Point(0, 0);
+
+                    break;
+                case HPositionText.Right://Texto bajo la barra
+                    p = new Point(0, 0);
+
+                    break;
+                case HPositionText.None:
+                    p = new Point(0, 0);
+
+                    break;
+            }
+            return p;
+        }
+
 
         #endregion
 
         #region -> Metodos Texto
-        private void SetFont(Font value)
+
+        private void ShowValueText(Graphics g)
         {
-            HacerCambio(() => LblTextL.Font = value);
-            HacerCambio(() => LblTextC.Font = value);
-            HacerCambio(() => LblTextR.Font = value);
-        }
+            double scaleFactor = (((double)this.value - this.minimum) / ((double)this.maximum - this.minimum));
 
-        private void ShowValueText()
-        {
+            Point startPoint = new Point(0, 0);
+            Size sizeRecText = new Size(this.Width, this.Height);
+            Rectangle rectangleText = new Rectangle(startPoint, sizeRecText);
 
-            string text = symbolBefore + this.value.ToString() + symbolAfter;
-            if (showMaximun) text = text + "/" + symbolBefore + this.maximum.ToString() + symbolAfter;
+            StringFormat ft = new StringFormat();
+            ft.Alignment = StringAlignment.Center;
+            ft.LineAlignment = StringAlignment.Center;
 
+            SolidBrush textBrush = new SolidBrush(fontColor);
 
-            //Ocultar las etiquetas
-            HacerCambio(() => LblTextL.Visible = false);
-            HacerCambio(() => LblTextC.Visible = false);
-            HacerCambio(() => LblTextR.Visible = false);
 
             switch (showTextValue)
             {
-                case HPositionText.Left://Texto arriba
-                    //Mostrar la etiqueta que corresponde
-                    HacerCambio(() => LblTextL.Visible = true);
+                case HPositionText.Left://Texto a la Izquierda
+                    if (fontColor == darkText || fontColor == ligthText)
+                    {
+                        if (this.BackColor.GetBrightness() >= 0.6F)
+                        {
+                            this.fontColor = darkText;
+                        }
+                        else
+                        {
+                            this.fontColor = ligthText;
+                        }
+                    }
 
-                    //Mostrar texto
-                    HacerCambio(() => LblTextL.Text = text);
 
-                    SetVerticalPositionText();
-
-                    break;
-
-                case HPositionText.Inside://Texto dentro de la barra
-                    //Mostrar la etiqueta que corresponde
-                    HacerCambio(() => LblTextC.Visible = true);
-
-                    // Mostrar texto
-                    HacerCambio(() => LblTextC.Text = text);
-
-                    SetVerticalPositionText();
+                    textBrush = new SolidBrush(fontColor);
+                    ft.Alignment = StringAlignment.Near;
 
                     break;
 
-                case HPositionText.Right://Texto bajo la barra
-                    //Mostrar la etiqueta que corresponde
-                    HacerCambio(() => LblTextR.Visible = true);
+                case HPositionText.InSide://Texto dentro de la barra
+                    if (fontColor == darkText || fontColor == ligthText)
+                    {
+                        if (verticalPositionText == VPositionText.Sliding)
+                        {
+                            if (scaleFactor >= 0.1)
+                            {
+                                if (this.barColor2.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                        else if (verticalPositionText == VPositionText.Down)
+                        {
+                            if (scaleFactor >= 0.1)
+                            {
+                                if (this.barColor1.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                        else if (verticalPositionText == VPositionText.Up)
+                        {
+                            if (scaleFactor >= 0.95)
+                            {
+                                if (this.barColor2.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                        else if (verticalPositionText == VPositionText.Middle)
+                        {
+                            if (scaleFactor >= 0.5)
+                            {
+                                if (this.barColor1.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                            else
+                            {
+                                if (this.channelColor.GetBrightness() >= 0.6F)
+                                {
+                                    this.fontColor = darkText;
+                                }
+                                else
+                                {
+                                    this.fontColor = ligthText;
+                                }
+                            }
+                        }
+                    }
 
-                    //Mostrar texto
-                    HacerCambio(() => LblTextR.Text = text);
+                    textBrush = new SolidBrush(fontColor);
+                    ft.Alignment = StringAlignment.Center;
+                    break;
 
-                    SetVerticalPositionText();
+                case HPositionText.Right://Texto a la derecha
+                    if (fontColor == darkText || fontColor == ligthText)
+                    {
+                        if (this.BackColor.GetBrightness() >= 0.6F)
+                        {
+                            this.fontColor = darkText;
+                        }
+                        else
+                        {
+                            this.fontColor = ligthText;
+                        }
+                    }
+                    textBrush = new SolidBrush(fontColor);
+                    ft.Alignment = StringAlignment.Far;
 
                     break;
 
                 case HPositionText.None:
 
-                    HacerCambio(() => LblTextL.Visible = false);
-                    HacerCambio(() => LblTextC.Visible = false);
-                    HacerCambio(() => LblTextR.Visible = false);
-                    HacerCambio(() => this.PnlChannel.Dock = DockStyle.Fill);
+                    text = "";
 
                     break;
             }
-            UpdateControlWidth();
-        }
-
-        private void SetVerticalPositionText()
-        {
-            int pX = 0;
-            int pY = 0;
 
             switch (verticalPositionText)
             {
                 case VPositionText.Down://Texto abajo
 
-                    switch (showTextValue)
-                    {
-                        case HPositionText.Left://Texto abajo a la izquierda
-                            pY = this.Height - LblTextL.Height - 1;
-
-                            HacerCambio(() => this.LblTextL.AutoSize = true);
-                            HacerCambio(() => this.LblTextL.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Right);
-                            break;
-
-                        case HPositionText.Inside://Texto abajo por dentro
-
-                            if (LblTextC.Width > this.Width)
-                            {
-                                HacerCambio(() => this.Width = LblTextC.Width);
-                                HacerCambio(() => PnlChannel.Width = LblTextC.Width);
-                                HacerCambio(() => PnlSlider.Width = LblTextC.Width);
-                            }
-
-                            pX = ((this.Width - this.LblTextC.Width) / 2);
-                            pY = this.Height - LblTextC.Height - 1;
-                            HacerCambio(() => this.LblTextC.AutoSize = true);
-                            HacerCambio(() => this.LblTextC.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Fill);
-
-                            break;
-
-                        case HPositionText.Right://Texto abajo a la derecha
-                            pY = this.Height - LblTextR.Height - 1;
-                            pX = this.barWidth + 1;
-                            HacerCambio(() => this.LblTextR.AutoSize = true);
-                            HacerCambio(() => this.LblTextR.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Left);
-
-                            break;
-                    }
+                    ft.LineAlignment = StringAlignment.Far;
 
                     break;
 
                 case VPositionText.Middle://Texto al medio
 
-                    switch (showTextValue)
-                    {
-                        case HPositionText.Left://Texto al medio a la izquierda
-                            pY = (this.Height - this.LblTextL.Height) / 2;
-
-                            HacerCambio(() => this.LblTextL.AutoSize = true);
-                            HacerCambio(() => this.LblTextL.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Right);
-
-                            break;
-
-                        case HPositionText.Inside://Texto al medio por dentro 
-                            if (LblTextC.Width > this.Width)
-                            {
-                                HacerCambio(() => this.Width = LblTextC.Width);
-                                HacerCambio(() => PnlChannel.Width = LblTextC.Width);
-                                HacerCambio(() => PnlSlider.Width = LblTextC.Width);
-                            }
-
-                            pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
-                            pY = (this.Height - this.LblTextC.Height) / 2;
-
-                            HacerCambio(() => this.LblTextC.AutoSize = true);
-                            HacerCambio(() => this.LblTextC.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Fill);
-
-                            break;
-
-                        case HPositionText.Right://Texto al medio a la derecha
-                            pX = PnlChannel.Width + 1;
-                            pY = (this.Height - this.LblTextR.Height) / 2;
-
-                            HacerCambio(() => this.LblTextR.AutoSize = true);
-                            HacerCambio(() => this.LblTextR.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Left);
-
-                            break;
-                    }
+                    ft.LineAlignment = StringAlignment.Center;
 
                     break;
 
                 case VPositionText.Up://Texto arriba
-                    pY = 1;
-                    switch (showTextValue)
-                    {
-                        case HPositionText.Left://Texto arriba a la izquierda
 
-                            HacerCambio(() => this.LblTextL.AutoSize = true);
-                            HacerCambio(() => this.LblTextL.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Right);
-
-                            break;
-
-                        case HPositionText.Inside://Texto arriba por dentro
-                            if (LblTextC.Width > this.Width)
-                            {
-                                HacerCambio(() => this.Width = LblTextC.Width);
-                                HacerCambio(() => PnlChannel.Width = LblTextC.Width);
-                                HacerCambio(() => PnlSlider.Width = LblTextC.Width);
-                            }
-
-                            pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
-
-                            HacerCambio(() => this.LblTextC.AutoSize = true);
-                            HacerCambio(() => this.LblTextC.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Fill);
-
-                            break;
-
-                        case HPositionText.Right://Texto arriba a la derecha
-                            pX = PnlChannel.Width + 1;
-
-                            HacerCambio(() => this.LblTextR.AutoSize = true);
-                            HacerCambio(() => this.LblTextR.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Left);
-
-                            break;
-                    }
+                    ft.LineAlignment = StringAlignment.Near;
 
                     break;
 
                 case VPositionText.Sliding:
 
+                    int txtHeight = TextRenderer.MeasureText(this.text, font).Height + 1;
+                    int h = this.Height - sliderHeight;
+                    int hM = this.Height - txtHeight;
 
-                    switch (showTextValue)
-                    {
-                        case HPositionText.Left://Texto deslizante a la izquierda
-                            pY = (this.Height - PnlSlider.Height);
-                            if (pY > this.Height - LblTextL.Height)
-                                pY = this.Height - LblTextL.Height;
+                    if (h > hM)
+                        h = hM;
 
-                            HacerCambio(() => this.LblTextL.AutoSize = true);
-                            HacerCambio(() => this.LblTextL.Location = new Point(pX, pY));
+                    //if (h < txtHeight)
+                    //    h = txtHeight;
 
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Right);
+                    startPoint.Y = h;
+                    ft.LineAlignment = StringAlignment.Near;
+                    sizeRecText = new Size(this.Width, txtHeight);
+                    rectangleText = new Rectangle(startPoint, sizeRecText);
 
-                            break;
-
-                        case HPositionText.Inside://Texto deslizante por dentro
-                            if (LblTextC.Width > this.Width)
-                            {
-                                HacerCambio(() => this.Width = LblTextC.Width);
-                                HacerCambio(() => PnlChannel.Width = LblTextC.Width);
-                                HacerCambio(() => PnlSlider.Width = LblTextC.Width);
-                            }
-
-                            pY = (this.Height - PnlSlider.Height);
-                            if (pY > this.Height - LblTextC.Height)
-                                pY = this.Height - LblTextC.Height;
-
-                            pX = (PnlChannel.Width - this.LblTextC.Width) / 2;
-
-                            HacerCambio(() => this.LblTextC.AutoSize = true);
-                            HacerCambio(() => this.LblTextC.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Fill);
-
-                            break;
-
-                        case HPositionText.Right://Texto deslizante a la derecha
-                            pY = (this.Height - PnlSlider.Height);
-                            if (pY > this.Height - LblTextR.Height)
-                                pY = this.Height - LblTextR.Height;
-
-
-                            pX = PnlChannel.Width + 1;
-                            HacerCambio(() => this.LblTextR.AutoSize = true);
-                            HacerCambio(() => this.LblTextR.Location = new Point(pX, pY));
-
-                            //Anclar la barra
-                            HacerCambio(() => this.PnlChannel.Dock = DockStyle.Left);
-
-                            break;
-                    }
                     break;
             }
+
+            g.DrawString(this.text, font, textBrush, rectangleText, ft);
+
+            UpdateControlWidth();
         }
+
 
 
         #endregion
@@ -724,15 +767,8 @@ namespace ControlesPersonalizados
         #region Metodos para el control
         private void UpdateControlWidth()
         {
-
-            HacerCambio(() => PnlChannel.Width = barWidth);
-            HacerCambio(() => PnlSlider.Width = barWidth);
-
-            int txtWidth = 0;
-
-            if (showTextValue == HPositionText.Left) txtWidth = LblTextL.Width;
-            else if (showTextValue == HPositionText.Inside) txtWidth = LblTextC.Width;
-            else if (showTextValue == HPositionText.Right) txtWidth = LblTextR.Width;
+            
+            int txtWidth = TextRenderer.MeasureText(this.text, font).Width + 1;
 
             //Altura de los textos
 
@@ -741,40 +777,24 @@ namespace ControlesPersonalizados
             {
 
                 case HPositionText.None:
-                    HacerCambio(() => PnlChannel.Width = barWidth);
-                    HacerCambio(() => PnlSlider.Width = barWidth);
                     HacerCambio(() => this.Width = barWidth);
 
                     break;
 
-
-                case HPositionText.Inside:
+                case HPositionText.InSide:
 
                     if (txtWidth > barWidth)
                     {
-                        HacerCambio(() => PnlChannel.Width = txtWidth);
-                        HacerCambio(() => PnlSlider.Width = txtWidth);
-
                         barWidth = txtWidth;
-                        this.Width = txtWidth;
-                    }
-                    else
-                    {
-                        HacerCambio(() => PnlChannel.Width = barWidth);
-                        HacerCambio(() => PnlSlider.Width = barWidth);
-
-                        this.Width = barWidth;
                     }
 
+                    HacerCambio(() => this.Width = barWidth);
 
                     break;
 
                 default:
-                    HacerCambio(() => PnlChannel.Width = barWidth);
-                    HacerCambio(() => PnlSlider.Width = barWidth);
-
-
-                    HacerCambio(() => this.Width = txtWidth + this.Padding.Left + this.Padding.Right + barWidth + 2);
+                    
+                    HacerCambio(() => this.Width = txtWidth + barWidth + 1);
                     break;
 
 
@@ -805,6 +825,7 @@ namespace ControlesPersonalizados
         }
 
         #endregion
+
 
     }
 }
