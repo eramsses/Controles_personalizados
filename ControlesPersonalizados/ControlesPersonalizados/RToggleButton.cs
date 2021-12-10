@@ -139,31 +139,26 @@ namespace ControlesPersonalizados
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             pevent.Graphics.Clear(this.Parent.BackColor);
+            try
+            {
+                if (this.BackColor == Color.Transparent)
+                {
+                    if (this.Parent.GetType() == typeof(RPanelRounded))
+                    {
 
-
-            //try
-            //{
-
-            //    if (this.Parent.GetType() == typeof(RPanelRounded))
-            //    {
-
-            //        RPanelRounded panelPadre = (RPanelRounded)this.Parent;
-            //        this.BackColor = panelPadre.BackColor1;
-            //    }
-
-
-
-            //    else
-            //    {
-            //        this.BackColor = this.Parent.BackColor;
-            //    }
-
-            //}
-            //catch (Exception e)
-            //{
-            //    pevent.Graphics.Clear(this.Parent.BackColor);
-            //}
-
+                        RPanelRounded panelPadre = (RPanelRounded)this.Parent;
+                        pevent.Graphics.Clear(panelPadre.BackColor1);
+                    }
+                    else
+                    {
+                        pevent.Graphics.Clear(this.Parent.BackColor);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                pevent.Graphics.Clear(this.Parent.BackColor);
+            }
 
 
             if (this.Checked)//Control encendido

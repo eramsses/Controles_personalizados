@@ -88,7 +88,6 @@ namespace ControlesPersonalizados
             set
             {
                 borderSize = value;
-                PintarPanel();
                 this.Invalidate();
             }
         }
@@ -104,7 +103,6 @@ namespace ControlesPersonalizados
             set
             {
                 this.backgroundColor1 = value;
-                PintarPanel();
                 this.Invalidate();
             }
         }
@@ -120,7 +118,6 @@ namespace ControlesPersonalizados
             set
             {
                 backgroundColor2 = value;
-                PintarPanel();
                 this.Invalidate();
             }
         }
@@ -136,7 +133,6 @@ namespace ControlesPersonalizados
             set
             {
                 angleColor = value;
-                PintarPanel();
                 this.Invalidate();
             }
         }
@@ -155,13 +151,7 @@ namespace ControlesPersonalizados
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            PintarPanel();
-
-        }
-
-        private void PintarPanel()
-        {
-            Graphics graph = this.CreateGraphics();
+            Graphics graph = e.Graphics;
             var rectBorderSmooth = this.ClientRectangle;
             var rectBorder = Rectangle.Inflate(rectBorderSmooth, -borderSize, -borderSize);
 
@@ -206,7 +196,7 @@ namespace ControlesPersonalizados
                     else
                         graph.Clear(backgroundColor1);
 
-                    
+
 
                     if (borderSize > 0)
                         graph.DrawRectangle(penBorder, rectBorder);
@@ -215,6 +205,7 @@ namespace ControlesPersonalizados
 
                 }
             }
+
         }
 
         private void ValidarRadioMinimo(int value)
