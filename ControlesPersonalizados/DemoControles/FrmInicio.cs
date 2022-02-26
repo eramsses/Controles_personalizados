@@ -32,14 +32,14 @@ namespace DemoControles
 
         private void chkPersonalizado_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkPersonalizado.Checked)
-            {
-                LblPersonalizado.Text = "Personalizado  Encendido";
-            }
-            else
-            {
-                LblPersonalizado.Text = "Personalizado  Apagado";
-            }
+            //if (chkPersonalizado.Checked)
+            //{
+            //    LblPersonalizado.Text = "Personalizado  Encendido";
+            //}
+            //else
+            //{
+            //    LblPersonalizado.Text = "Personalizado  Apagado";
+            //}
 
         }
 
